@@ -1,0 +1,2 @@
+class PerfSonarController < ApplicationController
+end
