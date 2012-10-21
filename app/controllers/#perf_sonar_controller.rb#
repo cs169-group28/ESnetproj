@@ -1,0 +1,12 @@
+class PerfSonarController < ApplicationController
+
+  def requestData
+    
+  end
+  
+  def showTraceroute
+  end
+  
+  def showTable
+  end
+end
