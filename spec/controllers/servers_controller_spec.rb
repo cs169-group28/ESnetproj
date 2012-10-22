@@ -24,9 +24,9 @@ describe ServersController do
   # Server. As you add validations to Server, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    {}
+    {:ip => '11.111.1.111', :name => 'Test Server'}
   end
-  
+
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
   # ServersController. Be sure to keep this updated too.
@@ -37,7 +37,7 @@ describe ServersController do
   describe "GET index" do
     it "assigns all servers as @servers" do
       server = Server.create! valid_attributes
-      get :index, {}, valid_session
+      get :index
       assigns(:servers).should eq([server])
     end
   end
@@ -45,7 +45,8 @@ describe ServersController do
   describe "GET show" do
     it "assigns the requested server as @server" do
       server = Server.create! valid_attributes
-      get :show, {:id => server.to_param}, valid_session
+
+      get :show, {:id => server.to_param}
       assigns(:server).should eq(server)
     end
   end

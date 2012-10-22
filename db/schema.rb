@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121021224810) do
+ActiveRecord::Schema.define(:version => 20121021234111) do
 
   create_table "servers", :force => true do |t|
     t.text     "ip"
@@ -22,6 +22,11 @@ ActiveRecord::Schema.define(:version => 20121021224810) do
     t.text     "state"
     t.float    "latitude"
     t.float    "longitude"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "traceroutes", :force => true do |t|
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
