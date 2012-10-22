@@ -19,7 +19,9 @@ require 'spec_helper'
 # that an instance is receiving a specific message.
 
 describe ServersController do
-
+  before(:each) do
+    Server.stub(:before_create)
+  end
   # This should return the minimal set of attributes required to create a valid
   # Server. As you add validations to Server, be sure to
   # update the return value of this method accordingly.
@@ -36,6 +38,7 @@ describe ServersController do
 
   describe "GET index" do
     it "assigns all servers as @servers" do
+
       server = Server.create! valid_attributes
       get :index
       assigns(:servers).should eq([server])
