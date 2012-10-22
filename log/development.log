@@ -7881,3 +7881,373 @@ Completed 200 OK in 166ms (Views: 163.6ms | ActiveRecord: 1.5ms)
   [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
   [1m[35m (0.0ms)[0m  begin transaction
   [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (1.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (2.2ms)[0m  select sqlite_version(*)
+  [1m[36m (9.3ms)[0m  [1mCREATE TABLE "servers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ip" text, "name" text, "country" text, "zip" integer, "city" text, "state" text, "latitude" float, "longitude" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (7.2ms)[0m  CREATE TABLE "traceroutes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (7.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36m (7.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.5ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (7.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121021234111')[0m
+  [1m[35m (6.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121021224810')
+Connecting to database specified by database.yml
+  [1m[36m (13.6ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (82.8ms)[0m  [1mINSERT INTO "servers" ("city", "country", "created_at", "ip", "latitude", "longitude", "name", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city", "-"], ["country", "-"], ["created_at", Mon, 22 Oct 2012 09:53:32 UTC +00:00], ["ip", "192.168.51.23"], ["latitude", 0.0], ["longitude", 0.0], ["name", "Berkeley Engineering DPT"], ["state", "-"], ["updated_at", Mon, 22 Oct 2012 09:53:32 UTC +00:00], ["zip", 0]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "servers" ("city", "country", "created_at", "ip", "latitude", "longitude", "name", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", nil], ["country", nil], ["created_at", Mon, 22 Oct 2012 09:53:33 UTC +00:00], ["ip", "453.145.31.65"], ["latitude", nil], ["longitude", nil], ["name", "Lawrence Berkeley NL"], ["state", nil], ["updated_at", Mon, 22 Oct 2012 09:53:33 UTC +00:00], ["zip", nil]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "servers" ("city", "country", "created_at", "ip", "latitude", "longitude", "name", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city", nil], ["country", nil], ["created_at", Mon, 22 Oct 2012 09:53:33 UTC +00:00], ["ip", "652.168.12.45"], ["latitude", nil], ["longitude", nil], ["name", "Moffitt Library"], ["state", nil], ["updated_at", Mon, 22 Oct 2012 09:53:33 UTC +00:00], ["zip", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "servers" ("city", "country", "created_at", "ip", "latitude", "longitude", "name", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", nil], ["country", nil], ["created_at", Mon, 22 Oct 2012 09:53:34 UTC +00:00], ["ip", "453.168.45.99"], ["latitude", nil], ["longitude", nil], ["name", "PG&E power station"], ["state", nil], ["updated_at", Mon, 22 Oct 2012 09:53:34 UTC +00:00], ["zip", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "servers" ("city", "country", "created_at", "ip", "latitude", "longitude", "name", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city", "-"], ["country", "-"], ["created_at", Mon, 22 Oct 2012 09:53:34 UTC +00:00], ["ip", "234.168.15.23"], ["latitude", 0.0], ["longitude", 0.0], ["name", "Stanley Hall"], ["state", "-"], ["updated_at", Mon, 22 Oct 2012 09:53:34 UTC +00:00], ["zip", 0]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+
+
+Started GET "/servers" for 127.0.0.1 at 2012-10-22 02:53:34 -0700
+Processing by ServersController#index as HTML
+  [1m[36mServer Load (0.1ms)[0m  [1mSELECT "servers".* FROM "servers" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "servers".* FROM "servers" 
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (1.0ms)
+  Rendered servers/index.html.erb within layouts/application (146.8ms)
+Completed 200 OK in 557ms (Views: 536.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/servers/new" for 127.0.0.1 at 2012-10-22 02:53:35 -0700
+Processing by ServersController#new as HTML
+  Rendered servers/_form.html.erb (7.0ms)
+  Rendered servers/new.html.erb within layouts/application (25.0ms)
+Completed 200 OK in 172ms (Views: 171.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/servers" for 127.0.0.1 at 2012-10-22 02:53:36 -0700
+Processing by ServersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9+o/B35PZFpZzpO6JWU+xJwuMI5jhzgN2Wi5xGiFAAE=", "server"=>{"ip"=>"'192.168.0.1'", "name"=>"", "country"=>"", "zip"=>"", "city"=>"", "state"=>"", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Server"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "servers" ("city", "country", "created_at", "ip", "latitude", "longitude", "name", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", nil], ["country", nil], ["created_at", Mon, 22 Oct 2012 09:53:36 UTC +00:00], ["ip", "'192.168.0.1'"], ["latitude", nil], ["longitude", nil], ["name", ""], ["state", nil], ["updated_at", Mon, 22 Oct 2012 09:53:36 UTC +00:00], ["zip", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/servers/6
+Completed 302 Found in 395ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/servers/6" for 127.0.0.1 at 2012-10-22 02:53:36 -0700
+Processing by ServersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mServer Load (0.4ms)[0m  SELECT "servers".* FROM "servers" WHERE "servers"."id" = ? LIMIT 1  [["id", "6"]]
+  Rendered servers/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 181ms (Views: 179.4ms | ActiveRecord: 0.4ms)
+  [1m[36m (4.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (12.1ms)[0m  INSERT INTO "servers" ("city", "country", "created_at", "ip", "latitude", "longitude", "name", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", "-"], ["country", "-"], ["created_at", Mon, 22 Oct 2012 09:53:37 UTC +00:00], ["ip", "192.168.51.23"], ["latitude", 0.0], ["longitude", 0.0], ["name", "Berkeley Engineering DPT"], ["state", "-"], ["updated_at", Mon, 22 Oct 2012 09:53:37 UTC +00:00], ["zip", 0]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "servers" ("city", "country", "created_at", "ip", "latitude", "longitude", "name", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city", nil], ["country", nil], ["created_at", Mon, 22 Oct 2012 09:53:37 UTC +00:00], ["ip", "453.145.31.65"], ["latitude", nil], ["longitude", nil], ["name", "Lawrence Berkeley NL"], ["state", nil], ["updated_at", Mon, 22 Oct 2012 09:53:37 UTC +00:00], ["zip", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "servers" ("city", "country", "created_at", "ip", "latitude", "longitude", "name", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", nil], ["country", nil], ["created_at", Mon, 22 Oct 2012 09:53:37 UTC +00:00], ["ip", "652.168.12.45"], ["latitude", nil], ["longitude", nil], ["name", "Moffitt Library"], ["state", nil], ["updated_at", Mon, 22 Oct 2012 09:53:37 UTC +00:00], ["zip", nil]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "servers" ("city", "country", "created_at", "ip", "latitude", "longitude", "name", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city", nil], ["country", nil], ["created_at", Mon, 22 Oct 2012 09:53:38 UTC +00:00], ["ip", "453.168.45.99"], ["latitude", nil], ["longitude", nil], ["name", "PG&E power station"], ["state", nil], ["updated_at", Mon, 22 Oct 2012 09:53:38 UTC +00:00], ["zip", nil]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "servers" ("city", "country", "created_at", "ip", "latitude", "longitude", "name", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", "-"], ["country", "-"], ["created_at", Mon, 22 Oct 2012 09:53:38 UTC +00:00], ["ip", "234.168.15.23"], ["latitude", 0.0], ["longitude", 0.0], ["name", "Stanley Hall"], ["state", "-"], ["updated_at", Mon, 22 Oct 2012 09:53:38 UTC +00:00], ["zip", 0]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+
+
+Started GET "/servers" for 127.0.0.1 at 2012-10-22 02:53:38 -0700
+Processing by ServersController#index as HTML
+  [1m[35mServer Load (0.1ms)[0m  SELECT "servers".* FROM "servers" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "servers".* FROM "servers" [0m
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.7ms)
+  Rendered servers/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 172ms (Views: 169.7ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/servers/1" for 127.0.0.1 at 2012-10-22 02:53:38 -0700
+Processing by ServersController#destroy as HTML
+  Parameters: {"authenticity_token"=>"aIomA9DOImQ4SWEAwX0SIHvWUEJc30H0vjqM8A9TOMU=", "id"=>"1"}
+  [1m[35mServer Load (0.1ms)[0m  SELECT "servers".* FROM "servers" WHERE "servers"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "servers" WHERE "servers"."id" = ?  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/servers
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/servers" for 127.0.0.1 at 2012-10-22 02:53:38 -0700
+Processing by ServersController#index as HTML
+  [1m[35mServer Load (0.1ms)[0m  SELECT "servers".* FROM "servers" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "servers".* FROM "servers" [0m
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.8ms)
+  Rendered servers/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 167ms (Views: 165.0ms | ActiveRecord: 0.1ms)
+  [1m[35m (4.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (15.2ms)[0m  [1mINSERT INTO "servers" ("city", "country", "created_at", "ip", "latitude", "longitude", "name", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city", "-"], ["country", "-"], ["created_at", Mon, 22 Oct 2012 09:53:39 UTC +00:00], ["ip", "192.168.51.23"], ["latitude", 0.0], ["longitude", 0.0], ["name", "Berkeley Engineering DPT"], ["state", "-"], ["updated_at", Mon, 22 Oct 2012 09:53:39 UTC +00:00], ["zip", 0]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "servers" ("city", "country", "created_at", "ip", "latitude", "longitude", "name", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", nil], ["country", nil], ["created_at", Mon, 22 Oct 2012 09:53:39 UTC +00:00], ["ip", "453.145.31.65"], ["latitude", nil], ["longitude", nil], ["name", "Lawrence Berkeley NL"], ["state", nil], ["updated_at", Mon, 22 Oct 2012 09:53:39 UTC +00:00], ["zip", nil]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "servers" ("city", "country", "created_at", "ip", "latitude", "longitude", "name", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city", nil], ["country", nil], ["created_at", Mon, 22 Oct 2012 09:53:39 UTC +00:00], ["ip", "652.168.12.45"], ["latitude", nil], ["longitude", nil], ["name", "Moffitt Library"], ["state", nil], ["updated_at", Mon, 22 Oct 2012 09:53:39 UTC +00:00], ["zip", nil]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "servers" ("city", "country", "created_at", "ip", "latitude", "longitude", "name", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", nil], ["country", nil], ["created_at", Mon, 22 Oct 2012 09:53:40 UTC +00:00], ["ip", "453.168.45.99"], ["latitude", nil], ["longitude", nil], ["name", "PG&E power station"], ["state", nil], ["updated_at", Mon, 22 Oct 2012 09:53:40 UTC +00:00], ["zip", nil]]
+  [1m[36m (0.2ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "servers" ("city", "country", "created_at", "ip", "latitude", "longitude", "name", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city", "-"], ["country", "-"], ["created_at", Mon, 22 Oct 2012 09:53:40 UTC +00:00], ["ip", "234.168.15.23"], ["latitude", 0.0], ["longitude", 0.0], ["name", "Stanley Hall"], ["state", "-"], ["updated_at", Mon, 22 Oct 2012 09:53:40 UTC +00:00], ["zip", 0]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+
+
+Started GET "/traceroutes" for 127.0.0.1 at 2012-10-22 02:53:40 -0700
+Processing by TraceroutesController#index as HTML
+  [1m[36mServer Load (0.1ms)[0m  [1mSELECT "servers".* FROM "servers" [0m
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.7ms)
+  Rendered traceroutes/index.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 158ms (Views: 156.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/traceroutes/handle_render" for 127.0.0.1 at 2012-10-22 02:53:40 -0700
+Processing by TraceroutesController#handle_render as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4QFt1klYbQE5YOxWNIq/cTP45KZo+g4+QxHG7Fw3UO8=", "Server"=>{"1"=>"1", "2"=>"1"}, "commit"=>"Route"}
+Redirected to http://www.example.com/traceroutes/render_map/1/1
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/traceroutes/render_map/1/1" for 127.0.0.1 at 2012-10-22 02:53:40 -0700
+Processing by TraceroutesController#render_map as HTML
+  Parameters: {"server1"=>"1", "server2"=>"1"}
+  [1m[35mServer Load (0.1ms)[0m  SELECT "servers".* FROM "servers" WHERE "servers"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "servers".* FROM "servers" WHERE "servers"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.6ms)
+  Rendered traceroutes/render_map.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 221ms (Views: 218.4ms | ActiveRecord: 0.1ms)
+  [1m[35m (15.9ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (2.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (1.3ms)[0m  select sqlite_version(*)
+  [1m[36m (9.9ms)[0m  [1mCREATE TABLE "servers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ip" text, "name" text, "country" text, "zip" integer, "city" text, "state" text, "latitude" float, "longitude" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (6.0ms)[0m  CREATE TABLE "traceroutes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (6.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36m (7.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (1.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (6.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121021234111')[0m
+  [1m[35m (7.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20121021224810')
+Connecting to database specified by database.yml
+  [1m[36m (5.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (77.3ms)[0m  [1mINSERT INTO "servers" ("city", "country", "created_at", "ip", "latitude", "longitude", "name", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city", "COLUMBUS"], ["country", "UNITED STATES"], ["created_at", Mon, 22 Oct 2012 09:54:17 UTC +00:00], ["ip", "11.111.1.111"], ["latitude", 39.9612], ["longitude", -82.9988], ["name", "Test Server"], ["state", "OHIO"], ["updated_at", Mon, 22 Oct 2012 09:54:17 UTC +00:00], ["zip", 43218]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ServersController#index as HTML
+  [1m[36mServer Load (1.1ms)[0m  [1mSELECT "servers".* FROM "servers" [0m
+  [1m[35mServer Load (0.1ms)[0m  SELECT "servers".* FROM "servers" 
+  Rendered servers/index.html.erb within layouts/application (45.5ms)
+Completed 200 OK in 207ms (Views: 179.0ms | ActiveRecord: 1.2ms)
+  [1m[36m (4.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (13.8ms)[0m  INSERT INTO "servers" ("city", "country", "created_at", "ip", "latitude", "longitude", "name", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", "COLUMBUS"], ["country", "UNITED STATES"], ["created_at", Mon, 22 Oct 2012 09:54:17 UTC +00:00], ["ip", "11.111.1.111"], ["latitude", 39.9612], ["longitude", -82.9988], ["name", "Test Server"], ["state", "OHIO"], ["updated_at", Mon, 22 Oct 2012 09:54:17 UTC +00:00], ["zip", 43218]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ServersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mServer Load (0.4ms)[0m  SELECT "servers".* FROM "servers" WHERE "servers"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 200 OK in 63ms (Views: 59.2ms | ActiveRecord: 0.4ms)
+  [1m[36m (2.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by ServersController#new as HTML
+Completed 200 OK in 46ms (Views: 45.3ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (15.4ms)[0m  INSERT INTO "servers" ("city", "country", "created_at", "ip", "latitude", "longitude", "name", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", "COLUMBUS"], ["country", "UNITED STATES"], ["created_at", Mon, 22 Oct 2012 09:54:18 UTC +00:00], ["ip", "11.111.1.111"], ["latitude", 39.9612], ["longitude", -82.9988], ["name", "Test Server"], ["state", "OHIO"], ["updated_at", Mon, 22 Oct 2012 09:54:18 UTC +00:00], ["zip", 43218]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ServersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mServer Load (0.1ms)[0m  SELECT "servers".* FROM "servers" WHERE "servers"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 200 OK in 62ms (Views: 59.3ms | ActiveRecord: 0.1ms)
+  [1m[36m (4.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (2.3ms)[0m  [1mSELECT COUNT(*) FROM "servers" [0m
+Processing by ServersController#create as HTML
+  Parameters: {"server"=>{"ip"=>"11.111.1.111", "name"=>"Test Server"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (7.8ms)[0m  [1mINSERT INTO "servers" ("city", "country", "created_at", "ip", "latitude", "longitude", "name", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city", "COLUMBUS"], ["country", "UNITED STATES"], ["created_at", Mon, 22 Oct 2012 09:54:18 UTC +00:00], ["ip", "11.111.1.111"], ["latitude", 39.9612], ["longitude", -82.9988], ["name", "Test Server"], ["state", "OHIO"], ["updated_at", Mon, 22 Oct 2012 09:54:18 UTC +00:00], ["zip", 43218]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/servers/1
+Completed 302 Found in 219ms (ActiveRecord: 8.0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "servers" [0m
+  [1m[35m (9.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by ServersController#create as HTML
+  Parameters: {"server"=>{"ip"=>"11.111.1.111", "name"=>"Test Server"}}
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (14.4ms)[0m  [1mINSERT INTO "servers" ("city", "country", "created_at", "ip", "latitude", "longitude", "name", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city", "COLUMBUS"], ["country", "UNITED STATES"], ["created_at", Mon, 22 Oct 2012 09:54:18 UTC +00:00], ["ip", "11.111.1.111"], ["latitude", 39.9612], ["longitude", -82.9988], ["name", "Test Server"], ["state", "OHIO"], ["updated_at", Mon, 22 Oct 2012 09:54:18 UTC +00:00], ["zip", 43218]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/servers/1
+Completed 302 Found in 295ms (ActiveRecord: 14.6ms)
+  [1m[36m (5.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by ServersController#create as HTML
+  Parameters: {"server"=>{"ip"=>"11.111.1.111", "name"=>"Test Server"}}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (16.3ms)[0m  INSERT INTO "servers" ("city", "country", "created_at", "ip", "latitude", "longitude", "name", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", "COLUMBUS"], ["country", "UNITED STATES"], ["created_at", Mon, 22 Oct 2012 09:54:19 UTC +00:00], ["ip", "11.111.1.111"], ["latitude", 39.9612], ["longitude", -82.9988], ["name", "Test Server"], ["state", "OHIO"], ["updated_at", Mon, 22 Oct 2012 09:54:19 UTC +00:00], ["zip", 43218]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/servers/1
+Completed 302 Found in 234ms (ActiveRecord: 16.5ms)
+  [1m[35mServer Load (0.3ms)[0m  SELECT "servers".* FROM "servers" ORDER BY "servers"."id" DESC LIMIT 1
+  [1m[36m (12.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+Processing by ServersController#create as HTML
+  Parameters: {"server"=>{}}
+Completed 200 OK in 46ms (Views: 45.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+Processing by ServersController#create as HTML
+  Parameters: {"server"=>{}}
+Completed 200 OK in 55ms (Views: 52.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (9.7ms)[0m  INSERT INTO "servers" ("city", "country", "created_at", "ip", "latitude", "longitude", "name", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", "COLUMBUS"], ["country", "UNITED STATES"], ["created_at", Mon, 22 Oct 2012 09:54:19 UTC +00:00], ["ip", "11.111.1.111"], ["latitude", 39.9612], ["longitude", -82.9988], ["name", "Test Server"], ["state", "OHIO"], ["updated_at", Mon, 22 Oct 2012 09:54:19 UTC +00:00], ["zip", 43218]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ServersController#update as HTML
+  Parameters: {"server"=>{"these"=>"params"}, "id"=>"1"}
+  [1m[35mServer Load (0.1ms)[0m  SELECT "servers".* FROM "servers" WHERE "servers"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 200 OK in 53ms (Views: 51.1ms | ActiveRecord: 0.1ms)
+  [1m[36m (3.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (8.0ms)[0m  INSERT INTO "servers" ("city", "country", "created_at", "ip", "latitude", "longitude", "name", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", "COLUMBUS"], ["country", "UNITED STATES"], ["created_at", Mon, 22 Oct 2012 09:54:19 UTC +00:00], ["ip", "11.111.1.111"], ["latitude", 39.9612], ["longitude", -82.9988], ["name", "Test Server"], ["state", "OHIO"], ["updated_at", Mon, 22 Oct 2012 09:54:19 UTC +00:00], ["zip", 43218]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ServersController#update as HTML
+  Parameters: {"server"=>{"ip"=>"11.111.1.111", "name"=>"Test Server"}, "id"=>"1"}
+  [1m[35mServer Load (0.1ms)[0m  SELECT "servers".* FROM "servers" WHERE "servers"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/servers/1
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms)
+  [1m[36m (7.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (6.5ms)[0m  INSERT INTO "servers" ("city", "country", "created_at", "ip", "latitude", "longitude", "name", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", "COLUMBUS"], ["country", "UNITED STATES"], ["created_at", Mon, 22 Oct 2012 09:54:20 UTC +00:00], ["ip", "11.111.1.111"], ["latitude", 39.9612], ["longitude", -82.9988], ["name", "Test Server"], ["state", "OHIO"], ["updated_at", Mon, 22 Oct 2012 09:54:20 UTC +00:00], ["zip", 43218]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ServersController#update as HTML
+  Parameters: {"server"=>{"ip"=>"11.111.1.111", "name"=>"Test Server"}, "id"=>"1"}
+  [1m[35mServer Load (0.1ms)[0m  SELECT "servers".* FROM "servers" WHERE "servers"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/servers/1
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+  [1m[36m (3.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (16.3ms)[0m  INSERT INTO "servers" ("city", "country", "created_at", "ip", "latitude", "longitude", "name", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", "COLUMBUS"], ["country", "UNITED STATES"], ["created_at", Mon, 22 Oct 2012 09:54:25 UTC +00:00], ["ip", "11.111.1.111"], ["latitude", 39.9612], ["longitude", -82.9988], ["name", "Test Server"], ["state", "OHIO"], ["updated_at", Mon, 22 Oct 2012 09:54:25 UTC +00:00], ["zip", 43218]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ServersController#update as HTML
+  Parameters: {"server"=>{}, "id"=>"1"}
+  [1m[35mServer Load (0.5ms)[0m  SELECT "servers".* FROM "servers" WHERE "servers"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 76ms (Views: 70.3ms | ActiveRecord: 0.8ms)
+  [1m[36m (3.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (16.3ms)[0m  INSERT INTO "servers" ("city", "country", "created_at", "ip", "latitude", "longitude", "name", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", "COLUMBUS"], ["country", "UNITED STATES"], ["created_at", Mon, 22 Oct 2012 09:54:25 UTC +00:00], ["ip", "11.111.1.111"], ["latitude", 39.9612], ["longitude", -82.9988], ["name", "Test Server"], ["state", "OHIO"], ["updated_at", Mon, 22 Oct 2012 09:54:25 UTC +00:00], ["zip", 43218]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Processing by ServersController#update as HTML
+  Parameters: {"server"=>{}, "id"=>"1"}
+  [1m[35mServer Load (0.1ms)[0m  SELECT "servers".* FROM "servers" WHERE "servers"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+Completed 200 OK in 46ms (Views: 42.0ms | ActiveRecord: 0.3ms)
+  [1m[36m (3.8ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (11.3ms)[0m  INSERT INTO "servers" ("city", "country", "created_at", "ip", "latitude", "longitude", "name", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["city", "COLUMBUS"], ["country", "UNITED STATES"], ["created_at", Mon, 22 Oct 2012 09:54:25 UTC +00:00], ["ip", "11.111.1.111"], ["latitude", 39.9612], ["longitude", -82.9988], ["name", "Test Server"], ["state", "OHIO"], ["updated_at", Mon, 22 Oct 2012 09:54:25 UTC +00:00], ["zip", 43218]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SELECT COUNT(*) FROM "servers" 
+Processing by ServersController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mServer Load (0.1ms)[0m  [1mSELECT "servers".* FROM "servers" WHERE "servers"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.9ms)[0m  [1mDELETE FROM "servers" WHERE "servers"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/servers
+Completed 302 Found in 7ms (ActiveRecord: 1.2ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "servers" [0m
+  [1m[35m (5.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (17.0ms)[0m  [1mINSERT INTO "servers" ("city", "country", "created_at", "ip", "latitude", "longitude", "name", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city", "COLUMBUS"], ["country", "UNITED STATES"], ["created_at", Mon, 22 Oct 2012 09:54:26 UTC +00:00], ["ip", "11.111.1.111"], ["latitude", 39.9612], ["longitude", -82.9988], ["name", "Test Server"], ["state", "OHIO"], ["updated_at", Mon, 22 Oct 2012 09:54:26 UTC +00:00], ["zip", 43218]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Processing by ServersController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mServer Load (0.2ms)[0m  [1mSELECT "servers".* FROM "servers" WHERE "servers"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mDELETE FROM "servers" WHERE "servers"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/servers
+Completed 302 Found in 7ms (ActiveRecord: 1.1ms)
+  [1m[36m (4.9ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (5.7ms)[0m  [1mINSERT INTO "servers" ("city", "country", "created_at", "ip", "latitude", "longitude", "name", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city", nil], ["country", nil], ["created_at", Mon, 22 Oct 2012 09:54:26 UTC +00:00], ["ip", nil], ["latitude", nil], ["longitude", nil], ["name", nil], ["state", nil], ["updated_at", Mon, 22 Oct 2012 09:54:26 UTC +00:00], ["zip", nil]]
+  [1m[35m (4.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+
+
+Started GET "/servers" for 127.0.0.1 at 2012-10-22 02:54:26 -0700
+Processing by ServersController#index as HTML
+  [1m[35mServer Load (2.3ms)[0m  SELECT "servers".* FROM "servers" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "servers".* FROM "servers" [0m
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (1.3ms)
+Completed 200 OK in 405ms (Views: 401.8ms | ActiveRecord: 2.3ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+
+
+Started GET "/traceroutes" for 127.0.0.1 at 2012-10-22 02:54:26 -0700
+Processing by TraceroutesController#index as HTML
+  [1m[35mServer Load (2.8ms)[0m  SELECT "servers".* FROM "servers" 
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.7ms)
+Completed 200 OK in 161ms (Views: 157.8ms | ActiveRecord: 2.8ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
