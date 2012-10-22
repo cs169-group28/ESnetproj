@@ -1,0 +1,25 @@
+<h1>Traceroute information</h1>
+
+<br />
+
+<b> Server 1 (origin): </b>
+<br />
+<%=@s1.ip%>
+<br />
+<%=@s1.name%>
+<br />
+
+<br />
+
+<b> Server 2 (destination): </b>
+<br />
+<%=@s2.ip%>
+<br />
+<%=@s2.name%>
+<br />
+
+<%= gmaps({
+    "markers" => {"data" => @json},
+    "polylines" => { "data" => @polylines_json }})%>
+
+<%=@polylines_json%>
