@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-
+gem 'simplecov'
 gem 'rails', '3.2.7'
 
 # Bundle edge Rails instead:
