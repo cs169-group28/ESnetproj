@@ -6,10 +6,10 @@ Given /the following servers exist/ do |servers_table|
   end
 end
 
-And /^I add the server:(.*)$/ do |server_details|
+And /^I add the server (.*)$/ do |server_details|
   details = server_details.to_s.gsub(/\s/, "").split(",")
   ip = details[0]
-  step %Q{I fill in "IP" with "#{ip}"}
-  step %Q{I press "Save Changes"}
+  step %Q{I fill in "server_ip" with "#{ip}"}
+  step %Q{I press "Create Server"}
 end
 
