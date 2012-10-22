@@ -1,6 +1,9 @@
 class TraceroutesController < ApplicationController
   # GET /traceroutes
   # GET /traceroutes.json
+
+  require 'json'
+
   def index
     @servers = Server.all
 
@@ -46,6 +49,35 @@ class TraceroutesController < ApplicationController
   end
 
   def render_map
+    @s1 = Server.find(params[:server1])
+    @s2 = Server.find(params[:server2])
+
+    s = Array.new
+    s.push(@s1, @s2)
+
+    puts '==============================='
+    puts s.to_gmaps4rails
+    # puts s.to_gmaps4rails.class
+    # puts s.to_gmaps4rails.class.name
+    puts '==============================='
+
+    @json = s.to_gmaps4rails
+
+
+    @polylines_json = '[' + @json + ']'
+
+
+    polylines_hash = JSON.parse @polylines_json
+    puts '==============================='
+    polylines_hash[0][0]["geodesic"] = true
+    puts polylines_hash[0][0]
+    puts '==============================='
+
+    @polylines_json = polylines_hash.to_json
+
+    puts '==============================='
+    puts @polylines_json
+    puts '==============================='
 
   end
 
