@@ -16,3 +16,238 @@ Connecting to database specified by database.yml
 Connecting to database specified by database.yml
   [1m[36m (4.9ms)[0m  [1mbegin transaction[0m
   [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (3.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateServers (20121021224810)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (7.3ms)[0m  CREATE TABLE "servers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "ip" text, "name" text, "country" text, "zip" integer, "city" text, "state" text, "latitude" float, "longitude" float, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20121021224810')[0m
+  [1m[35m (11.2ms)[0m  commit transaction
+  [1m[36m (2.9ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (6.7ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("servers")[0m
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-10-21 16:33:23 -0700
+Connecting to database specified by database.yml
+Served asset /rails.png - 200 OK (298ms)
+
+
+Started GET "/server" for 127.0.0.1 at 2012-10-21 16:33:27 -0700
+
+ActionController::RoutingError (No route matches [GET] "/server"):
+  actionpack (3.2.7) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.7) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.7) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.7) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.7) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.7) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.7) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.7) lib/rails/engine.rb:479:in `call'
+  railties (3.2.7) lib/rails/application.rb:220:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.7) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+  /usr/local/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+  /usr/local/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.7/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (103.6ms)
+
+
+Started GET "/servers" for 127.0.0.1 at 2012-10-21 16:33:31 -0700
+Processing by ServersController#index as HTML
+  [1m[36mServer Load (3.2ms)[0m  [1mSELECT "servers".* FROM "servers" [0m
+  Rendered servers/index.html.erb within layouts/application (1.0ms)
+Compiled perf_sonar.css  (141ms)  (pid 2659)
+Compiled scaffolds.css  (22ms)  (pid 2659)
+Compiled servers.css  (25ms)  (pid 2659)
+Compiled application.css  (656ms)  (pid 2659)
+Compiled jquery.js  (11ms)  (pid 2659)
+Compiled jquery_ujs.js  (0ms)  (pid 2659)
+Compiled perf_sonar.js  (669ms)  (pid 2659)
+Compiled servers.js  (258ms)  (pid 2659)
+Compiled application.js  (1594ms)  (pid 2659)
+Completed 200 OK in 3614ms (Views: 3333.8ms | ActiveRecord: 30.5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-21 16:33:35 -0700
+Served asset /scaffolds.css - 200 OK (26ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-21 16:33:35 -0700
+Served asset /application.css - 200 OK (61ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-21 16:33:36 -0700
+Served asset /perf_sonar.css - 200 OK (21ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-21 16:33:36 -0700
+Served asset /servers.css - 200 OK (18ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-21 16:33:36 -0700
+Served asset /jquery_ujs.js - 200 OK (22ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-21 16:33:36 -0700
+Served asset /jquery.js - 200 OK (13ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-21 16:33:36 -0700
+Served asset /perf_sonar.js - 200 OK (37ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-21 16:33:36 -0700
+Served asset /servers.js - 200 OK (24ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-21 16:33:37 -0700
+Served asset /application.js - 200 OK (64ms)
+
+
+Started GET "/servers/new" for 127.0.0.1 at 2012-10-21 16:33:38 -0700
+Processing by ServersController#new as HTML
+  Rendered servers/_form.html.erb (93.9ms)
+  Rendered servers/new.html.erb within layouts/application (363.3ms)
+Completed 200 OK in 554ms (Views: 540.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-21 16:33:39 -0700
+Served asset /perf_sonar.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-21 16:33:39 -0700
+Served asset /application.css - 304 Not Modified (30ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-21 16:33:39 -0700
+Served asset /servers.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-21 16:33:40 -0700
+Served asset /scaffolds.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-21 16:33:40 -0700
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-21 16:33:40 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-21 16:33:40 -0700
+Served asset /perf_sonar.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-21 16:33:40 -0700
+Served asset /servers.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-21 16:33:40 -0700
+Served asset /application.js - 304 Not Modified (27ms)
+
+
+Started POST "/servers" for 127.0.0.1 at 2012-10-21 16:33:52 -0700
+Processing by ServersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MrxRtMoCbRIiLAZ/fNiza4nIlhWUKsbzK7kVKS/KOWE=", "server"=>{"ip"=>"74.125.45.100", "name"=>"", "country"=>"", "zip"=>"", "city"=>"", "state"=>"", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Server"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (238.1ms)[0m  [1mINSERT INTO "servers" ("city", "country", "created_at", "ip", "latitude", "longitude", "name", "state", "updated_at", "zip") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["city", "MOUNTAIN VIEW"], ["country", "UNITED STATES"], ["created_at", Sun, 21 Oct 2012 23:33:54 UTC +00:00], ["ip", "74.125.45.100"], ["latitude", 37.3861], ["longitude", -122.084], ["name", ""], ["state", "CALIFORNIA"], ["updated_at", Sun, 21 Oct 2012 23:33:54 UTC +00:00], ["zip", 94043]]
+  [1m[35m (7.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/servers/1
+Completed 302 Found in 2176ms (ActiveRecord: 245.5ms)
+
+
+Started GET "/servers/1" for 127.0.0.1 at 2012-10-21 16:33:54 -0700
+Processing by ServersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mServer Load (2.7ms)[0m  [1mSELECT "servers".* FROM "servers" WHERE "servers"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered servers/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 162ms (Views: 156.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-21 16:33:54 -0700
+Served asset /application.css - 304 Not Modified (69ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-21 16:33:55 -0700
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-21 16:33:55 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-21 16:33:55 -0700
+Served asset /scaffolds.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-21 16:33:55 -0700
+Served asset /servers.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-21 16:33:55 -0700
+Served asset /perf_sonar.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-21 16:33:55 -0700
+Served asset /perf_sonar.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-21 16:33:56 -0700
+Served asset /servers.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-21 16:33:56 -0700
+Served asset /application.js - 304 Not Modified (22ms)
+
+
+Started GET "/servers" for 127.0.0.1 at 2012-10-21 16:34:03 -0700
+Processing by ServersController#index as HTML
+  [1m[35mServer Load (3.8ms)[0m  SELECT "servers".* FROM "servers" 
+  Rendered servers/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 146ms (Views: 140.9ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-21 16:34:03 -0700
+Served asset /application.css - 304 Not Modified (23ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-21 16:34:04 -0700
+Served asset /perf_sonar.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-21 16:34:04 -0700
+Served asset /servers.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-21 16:34:04 -0700
+Served asset /scaffolds.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-21 16:34:04 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-21 16:34:04 -0700
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-21 16:34:04 -0700
+Served asset /perf_sonar.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-21 16:34:04 -0700
+Served asset /servers.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-21 16:34:04 -0700
+Served asset /application.js - 304 Not Modified (22ms)
+Connecting to database specified by database.yml
