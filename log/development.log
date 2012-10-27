@@ -68553,3 +68553,1618 @@ Served asset /application.js - 304 Not Modified (12ms)
 Started GET "/assets/subtle_surface_@2X.png" for 127.0.0.1 at 2012-10-27 03:18:33 -0700
 Served asset /subtle_surface_@2X.png - 304 Not Modified (0ms)
 >>>>>>> 23d5d7efab42b10e9e7e6ea4aa2062772521879a
+Connecting to database specified by database.yml
+
+
+Started GET "/servers" for 127.0.0.1 at 2012-10-27 11:52:21 -0700
+Processing by ServersController#index as HTML
+Redirected to http://localhost:3000/user_sessions/new
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 537ms (ActiveRecord: 36.5ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at 2012-10-27 11:52:23 -0700
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (6.6ms)
+  Rendered user_sessions/new.html.erb within layouts/application (157.1ms)
+Completed 200 OK in 1708ms (Views: 1707.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-27 11:52:25 -0700
+Served asset /application.css - 304 Not Modified (64ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-27 11:52:25 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (22ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-27 11:52:26 -0700
+Served asset /perf_sonar.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-27 11:52:26 -0700
+Served asset /traceroutes.css - 304 Not Modified (20ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-27 11:52:26 -0700
+Served asset /scaffolds.css - 304 Not Modified (17ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-27 11:52:26 -0700
+Served asset /servers.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2012-10-27 11:52:27 -0700
+Served asset /twitter/bootstrap.css - 304 Not Modified (68ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:27 -0700
+Served asset /jquery.js - 304 Not Modified (42ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:27 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (38ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:28 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:28 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:28 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:28 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:29 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:29 -0700
+Served asset /perf_sonar.js - 304 Not Modified (20ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:29 -0700
+Served asset /servers.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:29 -0700
+Served asset /traceroutes.js - 304 Not Modified (24ms)
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:30 -0700
+Served asset /twitter/bootstrap/affix.js - 304 Not Modified (79ms)
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:30 -0700
+Served asset /twitter/bootstrap/alert.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:30 -0700
+Served asset /twitter/bootstrap/button.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:31 -0700
+Served asset /twitter/bootstrap/carousel.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:31 -0700
+Served asset /twitter/bootstrap/collapse.js - 304 Not Modified (18ms)
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:31 -0700
+Served asset /twitter/bootstrap/dropdown.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:31 -0700
+Served asset /twitter/bootstrap/modal.js - 304 Not Modified (16ms)
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:32 -0700
+Served asset /twitter/bootstrap/tooltip.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:32 -0700
+Served asset /twitter/bootstrap/popover.js - 304 Not Modified (19ms)
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:32 -0700
+Served asset /twitter/bootstrap/scrollspy.js - 304 Not Modified (18ms)
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:32 -0700
+Served asset /twitter/bootstrap/tab.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:33 -0700
+Served asset /twitter/bootstrap/transition.js - 304 Not Modified (14ms)
+
+
+Started GET "/assets/twitter/bootstrap/typeahead.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:33 -0700
+Served asset /twitter/bootstrap/typeahead.js - 304 Not Modified (17ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:33 -0700
+Served asset /twitter/bootstrap.js - 304 Not Modified (112ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:33 -0700
+Served asset /application.js - 304 Not Modified (281ms)
+
+
+Started GET "/assets/subtle_surface_@2X.png" for 127.0.0.1 at 2012-10-27 11:52:35 -0700
+Served asset /subtle_surface_@2X.png - 304 Not Modified (32ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2012-10-27 11:52:41 -0700
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8rb+RpPbMzpGPWvZ4eXxTor0cqmyWHiW/eaWxa4Pc8c=", "user_session"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Login"}
+  [1m[36mUser Load (3.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users".username LIKE 'admin') LIMIT 1[0m
+Redirected to http://localhost:3000/traceroutes
+Completed 302 Found in 74ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/traceroutes" for 127.0.0.1 at 2012-10-27 11:52:41 -0700
+Processing by TraceroutesController#index as HTML
+  [1m[35mServer Load (3.3ms)[0m  SELECT "servers".* FROM "servers" 
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (2.0ms)
+  Rendered traceroutes/index.html.erb within layouts/application (240.0ms)
+  [1m[36mUser Load (3.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Completed 200 OK in 582ms (Views: 553.3ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-27 11:52:42 -0700
+Served asset /application.css - 304 Not Modified (30ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-27 11:52:43 -0700
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-27 11:52:43 -0700
+Served asset /traceroutes.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-27 11:52:43 -0700
+Served asset /perf_sonar.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-27 11:52:44 -0700
+Served asset /servers.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-27 11:52:44 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2012-10-27 11:52:44 -0700
+Served asset /twitter/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:44 -0700
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:45 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:45 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:45 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:46 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:46 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:46 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:47 -0700
+Served asset /perf_sonar.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:47 -0700
+Served asset /servers.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:47 -0700
+Served asset /traceroutes.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:47 -0700
+Served asset /twitter/bootstrap/affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:48 -0700
+Served asset /twitter/bootstrap/alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:48 -0700
+Served asset /twitter/bootstrap/button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:48 -0700
+Served asset /twitter/bootstrap/carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:48 -0700
+Served asset /twitter/bootstrap/collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:48 -0700
+Served asset /twitter/bootstrap/dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:49 -0700
+Served asset /twitter/bootstrap/modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:49 -0700
+Served asset /twitter/bootstrap/tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:49 -0700
+Served asset /twitter/bootstrap/popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:49 -0700
+Served asset /twitter/bootstrap/scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:50 -0700
+Served asset /twitter/bootstrap/tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:50 -0700
+Served asset /twitter/bootstrap/transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/typeahead.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:50 -0700
+Served asset /twitter/bootstrap/typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:50 -0700
+Served asset /twitter/bootstrap.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-27 11:52:51 -0700
+Served asset /application.js - 304 Not Modified (45ms)
+
+
+Started GET "/assets/subtle_surface_@2X.png" for 127.0.0.1 at 2012-10-27 11:52:51 -0700
+Served asset /subtle_surface_@2X.png - 304 Not Modified (4ms)
+
+
+Started GET "/servers" for 127.0.0.1 at 2012-10-27 11:53:04 -0700
+Processing by ServersController#index as HTML
+  [1m[36mUser Load (3.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mServer Load (3.6ms)[0m  [1mSELECT "servers".* FROM "servers" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "servers".* FROM "servers" 
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.9ms)
+  Rendered servers/index.html.erb within layouts/application (62.5ms)
+Completed 200 OK in 352ms (Views: 268.3ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-27 11:53:05 -0700
+Served asset /application.css - 304 Not Modified (23ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-27 11:53:05 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-27 11:53:06 -0700
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-27 11:53:06 -0700
+Served asset /servers.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-27 11:53:06 -0700
+Served asset /traceroutes.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-27 11:53:06 -0700
+Served asset /perf_sonar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2012-10-27 11:53:07 -0700
+Served asset /twitter/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:07 -0700
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:07 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:07 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:08 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:08 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:08 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:08 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:09 -0700
+Served asset /perf_sonar.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:09 -0700
+Served asset /servers.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:09 -0700
+Served asset /traceroutes.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:09 -0700
+Served asset /twitter/bootstrap/affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:10 -0700
+Served asset /twitter/bootstrap/alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:10 -0700
+Served asset /twitter/bootstrap/button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:10 -0700
+Served asset /twitter/bootstrap/carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:10 -0700
+Served asset /twitter/bootstrap/collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:11 -0700
+Served asset /twitter/bootstrap/dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:11 -0700
+Served asset /twitter/bootstrap/modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:11 -0700
+Served asset /twitter/bootstrap/tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:11 -0700
+Served asset /twitter/bootstrap/popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:12 -0700
+Served asset /twitter/bootstrap/scrollspy.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:12 -0700
+Served asset /twitter/bootstrap/tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:12 -0700
+Served asset /twitter/bootstrap/transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/typeahead.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:12 -0700
+Served asset /twitter/bootstrap/typeahead.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:13 -0700
+Served asset /twitter/bootstrap.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:13 -0700
+Served asset /application.js - 304 Not Modified (47ms)
+
+
+Started GET "/assets/subtle_surface_@2X.png" for 127.0.0.1 at 2012-10-27 11:53:13 -0700
+Served asset /subtle_surface_@2X.png - 304 Not Modified (5ms)
+
+
+Started GET "/servers/new" for 127.0.0.1 at 2012-10-27 11:53:36 -0700
+Processing by ServersController#new as HTML
+  [1m[36mUser Load (2.8ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  Rendered servers/_form.html.erb (2.4ms)
+  Rendered servers/new.html.erb within layouts/application (38.4ms)
+Completed 200 OK in 314ms (Views: 307.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-27 11:53:36 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-27 11:53:37 -0700
+Served asset /application.css - 304 Not Modified (31ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-27 11:53:37 -0700
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-27 11:53:37 -0700
+Served asset /traceroutes.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-27 11:53:37 -0700
+Served asset /servers.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-27 11:53:38 -0700
+Served asset /perf_sonar.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2012-10-27 11:53:38 -0700
+Served asset /twitter/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:38 -0700
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:38 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:39 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:39 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:39 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:40 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:40 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:40 -0700
+Served asset /perf_sonar.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:40 -0700
+Served asset /servers.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:41 -0700
+Served asset /traceroutes.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:41 -0700
+Served asset /twitter/bootstrap/affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:41 -0700
+Served asset /twitter/bootstrap/alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:41 -0700
+Served asset /twitter/bootstrap/button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:42 -0700
+Served asset /twitter/bootstrap/carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:42 -0700
+Served asset /twitter/bootstrap/collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:42 -0700
+Served asset /twitter/bootstrap/dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:42 -0700
+Served asset /twitter/bootstrap/modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:43 -0700
+Served asset /twitter/bootstrap/tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:43 -0700
+Served asset /twitter/bootstrap/popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:43 -0700
+Served asset /twitter/bootstrap/scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:43 -0700
+Served asset /twitter/bootstrap/tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:44 -0700
+Served asset /twitter/bootstrap/transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/typeahead.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:44 -0700
+Served asset /twitter/bootstrap/typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:44 -0700
+Served asset /twitter/bootstrap.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:44 -0700
+Served asset /application.js - 304 Not Modified (52ms)
+
+
+Started GET "/assets/subtle_surface_@2X.png" for 127.0.0.1 at 2012-10-27 11:53:45 -0700
+Served asset /subtle_surface_@2X.png - 304 Not Modified (8ms)
+
+
+Started GET "/servers" for 127.0.0.1 at 2012-10-27 11:53:50 -0700
+Processing by ServersController#index as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mServer Load (3.4ms)[0m  [1mSELECT "servers".* FROM "servers" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "servers".* FROM "servers" 
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (1.8ms)
+  Rendered servers/index.html.erb within layouts/application (67.3ms)
+Completed 200 OK in 410ms (Views: 392.6ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-27 11:53:51 -0700
+Served asset /application.css - 304 Not Modified (27ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-27 11:53:51 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-27 11:53:51 -0700
+Served asset /servers.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-27 11:53:52 -0700
+Served asset /perf_sonar.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-27 11:53:52 -0700
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-27 11:53:52 -0700
+Served asset /traceroutes.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2012-10-27 11:53:53 -0700
+Served asset /twitter/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:53 -0700
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:53 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:53 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:54 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:54 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:54 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:54 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:54 -0700
+Served asset /perf_sonar.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:55 -0700
+Served asset /servers.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:55 -0700
+Served asset /traceroutes.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:55 -0700
+Served asset /twitter/bootstrap/affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:56 -0700
+Served asset /twitter/bootstrap/alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:56 -0700
+Served asset /twitter/bootstrap/button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:56 -0700
+Served asset /twitter/bootstrap/carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:56 -0700
+Served asset /twitter/bootstrap/collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:56 -0700
+Served asset /twitter/bootstrap/dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:57 -0700
+Served asset /twitter/bootstrap/modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:57 -0700
+Served asset /twitter/bootstrap/tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:57 -0700
+Served asset /twitter/bootstrap/popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:57 -0700
+Served asset /twitter/bootstrap/scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:58 -0700
+Served asset /twitter/bootstrap/tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:58 -0700
+Served asset /twitter/bootstrap/transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/typeahead.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:58 -0700
+Served asset /twitter/bootstrap/typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:58 -0700
+Served asset /twitter/bootstrap.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-27 11:53:59 -0700
+Served asset /application.js - 304 Not Modified (37ms)
+
+
+Started GET "/assets/subtle_surface_@2X.png" for 127.0.0.1 at 2012-10-27 11:53:59 -0700
+Served asset /subtle_surface_@2X.png - 304 Not Modified (7ms)
+
+
+Started GET "/servers/1" for 127.0.0.1 at 2012-10-27 11:54:19 -0700
+Processing by ServersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mServer Load (3.8ms)[0m  [1mSELECT "servers".* FROM "servers" WHERE "servers"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered servers/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 300ms (Views: 288.6ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-27 11:54:20 -0700
+Served asset /application.css - 304 Not Modified (27ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-27 11:54:20 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-27 11:54:21 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-27 11:54:21 -0700
+Served asset /traceroutes.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-27 11:54:21 -0700
+Served asset /servers.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-27 11:54:21 -0700
+Served asset /perf_sonar.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2012-10-27 11:54:21 -0700
+Served asset /twitter/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-27 11:54:22 -0700
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-27 11:54:22 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-27 11:54:22 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-27 11:54:23 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-27 11:54:23 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-27 11:54:23 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-27 11:54:23 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-27 11:54:24 -0700
+Served asset /perf_sonar.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-27 11:54:24 -0700
+Served asset /servers.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-27 11:54:24 -0700
+Served asset /traceroutes.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2012-10-27 11:54:24 -0700
+Served asset /twitter/bootstrap/affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2012-10-27 11:54:25 -0700
+Served asset /twitter/bootstrap/alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2012-10-27 11:54:25 -0700
+Served asset /twitter/bootstrap/button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2012-10-27 11:54:25 -0700
+Served asset /twitter/bootstrap/carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2012-10-27 11:54:25 -0700
+Served asset /twitter/bootstrap/collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2012-10-27 11:54:26 -0700
+Served asset /twitter/bootstrap/dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2012-10-27 11:54:26 -0700
+Served asset /twitter/bootstrap/modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2012-10-27 11:54:26 -0700
+Served asset /twitter/bootstrap/tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2012-10-27 11:54:26 -0700
+Served asset /twitter/bootstrap/popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2012-10-27 11:54:27 -0700
+Served asset /twitter/bootstrap/scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2012-10-27 11:54:27 -0700
+Served asset /twitter/bootstrap/tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2012-10-27 11:54:27 -0700
+Served asset /twitter/bootstrap/transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/typeahead.js?body=1" for 127.0.0.1 at 2012-10-27 11:54:27 -0700
+Served asset /twitter/bootstrap/typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-10-27 11:54:28 -0700
+Served asset /twitter/bootstrap.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-27 11:54:28 -0700
+Served asset /application.js - 304 Not Modified (26ms)
+
+
+Started GET "/assets/subtle_surface_@2X.png" for 127.0.0.1 at 2012-10-27 11:54:29 -0700
+Served asset /subtle_surface_@2X.png - 304 Not Modified (9ms)
+
+
+Started GET "/servers/servers" for 127.0.0.1 at 2012-10-27 11:54:45 -0700
+Processing by ServersController#show as HTML
+  Parameters: {"id"=>"servers"}
+  [1m[35mUser Load (5.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mServer Load (9.5ms)[0m  SELECT "servers".* FROM "servers" WHERE "servers"."id" = ? LIMIT 1  [["id", "servers"]]
+Completed 500 Internal Server Error in 20ms
+
+ActiveRecord::RecordNotFound (Couldn't find Server with id=servers):
+  app/controllers/servers_controller.rb:19:in `show'
+
+
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (43.9ms)
+
+
+Started GET "/servers/servers" for 127.0.0.1 at 2012-10-27 11:56:21 -0700
+Processing by ServersController#show as HTML
+  Parameters: {"id"=>"servers"}
+  [1m[36mUser Load (3.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mServer Load (2.9ms)[0m  [1mSELECT "servers".* FROM "servers" WHERE "servers"."id" = ? LIMIT 1[0m  [["id", "servers"]]
+Completed 500 Internal Server Error in 12ms
+
+ActiveRecord::RecordNotFound (Couldn't find Server with id=servers):
+  app/controllers/servers_controller.rb:19:in `show'
+
+
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.9ms)
+
+
+Started GET "/servers" for 127.0.0.1 at 2012-10-27 11:56:27 -0700
+Processing by ServersController#index as HTML
+  [1m[35mUser Load (3.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mServer Load (3.2ms)[0m  SELECT "servers".* FROM "servers" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "servers".* FROM "servers" [0m
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (1.0ms)
+  Rendered servers/index.html.erb within layouts/application (29.8ms)
+Completed 200 OK in 306ms (Views: 255.9ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-27 11:56:27 -0700
+Served asset /application.css - 304 Not Modified (54ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-27 11:56:28 -0700
+Served asset /perf_sonar.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-27 11:56:28 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-27 11:56:28 -0700
+Served asset /scaffolds.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-27 11:56:29 -0700
+Served asset /traceroutes.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-27 11:56:29 -0700
+Served asset /servers.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2012-10-27 11:56:29 -0700
+Served asset /twitter/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:29 -0700
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:30 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:30 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:30 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:30 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:30 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:31 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:31 -0700
+Served asset /perf_sonar.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:31 -0700
+Served asset /servers.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:31 -0700
+Served asset /traceroutes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:31 -0700
+Served asset /twitter/bootstrap/affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:31 -0700
+Served asset /twitter/bootstrap/alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:32 -0700
+Served asset /twitter/bootstrap/button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:32 -0700
+Served asset /twitter/bootstrap/carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:32 -0700
+Served asset /twitter/bootstrap/collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:32 -0700
+Served asset /twitter/bootstrap/dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:32 -0700
+Served asset /twitter/bootstrap/modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:33 -0700
+Served asset /twitter/bootstrap/tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:33 -0700
+Served asset /twitter/bootstrap/popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:33 -0700
+Served asset /twitter/bootstrap/scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:33 -0700
+Served asset /twitter/bootstrap/tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:33 -0700
+Served asset /twitter/bootstrap/transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/typeahead.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:34 -0700
+Served asset /twitter/bootstrap/typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:34 -0700
+Served asset /twitter/bootstrap.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:34 -0700
+Served asset /application.js - 304 Not Modified (55ms)
+
+
+Started GET "/assets/subtle_surface_@2X.png" for 127.0.0.1 at 2012-10-27 11:56:35 -0700
+Served asset /subtle_surface_@2X.png - 304 Not Modified (5ms)
+
+
+Started GET "/servers" for 127.0.0.1 at 2012-10-27 11:56:37 -0700
+Processing by ServersController#index as HTML
+  [1m[35mUser Load (3.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mServer Load (3.3ms)[0m  SELECT "servers".* FROM "servers" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "servers".* FROM "servers" [0m
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (1.0ms)
+  Rendered servers/index.html.erb within layouts/application (74.8ms)
+Completed 200 OK in 365ms (Views: 351.8ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-27 11:56:38 -0700
+Served asset /application.css - 304 Not Modified (27ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-27 11:56:38 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-27 11:56:38 -0700
+Served asset /servers.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-27 11:56:39 -0700
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-27 11:56:39 -0700
+Served asset /traceroutes.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-27 11:56:39 -0700
+Served asset /perf_sonar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2012-10-27 11:56:39 -0700
+Served asset /twitter/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:39 -0700
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:40 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:40 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:40 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:40 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:40 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:41 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:41 -0700
+Served asset /perf_sonar.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:41 -0700
+Served asset /servers.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:41 -0700
+Served asset /traceroutes.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:41 -0700
+Served asset /twitter/bootstrap/affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:41 -0700
+Served asset /twitter/bootstrap/alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:42 -0700
+Served asset /twitter/bootstrap/button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:42 -0700
+Served asset /twitter/bootstrap/carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:42 -0700
+Served asset /twitter/bootstrap/collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:42 -0700
+Served asset /twitter/bootstrap/dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:42 -0700
+Served asset /twitter/bootstrap/modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:43 -0700
+Served asset /twitter/bootstrap/tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:43 -0700
+Served asset /twitter/bootstrap/popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:43 -0700
+Served asset /twitter/bootstrap/scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:43 -0700
+Served asset /twitter/bootstrap/tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:44 -0700
+Served asset /twitter/bootstrap/transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/typeahead.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:44 -0700
+Served asset /twitter/bootstrap/typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:44 -0700
+Served asset /twitter/bootstrap.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:44 -0700
+Served asset /application.js - 304 Not Modified (45ms)
+
+
+Started GET "/assets/subtle_surface_@2X.png" for 127.0.0.1 at 2012-10-27 11:56:45 -0700
+Served asset /subtle_surface_@2X.png - 304 Not Modified (3ms)
+
+
+Started GET "/servers/1/edit" for 127.0.0.1 at 2012-10-27 11:56:53 -0700
+Processing by ServersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (25.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mServer Load (10.5ms)[0m  SELECT "servers".* FROM "servers" WHERE "servers"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered servers/_form.html.erb (1.9ms)
+  Rendered servers/edit.html.erb within layouts/application (41.0ms)
+Completed 200 OK in 448ms (Views: 398.7ms | ActiveRecord: 35.7ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-27 11:56:54 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-27 11:56:54 -0700
+Served asset /application.css - 304 Not Modified (28ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-27 11:56:54 -0700
+Served asset /servers.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-27 11:56:55 -0700
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-27 11:56:55 -0700
+Served asset /perf_sonar.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-27 11:56:55 -0700
+Served asset /traceroutes.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2012-10-27 11:56:55 -0700
+Served asset /twitter/bootstrap.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:56 -0700
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:56 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:56 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:56 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:57 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:57 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:57 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:57 -0700
+Served asset /perf_sonar.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:57 -0700
+Served asset /servers.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:57 -0700
+Served asset /traceroutes.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:58 -0700
+Served asset /twitter/bootstrap/affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:58 -0700
+Served asset /twitter/bootstrap/alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:58 -0700
+Served asset /twitter/bootstrap/button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:58 -0700
+Served asset /twitter/bootstrap/carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:59 -0700
+Served asset /twitter/bootstrap/collapse.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:59 -0700
+Served asset /twitter/bootstrap/dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:59 -0700
+Served asset /twitter/bootstrap/modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2012-10-27 11:56:59 -0700
+Served asset /twitter/bootstrap/tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:00 -0700
+Served asset /twitter/bootstrap/popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:00 -0700
+Served asset /twitter/bootstrap/scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:00 -0700
+Served asset /twitter/bootstrap/tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:00 -0700
+Served asset /twitter/bootstrap/transition.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/twitter/bootstrap/typeahead.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:00 -0700
+Served asset /twitter/bootstrap/typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:01 -0700
+Served asset /twitter/bootstrap.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:01 -0700
+Served asset /application.js - 304 Not Modified (37ms)
+
+
+Started GET "/assets/subtle_surface_@2X.png" for 127.0.0.1 at 2012-10-27 11:57:01 -0700
+Served asset /subtle_surface_@2X.png - 304 Not Modified (2ms)
+
+
+Started GET "/servers" for 127.0.0.1 at 2012-10-27 11:57:03 -0700
+Processing by ServersController#index as HTML
+  [1m[36mUser Load (7.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mServer Load (2.6ms)[0m  [1mSELECT "servers".* FROM "servers" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "servers".* FROM "servers" 
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.9ms)
+  Rendered servers/index.html.erb within layouts/application (66.2ms)
+Completed 200 OK in 290ms (Views: 274.9ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-27 11:57:03 -0700
+Served asset /perf_sonar.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-27 11:57:04 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-27 11:57:04 -0700
+Served asset /application.css - 304 Not Modified (31ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-27 11:57:04 -0700
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-27 11:57:04 -0700
+Served asset /traceroutes.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-27 11:57:04 -0700
+Served asset /servers.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2012-10-27 11:57:04 -0700
+Served asset /twitter/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:05 -0700
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:05 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:05 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:05 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:06 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:06 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:06 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:06 -0700
+Served asset /perf_sonar.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:06 -0700
+Served asset /servers.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:07 -0700
+Served asset /traceroutes.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:07 -0700
+Served asset /twitter/bootstrap/affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:07 -0700
+Served asset /twitter/bootstrap/alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:07 -0700
+Served asset /twitter/bootstrap/button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:07 -0700
+Served asset /twitter/bootstrap/carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:08 -0700
+Served asset /twitter/bootstrap/collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:08 -0700
+Served asset /twitter/bootstrap/dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:08 -0700
+Served asset /twitter/bootstrap/modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:08 -0700
+Served asset /twitter/bootstrap/tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:08 -0700
+Served asset /twitter/bootstrap/popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:08 -0700
+Served asset /twitter/bootstrap/scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:09 -0700
+Served asset /twitter/bootstrap/tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:09 -0700
+Served asset /twitter/bootstrap/transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/typeahead.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:09 -0700
+Served asset /twitter/bootstrap/typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:09 -0700
+Served asset /twitter/bootstrap.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:09 -0700
+Served asset /application.js - 304 Not Modified (38ms)
+
+
+Started GET "/assets/subtle_surface_@2X.png" for 127.0.0.1 at 2012-10-27 11:57:10 -0700
+Served asset /subtle_surface_@2X.png - 304 Not Modified (6ms)
+
+
+Started GET "/servers" for 127.0.0.1 at 2012-10-27 11:57:52 -0700
+Processing by ServersController#index as HTML
+  [1m[36mUser Load (3.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mServer Load (3.3ms)[0m  [1mSELECT "servers".* FROM "servers" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "servers".* FROM "servers" 
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.9ms)
+  Rendered servers/index.html.erb within layouts/application (65.5ms)
+Completed 200 OK in 273ms (Views: 259.4ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-27 11:57:53 -0700
+Served asset /perf_sonar.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-27 11:57:53 -0700
+Served asset /application.css - 304 Not Modified (31ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-27 11:57:53 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-27 11:57:54 -0700
+Served asset /traceroutes.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-27 11:57:54 -0700
+Served asset /servers.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-27 11:57:54 -0700
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2012-10-27 11:57:54 -0700
+Served asset /twitter/bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:54 -0700
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:54 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:55 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:55 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:55 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:55 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:55 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:56 -0700
+Served asset /perf_sonar.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:56 -0700
+Served asset /servers.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:56 -0700
+Served asset /traceroutes.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/twitter/bootstrap/affix.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:56 -0700
+Served asset /twitter/bootstrap/affix.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/alert.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:56 -0700
+Served asset /twitter/bootstrap/alert.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/button.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:57 -0700
+Served asset /twitter/bootstrap/button.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:57 -0700
+Served asset /twitter/bootstrap/carousel.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:57 -0700
+Served asset /twitter/bootstrap/collapse.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:57 -0700
+Served asset /twitter/bootstrap/dropdown.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/modal.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:57 -0700
+Served asset /twitter/bootstrap/modal.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:58 -0700
+Served asset /twitter/bootstrap/tooltip.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/popover.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:58 -0700
+Served asset /twitter/bootstrap/popover.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:58 -0700
+Served asset /twitter/bootstrap/scrollspy.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/tab.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:58 -0700
+Served asset /twitter/bootstrap/tab.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/transition.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:58 -0700
+Served asset /twitter/bootstrap/transition.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap/typeahead.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:59 -0700
+Served asset /twitter/bootstrap/typeahead.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/twitter/bootstrap.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:59 -0700
+Served asset /twitter/bootstrap.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-27 11:57:59 -0700
+Served asset /application.js - 304 Not Modified (46ms)
+
+
+Started GET "/assets/subtle_surface_@2X.png" for 127.0.0.1 at 2012-10-27 11:58:00 -0700
+Served asset /subtle_surface_@2X.png - 304 Not Modified (5ms)

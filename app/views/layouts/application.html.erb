@@ -12,8 +12,8 @@
     	<div class="navbar-inner">
     		<a class="brand">PerfSONAR</a>
     		<ul class="nav">
-    			<li><a href="servers">Server List</a></li>
-    			<li><a href="traceroutes">Traceroute Query</a></li>
+    			<li><%= link_to "Servers", servers_path %></li>
+    			<li><%= link_to "Traceroute Query", traceroutes_path %></li>
     			<% if current_user %>
     				<li><%= link_to "Edit Profile", users_path%></li>
     				<li><%= link_to "Logout", :logout %></li>
