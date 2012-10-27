@@ -8,6 +8,16 @@
 </head>
 <body>
 
+<div id="user_nav">
+  <% if current_user %>
+    <%= link_to "Server List", servers_path %> |
+    <%= link_to "Edit Profile", users_path %> |
+    <%= link_to "Logout", :logout %>
+  <% else %>
+    <%= link_to "Register", new_user_path %> |
+    <%= link_to "Login", :login %>
+  <% end %>
+</div>
 <%= yield %>
 
 <%= yield :scripts %>

@@ -1,4 +1,5 @@
 class ServersController < ApplicationController
+ before_filter :require_user
   # GET /servers
   # GET /servers.json
   def index
