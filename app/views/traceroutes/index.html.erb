@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 <h1>Select servers to query</h1>
 
+=======
+<h1>Select servers to perform traceroute</h1>
+<p id="notice"><%= notice %></p>
+>>>>>>> 3a14af00306dc05ee554d3be7d192a3889c47cf0
   <%= form_tag( handle_render_traceroute_path ) do %>
 
     <%=select("Server", "1", @servers.collect {|s| [s.ip, s.id]}, {:include_blank => '--Select a server--'}) %>

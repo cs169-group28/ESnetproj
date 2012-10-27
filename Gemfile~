@@ -13,6 +13,10 @@ group :development, :test do
   gem 'launchy'          # a useful debugging aid for user stories
   gem 'rspec-rails'
   gem 'simplecov'
+<<<<<<< HEAD
+=======
+  gem 'authlogic'
+>>>>>>> 3a14af00306dc05ee554d3be7d192a3889c47cf0
 end
 
 group :production do

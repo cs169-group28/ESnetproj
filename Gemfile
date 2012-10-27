@@ -13,6 +13,8 @@ group :development, :test do
   gem 'launchy'          # a useful debugging aid for user stories
   gem 'rspec-rails'
   gem 'simplecov'
+  gem 'authlogic'
+  gem 'nifty-generators'
 end
 
 group :production do
@@ -50,5 +52,10 @@ gem 'jquery-rails'
  gem 'debugger'
 
 gem 'gmaps4rails'
+<<<<<<< HEAD
 gem "therubyracer", :require => 'v8'
 
+=======
+
+gem "mocha", :group => :test
+>>>>>>> 3a14af00306dc05ee554d3be7d192a3889c47cf0

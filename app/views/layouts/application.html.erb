@@ -9,7 +9,21 @@
 <body>
   <div class="frame">
 
+<<<<<<< HEAD
     <%= yield %>
+=======
+<div id="user_nav">
+  <% if current_user %>
+    <%= link_to "Server List", servers_path %> |
+    <%= link_to "Edit Profile", users_path %> |
+    <%= link_to "Logout", :logout %>
+  <% else %>
+    <%= link_to "Register", new_user_path %> |
+    <%= link_to "Login", :login %>
+  <% end %>
+</div>
+<%= yield %>
+>>>>>>> 3a14af00306dc05ee554d3be7d192a3889c47cf0
 
     <%= yield :scripts %>
   </div>
