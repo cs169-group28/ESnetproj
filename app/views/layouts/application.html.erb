@@ -5,9 +5,9 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
 </head>
 <body>
-
 <div id="user_nav">
   <% if current_user %>
     <%= link_to "Server List", servers_path %> |
@@ -18,8 +18,64 @@
     <%= link_to "Login", :login %>
   <% end %>
 </div>
+
 <%= yield %>
 
 <%= yield :scripts %>
+
+<div id="viz"></div>
+<% if request.path_parameters.has_value?('traceroutes') %>
+    <p> Graph of unrealistic data </p>
+
+    <script type="text/javascript">
+
+var dataset = [],
+    i = 0;    
+for(i=0; i<5; i++){
+    dataset.push(Math.random()*100);
+}    
+
+var sampleSVG = d3.select("#viz")
+    .append("svg")
+    .attr("width", 500)
+    .attr("height", 300); 
+
+   var node = sampleSVG.selectAll("node")
+    .data(dataset)
+    .enter().append("circle")
+    .style("stroke", "gray")
+    .style("fill", "white")
+    
+    .attr("r", 30)
+    .attr("cx", function(d, i){return i*90+40})
+    .attr("cy", 70)
+    .text(function(d, cx) { return cx; })
+    .on("mouseover", function(){d3.select(this).style("fill", "aliceblue");})
+    .on("mouseout", function(){d3.select(this).style("fill", "white");})
+    .on("mousedown", animateFirstStep);
+
+ node.append("title")
+       .text(function(d) { return d; });
+
+function animateFirstStep(){
+    d3.select(this)
+      .transition()            
+        .delay(0)            
+        .duration(1000)
+        .attr("r", 10)
+        .style("fill", "steelblue")
+       
+        .each("end", animateSecondStep);
+};
+
+function animateSecondStep(){
+    d3.select(this)
+      .transition()
+        .duration(1000)
+        .attr("r", 35);
+};
+
+    </script>
+<% end %>
 </body>
 </html>
