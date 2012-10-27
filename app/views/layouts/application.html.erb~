@@ -23,12 +23,6 @@
     <%= link_to "Login", :login %>
   <% end %>
 </div>
-<%= yield %>
->>>>>>> 3a14af00306dc05ee554d3be7d192a3889c47cf0
-
-    <%= yield :scripts %>
-  </div>
-
 <div id="viz"></div>
 <% if request.path_parameters.has_value?('traceroutes') %>
     <p> Graph of unrealistic data </p>
@@ -83,6 +77,13 @@ function animateSecondStep(){
 
     </script>
 <% end %>
+<%= yield %>
+>>>>>>> 3a14af00306dc05ee554d3be7d192a3889c47cf0
+
+    <%= yield :scripts %>
+  </div>
+
+
 </body>
 </html>
 
