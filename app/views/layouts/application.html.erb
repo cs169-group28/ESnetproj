@@ -7,25 +7,25 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div class="navbar">
+    	<div class="navbar-inner">
+    		<a class="brand">PerfSONAR</a>
+    		<ul class="nav">
+    			<li><a href="servers">Server List</a></li>
+    			<li><a href="traceroutes">Traceroute Query</a></li>
+    			<% if current_user %>
+    				<li><%= link_to "Edit Profile", users_path%></li>
+    				<li><%= link_to "Logout", :logout %></li>
+  				<% else %>
+  	    			<li><%= link_to "Register", new_user_path %></li>
+    				<li><%= link_to "Login", :login %></li>
+ 	 			<% end %>
+    		</ul>
+    	</div>
+    </div>
   <div class="frame">
-
-<<<<<<< HEAD
-    <%= yield %>
-=======
-<div id="user_nav">
-  <% if current_user %>
-    <%= link_to "Server List", servers_path %> |
-    <%= link_to "Edit Profile", users_path %> |
-    <%= link_to "Logout", :logout %>
-  <% else %>
-    <%= link_to "Register", new_user_path %> |
-    <%= link_to "Login", :login %>
-  <% end %>
-</div>
-<%= yield %>
->>>>>>> 3a14af00306dc05ee554d3be7d192a3889c47cf0
-
-    <%= yield :scripts %>
+  	<%= yield %>
+	<%= yield :scripts %>    
   </div>
 </body>
 </html>

@@ -197,12 +197,9 @@ DEPENDENCIES
   gmaps4rails
   jquery-rails
   launchy
-<<<<<<< HEAD
   less-rails-bootstrap
-=======
   mocha
   nifty-generators
->>>>>>> 3a14af00306dc05ee554d3be7d192a3889c47cf0
   pg
   rails (= 3.2.7)
   rspec-rails
