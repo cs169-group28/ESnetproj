@@ -11,5 +11,28 @@
  *= require_self
  *= require_tree .
  */
-
+//=  require twitter/bootstrap
 //= require gmaps4rails
+
+
+.table {
+    margin-bottom: 0px;
+}
+
+html { 
+    background-image: image-url('subtle_surface_@2X.png');
+    background-repeat: repeat-y;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.frame {
+    background: Transparent;
+    position: absolute;
+    padding-left: 10px;
+    height: 100%;
+    frame: 100%;
+ 
+}

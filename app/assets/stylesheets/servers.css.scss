@@ -1,3 +1,21 @@
 // Place all the styles related to the servers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#map_frame{
+	margin-bottom: 20px;
+	border:2px solid;
+	width: 815px;
+}
+
+th, td {
+    border: 1px solid black;
+    overflow: hidden;
+    width: 100px;
+}
+
+td#actions {
+    overflow: visible;
+}
+
+      

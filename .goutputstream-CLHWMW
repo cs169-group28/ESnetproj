@@ -29,7 +29,6 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
-  gem 'less-rails-bootstrap'
 end
 
 gem 'jquery-rails'
@@ -50,5 +49,5 @@ gem 'jquery-rails'
  gem 'debugger'
 
 gem 'gmaps4rails'
-gem "therubyracer", :require => 'v8'
 
+gem 'less-rails-bootstrap'
