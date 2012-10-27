@@ -8,14 +8,11 @@
   <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
 </head>
 <body>
-<<<<<<< HEAD
-=======
   <div class="frame">
 
 <<<<<<< HEAD
     <%= yield %>
 =======
->>>>>>> 618e289326e8ac5ddd3746ab3a722df6c321023c
 <div id="user_nav">
   <% if current_user %>
     <%= link_to "Server List", servers_path %> |
@@ -26,13 +23,6 @@
     <%= link_to "Login", :login %>
   <% end %>
 </div>
-
-<%= yield %>
->>>>>>> 3a14af00306dc05ee554d3be7d192a3889c47cf0
-
-<<<<<<< HEAD
-<%= yield :scripts %>
-
 <div id="viz"></div>
 <% if request.path_parameters.has_value?('traceroutes') %>
     <p> Graph of unrealistic data </p>
@@ -87,9 +77,13 @@ function animateSecondStep(){
 
     </script>
 <% end %>
-=======
+<%= yield %>
+>>>>>>> 3a14af00306dc05ee554d3be7d192a3889c47cf0
+
     <%= yield :scripts %>
   </div>
->>>>>>> 618e289326e8ac5ddd3746ab3a722df6c321023c
+
+
 </body>
 </html>
+
