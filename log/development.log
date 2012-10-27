@@ -19820,3 +19820,2843 @@ Served asset /traceroutes.js - 304 Not Modified (0ms)
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-26 19:12:29 -0700
 Served asset /application.js - 304 Not Modified (7ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/traceroutes/" for 127.0.0.1 at 2012-10-26 19:22:25 -0700
+Processing by TraceroutesController#index as HTML
+  [1m[36mServer Load (0.1ms)[0m  [1mSELECT "servers".* FROM "servers" [0m
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (1.8ms)
+  Rendered traceroutes/index.html.erb within layouts/application (101.0ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Completed 200 OK in 516ms (Views: 341.0ms | ActiveRecord: 13.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:25 -0700
+Served asset /application.css - 304 Not Modified (28ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:25 -0700
+Served asset /servers.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:25 -0700
+Served asset /perf_sonar.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:25 -0700
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:25 -0700
+Served asset /traceroutes.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:25 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:25 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:25 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:25 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:25 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:25 -0700
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:25 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:25 -0700
+Served asset /perf_sonar.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:25 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:26 -0700
+Served asset /traceroutes.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:26 -0700
+Served asset /servers.js - 304 Not Modified (73ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:26 -0700
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started GET "/servers" for 127.0.0.1 at 2012-10-26 19:22:30 -0700
+Processing by ServersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mServer Load (0.3ms)[0m  SELECT "servers".* FROM "servers" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "servers".* FROM "servers" [0m
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.9ms)
+  Rendered servers/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 51ms (Views: 23.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:30 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:30 -0700
+Served asset /perf_sonar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:30 -0700
+Served asset /servers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:30 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:30 -0700
+Served asset /traceroutes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:30 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:30 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:30 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:30 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:30 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:30 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:30 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:30 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:30 -0700
+Served asset /perf_sonar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:30 -0700
+Served asset /servers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:30 -0700
+Served asset /traceroutes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:30 -0700
+Served asset /application.js - 304 Not Modified (63ms)
+
+
+Started GET "/servers/1" for 127.0.0.1 at 2012-10-26 19:22:33 -0700
+Processing by ServersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mServer Load (0.2ms)[0m  SELECT "servers".* FROM "servers" WHERE "servers"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered servers/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 37ms (Views: 33.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:34 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:34 -0700
+Served asset /perf_sonar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:34 -0700
+Served asset /servers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:34 -0700
+Served asset /traceroutes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:34 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:34 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:34 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:34 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:34 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:34 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:34 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:34 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:34 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:34 -0700
+Served asset /perf_sonar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:34 -0700
+Served asset /servers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:34 -0700
+Served asset /traceroutes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:34 -0700
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/servers" for 127.0.0.1 at 2012-10-26 19:22:36 -0700
+Processing by ServersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mServer Load (0.2ms)[0m  [1mSELECT "servers".* FROM "servers" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "servers".* FROM "servers" 
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.8ms)
+  Rendered servers/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 26ms (Views: 15.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:36 -0700
+Served asset /application.css - 304 Not Modified (45ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:36 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:36 -0700
+Served asset /perf_sonar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:36 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:36 -0700
+Served asset /traceroutes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:36 -0700
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:36 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:36 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:36 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:36 -0700
+Served asset /servers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:36 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:36 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:36 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:36 -0700
+Served asset /servers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:36 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:36 -0700
+Served asset /traceroutes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:36 -0700
+Served asset /perf_sonar.js - 304 Not Modified (0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-10-26 19:22:37 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" [0m
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.0. Use ':data => { :confirm => 'Text' }' instead. (called from block in _app_views_users_index_html_erb___661180337__620042038 at /home/ubuntu/ESnetproj/app/views/users/index.html.erb:18)
+  Rendered users/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 26ms (Views: 22.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:37 -0700
+Served asset /application.css - 304 Not Modified (14ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:37 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:37 -0700
+Served asset /servers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:37 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:37 -0700
+Served asset /traceroutes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:37 -0700
+Served asset /perf_sonar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:37 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:37 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:37 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:37 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:37 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:37 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:37 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:37 -0700
+Served asset /perf_sonar.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:37 -0700
+Served asset /traceroutes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:37 -0700
+Served asset /servers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:37 -0700
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/traceroutes" for 127.0.0.1 at 2012-10-26 19:22:42 -0700
+Processing by TraceroutesController#index as HTML
+  [1m[35mServer Load (0.1ms)[0m  SELECT "servers".* FROM "servers" 
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (1.7ms)
+  Rendered traceroutes/index.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Completed 200 OK in 74ms (Views: 72.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:42 -0700
+Served asset /application.css - 304 Not Modified (17ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:42 -0700
+Served asset /servers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:42 -0700
+Served asset /traceroutes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:42 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:42 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:42 -0700
+Served asset /perf_sonar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:42 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:42 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:42 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:42 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:42 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:42 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:42 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:42 -0700
+Served asset /servers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:42 -0700
+Served asset /traceroutes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:42 -0700
+Served asset /perf_sonar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:42 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2012-10-26 19:22:44 -0700
+Processing by UserSessionsController#destroy as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Redirected to http://localhost:3000/traceroutes
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/traceroutes" for 127.0.0.1 at 2012-10-26 19:22:44 -0700
+Processing by TraceroutesController#index as HTML
+  [1m[35mServer Load (0.2ms)[0m  SELECT "servers".* FROM "servers" 
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (1.7ms)
+  Rendered traceroutes/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:44 -0700
+Served asset /application.css - 304 Not Modified (13ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:44 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:44 -0700
+Served asset /servers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:44 -0700
+Served asset /perf_sonar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:44 -0700
+Served asset /traceroutes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-26 19:22:44 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:44 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:44 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:44 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:44 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:44 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:44 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:44 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:44 -0700
+Served asset /servers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:44 -0700
+Served asset /perf_sonar.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:44 -0700
+Served asset /traceroutes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-26 19:22:44 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/traceroutes" for 127.0.0.1 at 2012-10-26 19:30:19 -0700
+Processing by TraceroutesController#index as HTML
+  [1m[36mServer Load (0.3ms)[0m  [1mSELECT "servers".* FROM "servers" [0m
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (1.5ms)
+  Rendered traceroutes/index.html.erb within layouts/application (109.5ms)
+Completed 200 OK in 472ms (Views: 299.9ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:20 -0700
+Served asset /application.css - 304 Not Modified (53ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:20 -0700
+Served asset /scaffolds.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:20 -0700
+Served asset /perf_sonar.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:20 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:20 -0700
+Served asset /jquery.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:20 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:20 -0700
+Served asset /servers.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:20 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:20 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:20 -0700
+Served asset /traceroutes.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:20 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:20 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:20 -0700
+Served asset /servers.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:20 -0700
+Served asset /perf_sonar.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:20 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:20 -0700
+Served asset /traceroutes.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:20 -0700
+Served asset /application.js - 304 Not Modified (28ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2012-10-26 19:30:20 -0700
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (7.5ms)
+  Rendered user_sessions/new.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 55ms (Views: 54.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:20 -0700
+Served asset /application.css - 304 Not Modified (17ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:20 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:20 -0700
+Served asset /servers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:20 -0700
+Served asset /traceroutes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:20 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:20 -0700
+Served asset /perf_sonar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:20 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:20 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:20 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:21 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:21 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:21 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:21 -0700
+Served asset /perf_sonar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:21 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:21 -0700
+Served asset /servers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:21 -0700
+Served asset /traceroutes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:21 -0700
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2012-10-26 19:30:28 -0700
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NCz6+Y0NqtnxGfSFnqz4rKZnWAejMJ+rrMipXGGAntM=", "user_session"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Create User session"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users".username LIKE 'admin') LIMIT 1
+Redirected to http://localhost:3000/traceroutes
+Completed 302 Found in 40ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/traceroutes" for 127.0.0.1 at 2012-10-26 19:30:28 -0700
+Processing by TraceroutesController#index as HTML
+  [1m[36mServer Load (0.2ms)[0m  [1mSELECT "servers".* FROM "servers" [0m
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.8ms)
+  Rendered traceroutes/index.html.erb within layouts/application (41.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Completed 200 OK in 91ms (Views: 87.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:28 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:28 -0700
+Served asset /traceroutes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:28 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:28 -0700
+Served asset /servers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:28 -0700
+Served asset /perf_sonar.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:28 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:28 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:28 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:28 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:28 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:28 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:28 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:28 -0700
+Served asset /perf_sonar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:28 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:28 -0700
+Served asset /servers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:28 -0700
+Served asset /traceroutes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:28 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/servers" for 127.0.0.1 at 2012-10-26 19:30:31 -0700
+Processing by ServersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mServer Load (0.2ms)[0m  SELECT "servers".* FROM "servers" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "servers".* FROM "servers" [0m
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (1.0ms)
+  Rendered servers/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 55ms (Views: 24.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:31 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:31 -0700
+Served asset /perf_sonar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:31 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:31 -0700
+Served asset /servers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:31 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:31 -0700
+Served asset /traceroutes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:31 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:31 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:31 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:31 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:31 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:31 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:31 -0700
+Served asset /perf_sonar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:31 -0700
+Served asset /traceroutes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:31 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:31 -0700
+Served asset /servers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:31 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2012-10-26 19:30:33 -0700
+Processing by UserSessionsController#destroy as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Redirected to http://localhost:3000/traceroutes
+Completed 302 Found in 9ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/traceroutes" for 127.0.0.1 at 2012-10-26 19:30:33 -0700
+Processing by TraceroutesController#index as HTML
+  [1m[36mServer Load (0.2ms)[0m  [1mSELECT "servers".* FROM "servers" [0m
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (1.0ms)
+  Rendered traceroutes/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:33 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:33 -0700
+Served asset /perf_sonar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:33 -0700
+Served asset /traceroutes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:33 -0700
+Served asset /servers.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:33 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:33 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:33 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:33 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:33 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:33 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:33 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:33 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:33 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:33 -0700
+Served asset /perf_sonar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:33 -0700
+Served asset /servers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:33 -0700
+Served asset /traceroutes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:33 -0700
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/servers" for 127.0.0.1 at 2012-10-26 19:30:37 -0700
+Processing by ServersController#index as HTML
+Redirected to http://localhost:3000/user_sessions/new
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at 2012-10-26 19:30:37 -0700
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (9.0ms)
+  Rendered user_sessions/new.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 30ms (Views: 29.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:37 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:38 -0700
+Served asset /perf_sonar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:38 -0700
+Served asset /servers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:38 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:38 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:38 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:38 -0700
+Served asset /traceroutes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:38 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:38 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:38 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:38 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:38 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:38 -0700
+Served asset /perf_sonar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:38 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:38 -0700
+Served asset /traceroutes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:38 -0700
+Served asset /servers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:38 -0700
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started POST "/user_sessions" for 127.0.0.1 at 2012-10-26 19:30:45 -0700
+Processing by UserSessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NCz6+Y0NqtnxGfSFnqz4rKZnWAejMJ+rrMipXGGAntM=", "user_session"=>{"username"=>"admin", "password"=>"[FILTERED]"}, "commit"=>"Create User session"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users".username LIKE 'admin') LIMIT 1
+Redirected to http://localhost:3000/traceroutes
+Completed 302 Found in 8ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/traceroutes" for 127.0.0.1 at 2012-10-26 19:30:45 -0700
+Processing by TraceroutesController#index as HTML
+  [1m[36mServer Load (0.2ms)[0m  [1mSELECT "servers".* FROM "servers" [0m
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.8ms)
+  Rendered traceroutes/index.html.erb within layouts/application (4.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:45 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:45 -0700
+Served asset /perf_sonar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:45 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:45 -0700
+Served asset /servers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:45 -0700
+Served asset /traceroutes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:45 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:45 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:45 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:45 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:45 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:45 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:45 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:45 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:45 -0700
+Served asset /servers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:45 -0700
+Served asset /perf_sonar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:45 -0700
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:45 -0700
+Served asset /traceroutes.js - 304 Not Modified (0ms)
+
+
+Started POST "/traceroutes/handle_render" for 127.0.0.1 at 2012-10-26 19:30:51 -0700
+Processing by TraceroutesController#handle_render as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NCz6+Y0NqtnxGfSFnqz4rKZnWAejMJ+rrMipXGGAntM=", "Server"=>{"1"=>"1", "2"=>"2"}, "commit"=>"Route"}
+Redirected to http://localhost:3000/traceroutes/render_map/1/2
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/traceroutes/render_map/1/2" for 127.0.0.1 at 2012-10-26 19:30:51 -0700
+Processing by TraceroutesController#render_map as HTML
+  Parameters: {"server1"=>"1", "server2"=>"2"}
+  [1m[35mServer Load (0.2ms)[0m  SELECT "servers".* FROM "servers" WHERE "servers"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mServer Load (0.1ms)[0m  [1mSELECT "servers".* FROM "servers" WHERE "servers"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.6ms)
+  Rendered traceroutes/render_map.html.erb within layouts/application (2.3ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Completed 200 OK in 84ms (Views: 75.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:51 -0700
+Served asset /application.css - 304 Not Modified (22ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:51 -0700
+Served asset /traceroutes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:51 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:51 -0700
+Served asset /servers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:51 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:51 -0700
+Served asset /perf_sonar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:51 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:51 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:51 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:51 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:51 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:51 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:51 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:51 -0700
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:51 -0700
+Served asset /perf_sonar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:51 -0700
+Served asset /servers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:51 -0700
+Served asset /traceroutes.js - 304 Not Modified (0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-10-26 19:30:56 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" 
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.0. Use ':data => { :confirm => 'Text' }' instead. (called from block in _app_views_users_index_html_erb___960477467__619798338 at /home/ubuntu/ESnetproj/app/views/users/index.html.erb:18)
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 33ms (Views: 21.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:56 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:56 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:56 -0700
+Served asset /perf_sonar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:56 -0700
+Served asset /traceroutes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:56 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:56 -0700
+Served asset /servers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:56 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:56 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:56 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (54ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:56 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:56 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:56 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:56 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:56 -0700
+Served asset /perf_sonar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:56 -0700
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:56 -0700
+Served asset /servers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-26 19:30:56 -0700
+Served asset /traceroutes.js - 304 Not Modified (0ms)
+
+
+Started GET "/traceroutes" for 127.0.0.1 at 2012-10-26 19:30:59 -0700
+Processing by TraceroutesController#index as HTML
+  [1m[36mServer Load (0.4ms)[0m  [1mSELECT "servers".* FROM "servers" [0m
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.6ms)
+  Rendered traceroutes/index.html.erb within layouts/application (9.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1[0m
+Completed 200 OK in 29ms (Views: 26.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:59 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:59 -0700
+Served asset /perf_sonar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:59 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:59 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-26 19:30:59 -0700
+Served asset /traceroutes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:00 -0700
+Served asset /servers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:00 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:00 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:00 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:00 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:00 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:00 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:00 -0700
+Served asset /servers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:00 -0700
+Served asset /perf_sonar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:00 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:00 -0700
+Served asset /traceroutes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:00 -0700
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2012-10-26 19:31:01 -0700
+Processing by UserSessionsController#destroy as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1
+Redirected to http://localhost:3000/traceroutes
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/traceroutes" for 127.0.0.1 at 2012-10-26 19:31:01 -0700
+Processing by TraceroutesController#index as HTML
+  [1m[36mServer Load (0.2ms)[0m  [1mSELECT "servers".* FROM "servers" [0m
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (1.0ms)
+  Rendered traceroutes/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 64ms (Views: 62.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:01 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:01 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:01 -0700
+Served asset /perf_sonar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:01 -0700
+Served asset /traceroutes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:01 -0700
+Served asset /servers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:01 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:01 -0700
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:01 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:01 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:01 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:01 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:01 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:01 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:01 -0700
+Served asset /perf_sonar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:01 -0700
+Served asset /traceroutes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:01 -0700
+Served asset /servers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:01 -0700
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2012-10-26 19:31:02 -0700
+Processing by UsersController#new as HTML
+Redirected to http://localhost:3000/user_sessions/new
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at 2012-10-26 19:31:02 -0700
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (21.8ms)
+  Rendered user_sessions/new.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 44ms (Views: 43.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:02 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:02 -0700
+Served asset /perf_sonar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:02 -0700
+Served asset /servers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:02 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:02 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:02 -0700
+Served asset /traceroutes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:02 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:02 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:02 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:02 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:02 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:02 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:02 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:02 -0700
+Served asset /perf_sonar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:02 -0700
+Served asset /servers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:02 -0700
+Served asset /traceroutes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:02 -0700
+Served asset /application.js - 304 Not Modified (71ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2012-10-26 19:31:09 -0700
+Processing by UsersController#new as HTML
+Redirected to http://localhost:3000/user_sessions/new
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at 2012-10-26 19:31:09 -0700
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (12.1ms)
+  Rendered user_sessions/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 31ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:09 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:09 -0700
+Served asset /scaffolds.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:09 -0700
+Served asset /servers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:09 -0700
+Served asset /traceroutes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:09 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:09 -0700
+Served asset /perf_sonar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:09 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:09 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:09 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:09 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:09 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:09 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:09 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:09 -0700
+Served asset /servers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:09 -0700
+Served asset /perf_sonar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:09 -0700
+Served asset /traceroutes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:09 -0700
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2012-10-26 19:31:10 -0700
+Processing by UsersController#new as HTML
+Redirected to http://localhost:3000/user_sessions/new
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at 2012-10-26 19:31:10 -0700
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (11.3ms)
+  Rendered user_sessions/new.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 67ms (Views: 67.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:10 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:10 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:10 -0700
+Served asset /servers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:10 -0700
+Served asset /traceroutes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:10 -0700
+Served asset /perf_sonar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:10 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:10 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:10 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:10 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:10 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:10 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:10 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:10 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:10 -0700
+Served asset /perf_sonar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:10 -0700
+Served asset /servers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:10 -0700
+Served asset /traceroutes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:10 -0700
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2012-10-26 19:31:11 -0700
+Processing by UsersController#new as HTML
+Redirected to http://localhost:3000/user_sessions/new
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at 2012-10-26 19:31:11 -0700
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (15.6ms)
+  Rendered user_sessions/new.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 35ms (Views: 34.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:11 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:11 -0700
+Served asset /perf_sonar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:11 -0700
+Served asset /traceroutes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:11 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:11 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:11 -0700
+Served asset /servers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:11 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:11 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:11 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:11 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:11 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:11 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:11 -0700
+Served asset /perf_sonar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:11 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:11 -0700
+Served asset /servers.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:11 -0700
+Served asset /application.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:11 -0700
+Served asset /traceroutes.js - 304 Not Modified (0ms)
+
+
+Started GET "/traceroutes" for 127.0.0.1 at 2012-10-26 19:31:20 -0700
+Processing by TraceroutesController#index as HTML
+  [1m[35mServer Load (4.6ms)[0m  SELECT "servers".* FROM "servers" 
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.8ms)
+  Rendered traceroutes/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 60ms (Views: 54.6ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:20 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:20 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:20 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:20 -0700
+Served asset /perf_sonar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:20 -0700
+Served asset /traceroutes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:20 -0700
+Served asset /servers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:20 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:20 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:20 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:20 -0700
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:20 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:20 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:20 -0700
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:20 -0700
+Served asset /perf_sonar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:20 -0700
+Served asset /servers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:20 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:20 -0700
+Served asset /traceroutes.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2012-10-26 19:31:21 -0700
+Processing by UsersController#new as HTML
+Redirected to http://localhost:3000/user_sessions/new
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at 2012-10-26 19:31:21 -0700
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (18.7ms)
+  Rendered user_sessions/new.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 39ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:21 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:21 -0700
+Served asset /servers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:21 -0700
+Served asset /traceroutes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:21 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:21 -0700
+Served asset /perf_sonar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-26 19:31:21 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:22 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:22 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (46ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:22 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:22 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:22 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:22 -0700
+Served asset /jquery.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:22 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:22 -0700
+Served asset /perf_sonar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:22 -0700
+Served asset /application.js - 304 Not Modified (6ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:22 -0700
+Served asset /servers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-26 19:31:22 -0700
+Served asset /traceroutes.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2012-10-26 19:33:20 -0700
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (4.0ms)
+  Rendered users/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 28ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-26 19:33:20 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:20 -0700
+Served asset /jquery.js - 304 Not Modified (19ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-26 19:33:21 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-26 19:33:21 -0700
+Served asset /perf_sonar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-26 19:33:21 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-26 19:33:21 -0700
+Served asset /servers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-26 19:33:21 -0700
+Served asset /traceroutes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:21 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:21 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:21 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:21 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (80ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:21 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:21 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:21 -0700
+Served asset /traceroutes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:21 -0700
+Served asset /perf_sonar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:21 -0700
+Served asset /servers.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:21 -0700
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/traceroutes" for 127.0.0.1 at 2012-10-26 19:33:26 -0700
+Processing by TraceroutesController#index as HTML
+  [1m[36mServer Load (0.1ms)[0m  [1mSELECT "servers".* FROM "servers" [0m
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.8ms)
+  Rendered traceroutes/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 34ms (Views: 15.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-26 19:33:26 -0700
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-26 19:33:26 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-26 19:33:26 -0700
+Served asset /servers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-26 19:33:26 -0700
+Served asset /traceroutes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-26 19:33:26 -0700
+Served asset /perf_sonar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-26 19:33:26 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:26 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:26 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:26 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:26 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:26 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:26 -0700
+Served asset /jquery.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:26 -0700
+Served asset /perf_sonar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:26 -0700
+Served asset /servers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:26 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:26 -0700
+Served asset /traceroutes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:26 -0700
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-10-26 19:33:29 -0700
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3000/user_sessions/new
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at 2012-10-26 19:33:29 -0700
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (6.6ms)
+  Rendered user_sessions/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 21ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-26 19:33:29 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-26 19:33:29 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-26 19:33:29 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-26 19:33:29 -0700
+Served asset /perf_sonar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-26 19:33:29 -0700
+Served asset /traceroutes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-26 19:33:29 -0700
+Served asset /servers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:29 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:29 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:29 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:29 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:29 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:29 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:29 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:29 -0700
+Served asset /traceroutes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:29 -0700
+Served asset /servers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:29 -0700
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:29 -0700
+Served asset /perf_sonar.js - 304 Not Modified (2ms)
+
+
+Started GET "/users/destroy" for 127.0.0.1 at 2012-10-26 19:33:39 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"destroy"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "destroy"]]
+Completed 500 Internal Server Error in 6ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with id=destroy):
+  app/controllers/users_controller.rb:17:in `show'
+
+
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.9ms)
+
+
+Started GET "/users/current/edit" for 127.0.0.1 at 2012-10-26 19:33:46 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"current"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "current"]]
+Completed 500 Internal Server Error in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with id=current):
+  app/controllers/users_controller.rb:38:in `edit'
+
+
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.7/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.7ms)
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/actionpack-3.2.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.6ms)
+
+
+Started GET "/users/" for 127.0.0.1 at 2012-10-26 19:33:49 -0700
+Processing by UsersController#index as HTML
+Redirected to http://localhost:3000/user_sessions/new
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/user_sessions/new" for 127.0.0.1 at 2012-10-26 19:33:49 -0700
+Processing by UserSessionsController#new as HTML
+  Rendered user_sessions/_form.html.erb (56.7ms)
+  Rendered user_sessions/new.html.erb within layouts/application (57.6ms)
+Completed 200 OK in 72ms (Views: 71.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-26 19:33:49 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-26 19:33:49 -0700
+Served asset /servers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-26 19:33:49 -0700
+Served asset /traceroutes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-26 19:33:49 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-26 19:33:49 -0700
+Served asset /perf_sonar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-26 19:33:49 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:49 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:49 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:49 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:49 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:49 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:49 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:49 -0700
+Served asset /traceroutes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:49 -0700
+Served asset /servers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:49 -0700
+Served asset /perf_sonar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:49 -0700
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:49 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2012-10-26 19:33:54 -0700
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (3.7ms)
+  Rendered users/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 20ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-26 19:33:54 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-26 19:33:54 -0700
+Served asset /servers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-26 19:33:54 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-26 19:33:54 -0700
+Served asset /perf_sonar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-26 19:33:54 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-26 19:33:54 -0700
+Served asset /traceroutes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:54 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:54 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:55 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (67ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:55 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:55 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:55 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:55 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:55 -0700
+Served asset /perf_sonar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:55 -0700
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:55 -0700
+Served asset /traceroutes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-26 19:33:55 -0700
+Served asset /servers.js - 304 Not Modified (0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2012-10-26 19:34:05 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NCz6+Y0NqtnxGfSFnqz4rKZnWAejMJ+rrMipXGGAntM=", "user"=>{"username"=>"hello", "email"=>"hello@sagdjlk.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER('hello@sagdjlk.com') LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT 1 AS one FROM "users" WHERE LOWER("users"."username") = LOWER('hello') LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."persistence_token" = '2d0671374ef2c6195e8bb7c3b7e80c1ba0665cb33c7d86c72152ee4a8d713840753859775fc192169a904fe5297bddcaa989614d4f0e2a7219f72e3c6314b1e0' LIMIT 1[0m
+Binary data inserted for `string` type on column `crypted_password`
+  [1m[35mSQL (4.2ms)[0m  INSERT INTO "users" ("created_at", "crypted_password", "email", "password_salt", "persistence_token", "updated_at", "username") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Sat, 27 Oct 2012 02:34:06 UTC +00:00], ["crypted_password", "c0554405dffc7c82ba77c0dcd1100988d90c1601112c4050e76f2da92f5d9322b34e4c214cc7139fd05f85bb96878085fd87b6de017764514de9ecbb64361f07"], ["email", "hello@sagdjlk.com"], ["password_salt", "JpvhTf4S8FiT2InENpHt"], ["persistence_token", "2d0671374ef2c6195e8bb7c3b7e80c1ba0665cb33c7d86c72152ee4a8d713840753859775fc192169a904fe5297bddcaa989614d4f0e2a7219f72e3c6314b1e0"], ["updated_at", Sat, 27 Oct 2012 02:34:06 UTC +00:00], ["username", "hello"]]
+  [1m[36m (42.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 148ms (ActiveRecord: 47.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-10-26 19:34:06 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = '2d0671374ef2c6195e8bb7c3b7e80c1ba0665cb33c7d86c72152ee4a8d713840753859775fc192169a904fe5297bddcaa989614d4f0e2a7219f72e3c6314b1e0' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = '2d0671374ef2c6195e8bb7c3b7e80c1ba0665cb33c7d86c72152ee4a8d713840753859775fc192169a904fe5297bddcaa989614d4f0e2a7219f72e3c6314b1e0' LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" 
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.0. Use ':data => { :confirm => 'Text' }' instead. (called from block in _app_views_users_index_html_erb___960477467__619798338 at /home/ubuntu/ESnetproj/app/views/users/index.html.erb:18)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.0. Use ':data => { :confirm => 'Text' }' instead. (called from block in _app_views_users_index_html_erb___960477467__619798338 at /home/ubuntu/ESnetproj/app/views/users/index.html.erb:18)
+  Rendered users/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 26ms (Views: 19.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-26 19:34:06 -0700
+Served asset /application.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-26 19:34:06 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-26 19:34:06 -0700
+Served asset /servers.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-26 19:34:06 -0700
+Served asset /perf_sonar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-26 19:34:06 -0700
+Served asset /traceroutes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-26 19:34:06 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:06 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:06 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:06 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:06 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:06 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:06 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:06 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:06 -0700
+Served asset /perf_sonar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:06 -0700
+Served asset /servers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:06 -0700
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:06 -0700
+Served asset /traceroutes.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2012-10-26 19:34:09 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = '2d0671374ef2c6195e8bb7c3b7e80c1ba0665cb33c7d86c72152ee4a8d713840753859775fc192169a904fe5297bddcaa989614d4f0e2a7219f72e3c6314b1e0' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = '2d0671374ef2c6195e8bb7c3b7e80c1ba0665cb33c7d86c72152ee4a8d713840753859775fc192169a904fe5297bddcaa989614d4f0e2a7219f72e3c6314b1e0' LIMIT 1[0m
+Completed 200 OK in 66ms (Views: 65.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-26 19:34:09 -0700
+Served asset /application.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-26 19:34:09 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-26 19:34:09 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-26 19:34:09 -0700
+Served asset /traceroutes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-26 19:34:09 -0700
+Served asset /perf_sonar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-26 19:34:09 -0700
+Served asset /servers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:09 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:09 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:09 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:09 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:09 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:09 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:09 -0700
+Served asset /servers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:09 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:09 -0700
+Served asset /perf_sonar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:09 -0700
+Served asset /traceroutes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:09 -0700
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-10-26 19:34:19 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = '2d0671374ef2c6195e8bb7c3b7e80c1ba0665cb33c7d86c72152ee4a8d713840753859775fc192169a904fe5297bddcaa989614d4f0e2a7219f72e3c6314b1e0' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = '2d0671374ef2c6195e8bb7c3b7e80c1ba0665cb33c7d86c72152ee4a8d713840753859775fc192169a904fe5297bddcaa989614d4f0e2a7219f72e3c6314b1e0' LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" 
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.0. Use ':data => { :confirm => 'Text' }' instead. (called from block in _app_views_users_index_html_erb___960477467__619798338 at /home/ubuntu/ESnetproj/app/views/users/index.html.erb:18)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.0. Use ':data => { :confirm => 'Text' }' instead. (called from block in _app_views_users_index_html_erb___960477467__619798338 at /home/ubuntu/ESnetproj/app/views/users/index.html.erb:18)
+  Rendered users/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 23ms (Views: 20.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-26 19:34:19 -0700
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-26 19:34:19 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-26 19:34:19 -0700
+Served asset /servers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-26 19:34:19 -0700
+Served asset /traceroutes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-26 19:34:19 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-26 19:34:19 -0700
+Served asset /perf_sonar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:19 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:19 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:19 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:19 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:19 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:19 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:19 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:19 -0700
+Served asset /perf_sonar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:19 -0700
+Served asset /servers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:19 -0700
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:19 -0700
+Served asset /traceroutes.js - 304 Not Modified (0ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2012-10-26 19:34:21 -0700
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "4"]]
+  Rendered users/_form.html.erb (3.1ms)
+  Rendered users/edit.html.erb within layouts/application (4.2ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = '2d0671374ef2c6195e8bb7c3b7e80c1ba0665cb33c7d86c72152ee4a8d713840753859775fc192169a904fe5297bddcaa989614d4f0e2a7219f72e3c6314b1e0' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = '2d0671374ef2c6195e8bb7c3b7e80c1ba0665cb33c7d86c72152ee4a8d713840753859775fc192169a904fe5297bddcaa989614d4f0e2a7219f72e3c6314b1e0' LIMIT 1[0m
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-26 19:34:21 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-26 19:34:21 -0700
+Served asset /servers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-26 19:34:21 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-26 19:34:21 -0700
+Served asset /traceroutes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-26 19:34:21 -0700
+Served asset /perf_sonar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-26 19:34:21 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:21 -0700
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:21 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:21 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:21 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:21 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:21 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:21 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:21 -0700
+Served asset /perf_sonar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:21 -0700
+Served asset /servers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:21 -0700
+Served asset /traceroutes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:21 -0700
+Served asset /application.js - 304 Not Modified (5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2012-10-26 19:34:25 -0700
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = '2d0671374ef2c6195e8bb7c3b7e80c1ba0665cb33c7d86c72152ee4a8d713840753859775fc192169a904fe5297bddcaa989614d4f0e2a7219f72e3c6314b1e0' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = '2d0671374ef2c6195e8bb7c3b7e80c1ba0665cb33c7d86c72152ee4a8d713840753859775fc192169a904fe5297bddcaa989614d4f0e2a7219f72e3c6314b1e0' LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" 
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.0. Use ':data => { :confirm => 'Text' }' instead. (called from block in _app_views_users_index_html_erb___960477467__619798338 at /home/ubuntu/ESnetproj/app/views/users/index.html.erb:18)
+DEPRECATION WARNING: :confirm option is deprecated and will be removed from Rails 4.0. Use ':data => { :confirm => 'Text' }' instead. (called from block in _app_views_users_index_html_erb___960477467__619798338 at /home/ubuntu/ESnetproj/app/views/users/index.html.erb:18)
+  Rendered users/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 67ms (Views: 64.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-26 19:34:25 -0700
+Served asset /application.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-26 19:34:25 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-26 19:34:25 -0700
+Served asset /perf_sonar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-26 19:34:25 -0700
+Served asset /traceroutes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-26 19:34:25 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-26 19:34:25 -0700
+Served asset /servers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:25 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:25 -0700
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:25 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:25 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:25 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:25 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:25 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:25 -0700
+Served asset /perf_sonar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:25 -0700
+Served asset /servers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:25 -0700
+Served asset /traceroutes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:25 -0700
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/traceroutes" for 127.0.0.1 at 2012-10-26 19:34:30 -0700
+Processing by TraceroutesController#index as HTML
+  [1m[36mServer Load (0.2ms)[0m  [1mSELECT "servers".* FROM "servers" [0m
+  Rendered /usr/local/lib/ruby/gems/1.9.1/gems/gmaps4rails-1.5.6/app/views/gmaps4rails/_gmaps4rails.html.erb (0.8ms)
+  Rendered traceroutes/index.html.erb within layouts/application (2.9ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."persistence_token" = '2d0671374ef2c6195e8bb7c3b7e80c1ba0665cb33c7d86c72152ee4a8d713840753859775fc192169a904fe5297bddcaa989614d4f0e2a7219f72e3c6314b1e0' LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."persistence_token" = '2d0671374ef2c6195e8bb7c3b7e80c1ba0665cb33c7d86c72152ee4a8d713840753859775fc192169a904fe5297bddcaa989614d4f0e2a7219f72e3c6314b1e0' LIMIT 1[0m
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-10-26 19:34:30 -0700
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-10-26 19:34:30 -0700
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.css?body=1" for 127.0.0.1 at 2012-10-26 19:34:30 -0700
+Served asset /traceroutes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails.css?body=1" for 127.0.0.1 at 2012-10-26 19:34:30 -0700
+Served asset /gmaps4rails.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.css?body=1" for 127.0.0.1 at 2012-10-26 19:34:30 -0700
+Served asset /servers.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/perf_sonar.css?body=1" for 127.0.0.1 at 2012-10-26 19:34:30 -0700
+Served asset /perf_sonar.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:30 -0700
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.base.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:30 -0700
+Served asset /gmaps4rails/gmaps4rails.base.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.bing.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:30 -0700
+Served asset /gmaps4rails/gmaps4rails.bing.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.mapquest.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:30 -0700
+Served asset /gmaps4rails/gmaps4rails.mapquest.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:30 -0700
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.googlemaps.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:30 -0700
+Served asset /gmaps4rails/gmaps4rails.googlemaps.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:30 -0700
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/perf_sonar.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:30 -0700
+Served asset /perf_sonar.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/traceroutes.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:30 -0700
+Served asset /traceroutes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/servers.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:30 -0700
+Served asset /servers.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/gmaps4rails/gmaps4rails.openlayers.js?body=1" for 127.0.0.1 at 2012-10-26 19:34:30 -0700
+Served asset /gmaps4rails/gmaps4rails.openlayers.js - 304 Not Modified (0ms)
