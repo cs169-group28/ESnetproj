@@ -2,12 +2,20 @@
 <html>
 <head>
   <title>PerfSONAR</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
 </head>
 <body>
+<<<<<<< HEAD
+=======
+  <div class="frame">
+
+<<<<<<< HEAD
+    <%= yield %>
+=======
+>>>>>>> 618e289326e8ac5ddd3746ab3a722df6c321023c
 <div id="user_nav">
   <% if current_user %>
     <%= link_to "Server List", servers_path %> |
@@ -20,7 +28,9 @@
 </div>
 
 <%= yield %>
+>>>>>>> 3a14af00306dc05ee554d3be7d192a3889c47cf0
 
+<<<<<<< HEAD
 <%= yield :scripts %>
 
 <div id="viz"></div>
@@ -77,5 +87,9 @@ function animateSecondStep(){
 
     </script>
 <% end %>
+=======
+    <%= yield :scripts %>
+  </div>
+>>>>>>> 618e289326e8ac5ddd3746ab3a722df6c321023c
 </body>
 </html>

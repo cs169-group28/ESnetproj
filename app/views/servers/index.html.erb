@@ -1,6 +1,6 @@
-<h1>Listing servers</h1>
-
-<table>
+<!--The server index-->
+<h1>List of Servers</h1>
+<table class="table table-striped" id="server">
   <tr>
     <th>Ip</th>
     <th>Name</th>
@@ -10,30 +10,49 @@
     <th>State</th>
     <th>Latitude</th>
     <th>Longitude</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Server Actions</th>
   </tr>
 
-<% @servers.each do |server| %>
-  <tr>
-    <td><%= server.ip %></td>
-    <td><%= server.name %></td>
-    <td><%= server.country %></td>
-    <td><%= server.zip %></td>
-    <td><%= server.city %></td>
-    <td><%= server.state %></td>
-    <td><%= server.latitude %></td>
-    <td><%= server.longitude %></td>
-    <td><%= link_to 'Show', server %></td>
-    <td><%= link_to 'Edit', edit_server_path(server) %></td>
-    <td><%= link_to 'Destroy', server, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
+  <% @servers.each do |server| %>
+    <tr>
+      <td><%= server.ip %></td>
+      <td><%= server.name %></td>      
+      <td><%= server.country %></td>
+      <td><%= server.zip %></td>
+      <td><%= server.city %></td>
+      <td><%= server.state %></td>
+      <td><%= server.latitude %></td>
+      <td><%= server.longitude %></td>
+      <td id="actions">
+        <div class="btn-group">
+          <button class="btn dropdown-toggle" data-toggle="dropdown">
+            Actions
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li><%= link_to 'Show', server %></li>
+            <li><%= link_to 'Edit', edit_server_path(server) %></li>
+            <li><%= link_to 'Remove', server, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+          </ul>
+        </div>
+      </td>
+    </tr>
+  <% end %>
 </table>
 
-<br />
 
-<%= gmaps4rails(@json) %>
+<div id="map_frame">
+  <%= gmaps4rails(@json) %>
+</div>
 
-<%= link_to 'New Server', new_server_path %>
+
+
+<form method="link" action="servers/new">
+  <button class="btn btn-primary">New Server</button>
+</form>
+
+
+
+
+
+
