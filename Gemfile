@@ -49,12 +49,11 @@ gem 'jquery-rails'
 # gem 'capistrano'
 
 # To use debugger
- gem 'debugger'
-
+gem 'debugger'
 gem 'gmaps4rails'
-
-gem "therubyracer", :require => 'v8'
-
-
-gem "mocha", :group => :test
-
+gem 'therubyracer', :require => 'v8'
+gem 'xml-simple'
+gem 'nokogiri'
+gem 'httparty'
+gem 'mocha', :group => :test
+gem 'select2-rails'
