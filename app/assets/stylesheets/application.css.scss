@@ -8,31 +8,44 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
+ *= require twitter/bootstrap
+ *= require gmaps4rails
  *= require_self
  *= require_tree .
  */
-//=  require twitter/bootstrap
-//= require gmaps4rails
 
+th, td {
+    border: 1px solid black;
 
-.table {
-    margin-bottom: 0px;
 }
 
-html { 
-    background-image: image-url('subtle_surface_@2X.png');
-    background-repeat: repeat-y;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+tr {
+ background-color: White;
 }
+
+td#actions {
+    overflow: visible;
+}
+
+table.server {
+    opacity: 1.0;
+}
+
+h1 {
+    text-align:left;
+    color: #191919;
+}
+
+
+
+
+
 
 .frame {
-    background: Transparent;
-    position: absolute;
-    padding-left: 10px;
+    position: relative;
     height: 100%;
+    width: 100%;
     frame: 100%;
+    padding-left: 10px;
  
 }

@@ -15,7 +15,7 @@
     			<li><%= link_to "Servers", servers_path %></li>
     			<li><%= link_to "Traceroute Query", traceroutes_path %></li>
     			<% if current_user %>
-    				<li><%= link_to "Edit Profile", users_path%></li>
+    				<li><%= link_to "View Profile", users_path%></li>
     				<li><%= link_to "Logout", :logout %></li>
   				<% else %>
   	    			<li><%= link_to "Register", new_user_path %></li>
@@ -26,8 +26,8 @@
     </div>
   <div class="frame">
 
-  	<%= yield %>
-	<%= yield :scripts %>    
+<%= yield %>
+<%= yield :scripts %>    
 <div id="viz"></div>
 <% if request.path_parameters.has_value?('traceroutes') %>
     <p> Graph of unrealistic data </p>

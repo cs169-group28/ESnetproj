@@ -1,15 +1,12 @@
 <!--The server index-->
 <h1>List of Servers</h1>
-<table class="table table-striped" id="server">
+<table class="table table-striped table-bordered server">
   <tr>
     <th>Ip</th>
     <th>Name</th>
-    <th>Country</th>
-    <th>Zip</th>
     <th>City</th>
     <th>State</th>
-    <th>Latitude</th>
-    <th>Longitude</th>
+    <th>Country</th>
     <th>Server Actions</th>
   </tr>
 
@@ -17,12 +14,9 @@
     <tr>
       <td><%= server.ip %></td>
       <td><%= server.name %></td>      
-      <td><%= server.country %></td>
-      <td><%= server.zip %></td>
       <td><%= server.city %></td>
       <td><%= server.state %></td>
-      <td><%= server.latitude %></td>
-      <td><%= server.longitude %></td>
+      <td><%= server.country %></td>
       <td id="actions">
         <div class="btn-group">
           <button class="btn dropdown-toggle" data-toggle="dropdown">
@@ -41,6 +35,7 @@
 </table>
 
 
+
 <div id="map_frame">
   <%= gmaps4rails(@json) %>
 </div>
@@ -50,9 +45,3 @@
 <form method="link" action="servers/new">
   <button class="btn btn-primary">New Server</button>
 </form>
-
-
-
-
-
-
