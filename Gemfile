@@ -57,3 +57,4 @@ gem 'nokogiri'
 gem 'httparty'
 gem 'mocha', :group => :test
 gem 'select2-rails'
+gem 'authlogic'
