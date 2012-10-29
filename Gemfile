@@ -31,7 +31,7 @@ group :assets do
   # gem 'therubyracer', :platforms => :ruby
 
   gem 'uglifier', '>= 1.0.3'
-  gem 'less-rails-bootstrap'
+ 
 end
 
 gem 'jquery-rails'
@@ -58,3 +58,4 @@ gem 'httparty'
 gem 'mocha', :group => :test
 gem 'select2-rails'
 gem 'authlogic'
+gem 'less-rails-bootstrap'
