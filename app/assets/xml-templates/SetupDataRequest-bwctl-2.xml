@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<soap:Envelope
+  xmlns:soap="http://www.w3.org/2001/12/soap-envelope"
+  soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
+   <soap:Header />
+   <soap:Body>
+
+<nmwg:message type="SetupDataRequest" id="setupDataRequest1"
+              xmlns:iperf= "http://ggf.org/ns/nmwg/tools/iperf/2.0/"
+              xmlns:nmwg="http://ggf.org/ns/nmwg/base/2.0/"
+              xmlns:select="http://ggf.org/ns/nmwg/ops/select/2.0/"
+              xmlns:nmwgt="http://ggf.org/ns/nmwg/topology/2.0/"
+              xmlns:nmtm="http://ggf.org/ns/nmwg/time/2.0/">
+  
+  <nmwg:metadata id="meta2" xmlns:nmwg="http://ggf.org/ns/nmwg/base/2.0/">
+    <nmwg:subject id="sub1">
+      <nmwgt:endPointPair xmlns:nmwgt="http://ggf.org/ns/nmwg/topology/2.0/">
+        <nmwgt:src type="hostname" value="198.124.238.38" />
+        <nmwgt:dst type="hostname" value="198.129.254.30" />
+      </nmwgt:endPointPair>
+    </nmwg:subject>
+    <nmwg:eventType>http://ggf.org/ns/nmwg/tools/iperf/2.0</nmwg:eventType>
+  </nmwg:metadata> 
+  <nmwg:metadata id="meta2c" xmlns:nmwg="http://ggf.org/ns/nmwg/base/2.0/">
+    <select:subject id="sub2c" metadataIdRef="meta2" xmlns:select="http://ggf.org/ns/nmwg/ops/select/2.0/"/> 
+    <select:parameters id="param2c" xmlns:select="http://ggf.org/ns/nmwg/ops/select/2.0/">      
+      <nmwg:parameter name="startTime">1348710300</nmwg:parameter>
+      <nmwg:parameter name="endTime">1351302300</nmwg:parameter>
+    </select:parameters>
+    <nmwg:eventType>http://ggf.org/ns/nmwg/ops/select/2.0</nmwg:eventType> 
+  </nmwg:metadata>
+  <nmwg:data id="data2" metadataIdRef="meta2c" xmlns:nmwg="http://ggf.org/ns/nmwg/base/2.0/"/>
+
+</nmwg:message>
+
+</soap:Body>
+</soap:Envelope>

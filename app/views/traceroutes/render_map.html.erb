@@ -1,25 +1,89 @@
-<h1>Traceroute information</h1>
+<h2>
+<%= @request_type %>
+	 response</h2>
 
 <br />
 
 <b> Server 1 (origin): </b>
 <br />
-<%=@s1.ip%>
+<%=@s1.hostname%>
 <br />
-<%=@s1.name%>
+<%=@s1.ip%>
 <br />
 
 <br />
 
 <b> Server 2 (destination): </b>
 <br />
+<%=@s2.hostname%>
+<br />
 <%=@s2.ip%>
 <br />
-<%=@s2.name%>
+
 <br />
 
 <%= gmaps({
     "markers" => {"data" => @json},
     "polylines" => { "data" => @polylines_json }})%>
 
-<%=@polylines_json%>
+
+<br />
+<table class="table table-striped table-bordered table-condensed">
+<% if @request_type == "OWAMP" %>
+<tr>
+  <th>Min TTL</th>
+  <th>Min Delay</th>
+  <th>Max Error</th>
+  <th>Max Delay</th>
+  <th>Duplicates</th>
+  <th>End Time</th>
+  <th>Loss</th>
+  <th>Sent</th>
+  <th>Start Time</th>
+  <th>Max TTL</th>
+</tr>
+<% @response.each do |entry| %>
+<tr>
+	<td><%= entry[:minTTL] %></td>
+	<td><%= entry[:min_delay] %></td>
+	<td><%= entry[:maxError] %></td>
+	<td><%= entry[:max_delay] %></td>
+	<td><%= entry[:duplicates] %></td>
+	<td><%= entry[:endTime] %></td>
+	<td><%= entry[:loss] %></td>
+	<td><%= entry[:sent] %></td>
+	<td><%= entry[:startTime] %></td>
+	<td><%= entry[:maxTTL] %></td>
+</tr>
+<% end %>
+
+<% elsif @request_type == "BWCTL" %>
+<tr>
+  <th>Time Value</th>
+  <th>Throughput</th>
+</tr>
+<% @response.each do |entry| %>
+<tr>
+	<td><%= entry[:timeValue] %></td>
+	<td><%= entry[:throughput] %></td>
+</tr>
+<% end %>
+<% else %>
+<tr>
+  <th>Query Num</th>
+  <th>Hop</th>
+  <th>Value</th>
+  <th>Value Units</th>
+  <th>Time Value</th>
+</tr>
+<% @response.each do |entry| %>
+<tr>
+	<td><%= entry[:queryNum] %></td>
+	<td><%= entry[:hop] %></td>
+	<td><%= entry[:value] %></td>
+	<td><%= entry[:valueUnits] %></td>
+	<td><%= entry[:timeValue] %></td>
+</tr>
+<% end %>
+<% end %>
+</table>

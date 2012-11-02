@@ -4,9 +4,11 @@
 <p id="notice"><%= notice %></p>
   <%= form_tag( handle_render_traceroute_path ) do %>
 
-    <%=select("Server", "1", @servers.collect {|s| [s.ip, s.id]}, {:include_blank => '--Select a server--'}) %>
+    <%=select("Server", "1", @servers.collect {|s| [s.hostname, s.id]}, {:include_blank => '--Select a server--'}) %>
 
-    <%=select("Server", "2", @servers.collect {|s| [s.ip, s.id]}, {:include_blank => '--Select a server--'}) %>
+    <%=select("Server", "2", @servers.collect {|s| [s.hostname, s.id]}, {:include_blank => '--Select a server--'}) %>
+
+    <%=select("Requesttype", "3", ["BWCTL", "OWAMP", "TRACEROUTE"], {:include_blank => '--Select request type--'}) %>
 
   <br />
   <%=submit_tag 'Route', :id => 'route'  %>

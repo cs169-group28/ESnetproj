@@ -2,8 +2,8 @@
 <h1>List of Servers</h1>
 <table class="table table-striped table-bordered table-condensed server">
   <tr>
+    <th>Hostname</th>
     <th>Ip</th>
-    <th>Name</th>
     <th>City</th>
     <th>State</th>
     <th>Country</th>
@@ -12,8 +12,8 @@
 
   <% @servers.each do |server| %>
     <tr>
-      <td><%= server.ip %></td>
-      <td><%= server.name %></td>      
+      <td><%= server.hostname %></td>
+      <td><%= server.ip %></td>    
       <td><%= server.city %></td>
       <td><%= server.state %></td>
       <td><%= server.country %></td>

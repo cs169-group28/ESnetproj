@@ -3,6 +3,10 @@ class TraceroutesController < ApplicationController
   # GET /traceroutes.json
 
   require 'json'
+  require 'xmlsimple'
+  require 'net/http'
+  require 'uri'
+  require 'socket'
 
   def index
     @servers = Server.all
@@ -45,21 +49,33 @@ class TraceroutesController < ApplicationController
   end
 
   def handle_render
-    redirect_to render_map_traceroute_path(params[:Server]['1'], params[:Server]['2'])
+    redirect_to render_map_traceroute_path(params[:Requesttype]['3'], params[:Server]['1'], params[:Server]['2'])
   end
 
   def render_map
     @s1 = Server.find(params[:server1])
     @s2 = Server.find(params[:server2])
+    @request_type = params[:requesttype]
     s = Array.new
     s.push(@s1, @s2)
     @json = s.to_gmaps4rails
     @polylines_json = '[' + @json + ']'
     polylines_hash = JSON.parse @polylines_json
-    polylines_hash[0][0]["geodesic"] = true
     @polylines_json = polylines_hash.to_json
     puts @polylines_json
 
+    if @request_type == "OWAMP"
+      # Convert hostnames to IP address only for OWAMP
+      src = IPSocket::getaddress(@s1.hostname)
+      dst = IPSocket::getaddress(@s2.hostname)
+      @response = Perfsonar.requestOwampData(src, dst)
+    elsif @request_type == "BWCTL"
+      
+      @response = Perfsonar.requestBwctlData(@s1.hostname, @s2.hostname)
+    else
+      @response = Perfsonar.requestTracerouteData(@s1.hostname, @s2.hostname)
+    end
+   
   end
 
 end

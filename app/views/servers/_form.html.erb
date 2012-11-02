@@ -12,12 +12,13 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :hostname %><br />
+    <%= f.text_field :hostname %>
+  </div>
+
+  <div class="field">
     <%= f.label :ip %><br />
     <%= f.text_field :ip %>
-  </div>
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
   </div>
 
   <button class="btn btn-primary" type="submit">Save Server</button>

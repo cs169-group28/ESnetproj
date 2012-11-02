@@ -68,5 +68,5 @@ PerfSONAR::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
   match 'traceroutes/handle_render/'=>'traceroutes#handle_render', :via => :post, :as=>'handle_render_traceroute'
-  match 'traceroutes/render_map/:server1/:server2/'=>'traceroutes#render_map', :via => :get, :as=>'render_map_traceroute'
+  match 'traceroutes/render_map/:requesttype/:server1/:server2/'=>'traceroutes#render_map', :via => :get, :as=>'render_map_traceroute'
 end
