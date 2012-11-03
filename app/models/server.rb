@@ -1,7 +1,7 @@
 class Server < ActiveRecord::Base
   attr_accessible :hostname, :city, :country, :ip, :latitude, :longitude, :name, :state, :zip
 
-  before_create :getIp
+  # before_create :getIp
   before_update :getIp
   acts_as_gmappable :process_geocoding => false
 
@@ -20,7 +20,7 @@ class Server < ActiveRecord::Base
   end
 
   def getIp
-    if self.ip.empty?
+    if self.ip.blank?
       self.ip = IPSocket::getaddress(self.hostname)
     end
     ipInfo = getIpInfo(self.ip)
