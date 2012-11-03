@@ -15,3 +15,11 @@
 //= require_tree .
 //=require twitter/bootstrap
 //= require select2
+
+$(document).ready(function(){
+  $('select').select2({
+  	placeholder: "Select a Server placeholderrrrr",
+  	allowClear: false,
+  	width: "element"
+  });
+});

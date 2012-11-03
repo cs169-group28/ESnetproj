@@ -4,14 +4,35 @@
 <p id="notice"><%= notice %></p>
   <%= form_tag( handle_render_traceroute_path ) do %>
 
-    <%=select("Server", "1", @servers.collect {|s| [s.hostname, s.id]}, {:include_blank => '--Select a server--'}) %>
+  	<div class="row">
+  		<div class="span4">
+  			<h5>Server (src):</h5>
+  		</div>
+  		<div class="span4">
+  			<h5>Server (dst):</h5>
+  		</div>
+  		<div class="span4">
+  			<h5>Request Type:</h5>
+  		</div>
+  	</div>
 
-    <%=select("Server", "2", @servers.collect {|s| [s.hostname, s.id]}, {:include_blank => '--Select a server--'}) %>
+	<div class="row">
+	    <div class="span4">
+	    <%=select("Server", "1", @servers.collect {|s| [s.hostname, s.id]}, {:include_blank => '--Select a server--'}) %>
+	    </div>
 
-    <%=select("Requesttype", "3", ["BWCTL", "OWAMP", "TRACEROUTE"], {:include_blank => '--Select request type--'}) %>
+	    <div class="span4">
+	    <%=select("Server", "2", @servers.collect {|s| [s.hostname, s.id]}, {:include_blank => '--Select a server--'}) %>
+	    </div>
+
+	    <div class="span4">
+	    <%=select("Requesttype", "3", ["BWCTL", "OWAMP", "TRACEROUTE"], {:include_blank => '--Select request type--'}) %>
+		</div>
+	</div>
+
 
   <br />
-  <%=submit_tag 'Route', :id => 'route'  %>
+  	<%=submit_tag 'Route', :id => 'route'  %>
   <br />
 
 <% end %>
