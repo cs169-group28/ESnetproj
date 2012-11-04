@@ -24,3 +24,7 @@ Scenario: Add a server with a specific ip address
   Then I should be on the server page for 6
 	Then I should see "192.168.0.1"
 
+Scenario: Add a server without a specific ip address
+  When I am on the new server page
+  And I add the server ''
+  Then I should not be on the server page for 
