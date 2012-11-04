@@ -7,8 +7,7 @@ Background: User information has been added to the database
 
   Given the follwing users exist:
 
-  | Username                      | Email          |
-  --------------------------------------------------
+  | username                      | email          |
   | testuser                      | test@user.com  |  
   | testuser2                     | test2@gmail.com|      
 
