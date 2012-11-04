@@ -4,6 +4,7 @@
 <p id="notice"><%= notice %></p>
   <%= form_tag( handle_render_traceroute_path ) do %>
 
+  <div class ="selectors">    
   	<div class="row">
   		<div class="span4">
   			<h5>Server (src):</h5>
@@ -29,10 +30,11 @@
 	    <%=select("Requesttype", "3", ["BWCTL", "OWAMP", "TRACEROUTE"], {:include_blank => '--Select request type--'}) %>
 		</div>
 	</div>
+</div>
 
 
   <br />
-  	<%=submit_tag 'Route', :id => 'route'  %>
+  	<%=submit_tag('Route', :id => 'route', :class =>'btn btn-primary')  %>
   <br />
 
 <% end %>

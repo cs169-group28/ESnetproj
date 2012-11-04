@@ -1,4 +1,4 @@
-Feature: Add a server to list of servers
+Feature: Manage a list of servers
 
   As a network user 
   So that I can troubleshoot different servers
@@ -8,19 +8,37 @@ Feature: Add a server to list of servers
 
  	Given the following servers exist:
 
-  | name                        | city        | ip             |
-  | Berkeley Engineering DPT    | Berkeley    | 192.168.51.23  |
-  | Lawrence Berkeley NL        | Berkeley    | 453.145.31.65  |
-  | Moffitt Library             | Berkeley    | 652.168.12.45  |
-  | PG&E power station          | Oakland     | 453.168.45.99  |
-  | Stanley Hall                | Berkeley    | 234.168.15.23  |
+  | hostname                  | ip             |
+  | pppl-pt1.es.net           | 192.168.51.23  |
+  | jgi-pt1.es.net            | 453.145.31.65  |
+  | albu-owamp.es.net         | 652.168.12.45  |
+  | aofa-owamp.es.net         | 453.168.45.99  |    
 
+  Given the following users exist:
+
+  |username       | email            | password      | password_confirmation    |
+  | admin         | admin@admin.com  | admin1        | admin1                   |
+
+  And I am on the new user session page
+  And I fill in "user_session_username" with "admin"
+  And I fill in "user_session_password" with "admin1"
+  And I press "login"
   And I am on the servers page
-  Then I should not see '192.168.0.1'
+  Then I should not see 'ornl2-pt1.es.net'
 
-Scenario: Add a server with a specific ip address
+Scenario: Add a server with a specific hostname
 	When I am on the new server page
-  And I add the server '192.168.0.1'
-  Then I should be on the server page for 6
-	Then I should see "192.168.0.1"
+  And I fill in "server_hostname" with "ornl2-pt1.es.net"
+  And I press "create_server"
+  Then I should be on the server page for 96
+	Then I should see "ornl2-pt1.es.net"
+
+Scenario: Remove a server with a specific ip address and name
+  When I am on the new server page
+  And I fill in "server_hostname" with "ornl2-pt1.es.net"
+  And I press "create_server"
+  Then I should be on the server page for 96
+  When I press "delete"
+  Then I should be on the servers page
+  And I should not see "ornl2-pt1.es.net"
 

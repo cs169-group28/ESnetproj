@@ -9,7 +9,13 @@ end
 And /^I add the server (.*)$/ do |server_details|
   details = server_details.to_s.gsub(/\s/, "").split(",")
   ip = details[0]
-  step %Q{I fill in "server_ip" with "#{ip}"}
+  step %Q{I fill in 'server_hostname' with #{ip}}
   step %Q{I press "Create Server"}
 end
+
+Given /the following users exist/ do |users_table|
+	users_table.hashes.each do |user|
+		User.create(user)
+	end	
+end	
 

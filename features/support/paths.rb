@@ -23,6 +23,13 @@ module NavigationHelpers
     #     user_profile_path(User.find_by_login($1))
     when /^the server page for (.*)$/
     server_path($1)
+
+    when /^the new server page$/
+    new_server_path  
+
+    when /^the new user session page$/
+      new_user_session_path
+
     
     else
       begin
