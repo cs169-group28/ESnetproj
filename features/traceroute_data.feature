@@ -5,19 +5,17 @@ Feature: See traceroute data between two servers
 
 Background: Server information has been added to the database
 
-  Given the follwing servers exist:
+  Given the following servers exist:
 
-  | hostname                  | IP             |
+  | hostname                  | ip             |
   | pppl-pt1.es.net           | 192.168.51.23  |
   | jgi-pt1.es.net            | 453.145.31.65  |
   | albu-owamp.es.net         | 652.168.12.45  |
   | aofa-owamp.es.net         | 453.168.45.99  |
 
-  And I am on the PERFSonar  "traceroute" page
-
+   And I am on the traceroutes page
 Scenario: View traceroute data between pppl-pt1.es.net and jgi-pt1.es.net
-  When I select pppl-pt1.es.net
-  And I select gi-pt1.es.net
-  And I press "Route"
-  Then I should be on the "Traceroute information" page
-  And I should see "66.208.288.226, /\d{1,}ms, \d{1,}ms, \d{1,}ms$"
+  When I select "1" from "Server_1"
+  When I select "jgi-pt1.es.net" from "Server_2"
+  When I press 'Route'
+  Then I should see "66.208.288.226, /\d{1,}ms, \d{1,}ms, \d{1,}ms$"
