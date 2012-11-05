@@ -17,5 +17,5 @@ Background: Server information has been added to the database
 Scenario: View traceroute data between pppl-pt1.es.net and jgi-pt1.es.net
   When I select "1" from "Server_1"
   When I select "jgi-pt1.es.net" from "Server_2"
-  When I press 'Route'
+  When I press "route"
   Then I should see "66.208.288.226, /\d{1,}ms, \d{1,}ms, \d{1,}ms$"
