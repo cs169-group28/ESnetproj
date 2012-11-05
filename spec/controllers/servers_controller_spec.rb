@@ -21,12 +21,19 @@ require 'spec_helper'
 describe ServersController do
   before(:each) do
     Server.stub(:before_create)
+    Server.stub(:to_gmaps4rails)
+    setup
+    @user = User.create!(:username => 'admin1', :email => 'admin1@admin.com', :password => 'admin1', :password_confirmation => 'admin1')
+    UserSession.create!(@user)
+    @server1 = mock('hostname1')
+    @server2 = mock('hostname2')
+    @serverlist = [@server1, @server2]
   end
   # This should return the minimal set of attributes required to create a valid
   # Server. As you add validations to Server, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    {:ip => '11.111.1.111', :name => 'Test Server'}
+    {:hostname => 'jgi-pt12.es.net'}
   end
 
   # This should return the minimal set of values that should be in the session
@@ -36,132 +43,19 @@ describe ServersController do
     {}
   end
 
-  describe "GET index" do
-    it "assigns all servers as @servers" do
-
-      server = Server.create! valid_attributes
-      get :index
-      assigns(:servers).should eq([server])
-    end
-  end
-
   describe "GET show" do
     it "assigns the requested server as @server" do
-      server = Server.create! valid_attributes
-
-      get :show, {:id => server.to_param}
-      assigns(:server).should eq(server)
-    end
-  end
-
-  describe "GET new" do
-    it "assigns a new server as @server" do
-      get :new, {}, valid_session
-      assigns(:server).should be_a_new(Server)
+      Server.should_receive(:find).and_return(@server1)
+      get :show, {:id => 1}
+      assigns(:server).should eq(@server1)
     end
   end
 
   describe "GET edit" do
     it "assigns the requested server as @server" do
-      server = Server.create! valid_attributes
-      get :edit, {:id => server.to_param}, valid_session
-      assigns(:server).should eq(server)
-    end
-  end
-
-  describe "POST create" do
-    describe "with valid params" do
-      it "creates a new Server" do
-        expect {
-          post :create, {:server => valid_attributes}, valid_session
-        }.to change(Server, :count).by(1)
-      end
-
-      it "assigns a newly created server as @server" do
-        post :create, {:server => valid_attributes}, valid_session
-        assigns(:server).should be_a(Server)
-        assigns(:server).should be_persisted
-      end
-
-      it "redirects to the created server" do
-        post :create, {:server => valid_attributes}, valid_session
-        response.should redirect_to(Server.last)
-      end
-    end
-
-    describe "with invalid params" do
-      it "assigns a newly created but unsaved server as @server" do
-        # Trigger the behavior that occurs when invalid params are submitted
-        Server.any_instance.stub(:save).and_return(false)
-        post :create, {:server => {}}, valid_session
-        assigns(:server).should be_a_new(Server)
-      end
-
-      it "re-renders the 'new' template" do
-        # Trigger the behavior that occurs when invalid params are submitted
-        Server.any_instance.stub(:save).and_return(false)
-        post :create, {:server => {}}, valid_session
-        response.should render_template("new")
-      end
-    end
-  end
-
-  describe "PUT update" do
-    describe "with valid params" do
-      it "updates the requested server" do
-        server = Server.create! valid_attributes
-        # Assuming there are no other servers in the database, this
-        # specifies that the Server created on the previous line
-        # receives the :update_attributes message with whatever params are
-        # submitted in the request.
-        Server.any_instance.should_receive(:update_attributes).with({'these' => 'params'})
-        put :update, {:id => server.to_param, :server => {'these' => 'params'}}, valid_session
-      end
-
-      it "assigns the requested server as @server" do
-        server = Server.create! valid_attributes
-        put :update, {:id => server.to_param, :server => valid_attributes}, valid_session
-        assigns(:server).should eq(server)
-      end
-
-      it "redirects to the server" do
-        server = Server.create! valid_attributes
-        put :update, {:id => server.to_param, :server => valid_attributes}, valid_session
-        response.should redirect_to(server)
-      end
-    end
-
-    describe "with invalid params" do
-      it "assigns the server as @server" do
-        server = Server.create! valid_attributes
-        # Trigger the behavior that occurs when invalid params are submitted
-        Server.any_instance.stub(:save).and_return(false)
-        put :update, {:id => server.to_param, :server => {}}, valid_session
-        assigns(:server).should eq(server)
-      end
-
-      it "re-renders the 'edit' template" do
-        server = Server.create! valid_attributes
-        # Trigger the behavior that occurs when invalid params are submitted
-        Server.any_instance.stub(:save).and_return(false)
-        put :update, {:id => server.to_param, :server => {}}, valid_session
-        response.should render_template("edit")
-      end
-    end
-  end
-
-  describe "DELETE destroy" do
-    it "destroys the requested server" do
-      server = Server.create! valid_attributes
-      expect {
-        delete :destroy, {:id => server.to_param}, valid_session
-      }.to change(Server, :count).by(-1)
-    end
-
-    it "redirects to the servers list" do
-      server = Server.create! valid_attributes
-      delete :destroy, {:id => server.to_param}, valid_session
-      response.should redirect_to(servers_url)
+      Server.should_receive(:find).and_return(@server1)
+      get :edit, {:id => 1}
+      assigns(:server).should eq(@server1)
     end
   end
 

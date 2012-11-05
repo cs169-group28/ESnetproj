@@ -1,4 +1,7 @@
 require 'spec_helper'
+require 'authlogic/test_case'
+
+include Authlogic::TestCase
 
 # Specs in this file have access to a helper object that includes
 # the ServersHelper. For example:
@@ -12,4 +15,6 @@ require 'spec_helper'
 # end
 describe ServersHelper do
   pending "add some examples to (or delete) #{__FILE__}"
+
 end
+

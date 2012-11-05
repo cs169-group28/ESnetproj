@@ -1,0 +1,1 @@
+:username => 'admin', :password => 'admin', :password_confirm => 'admin', :user_email => 'admin@admin.com'
