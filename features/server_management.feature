@@ -33,7 +33,7 @@ Scenario: Add a server with a specific hostname
   Then I should be on the server page for 96
 	Then I should see "ornl2-pt1.es.net"
 
-  Scenario: Remove a server with a specific ip address and name
+Scenario: Remove a server with a specific ip address and name
   When I am on the new server page
   And I fill in "server_hostname" with "ornl2-pt1.es.net"
   And I press "create_server"
