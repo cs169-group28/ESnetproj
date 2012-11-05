@@ -30,6 +30,9 @@ module NavigationHelpers
     when /^the new user session page$/
       new_user_session_path
 
+    when /^the user session page$/
+      user_sessions_path
+
     
     else
       begin

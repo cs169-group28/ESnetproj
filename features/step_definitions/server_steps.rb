@@ -13,9 +13,5 @@ And /^I add the server (.*)$/ do |server_details|
   step %Q{I press "Create Server"}
 end
 
-Given /the following users exist/ do |users_table|
-	users_table.hashes.each do |user|
-		User.create(user)
-	end	
-end	
+
 

@@ -5,20 +5,26 @@ Feature: Log in to user account
 
 Background: User information has been added to the database
 
-  Given the follwing users exist:
+  Given the following users exist:
 
+  |username       | email            | password      | password_confirmation    |
+  | admin         | admin@admin.com  | admin1        | admin1                   |
 
-  | Username                      | Email          |
-  | testuser                      | test@user.com  |  
-  | testuser2                     | test2@gmail.com|     
-
-  And I am on the PERFSonar login page
 
 Scenario: Authenticate using credentials
-  When I fill in the folowing: "Username=>testuser", "Password=>test"
-  When I press "Login"
-  Then I should be on the "Traceroute page"
-  When I press "View profile"
-  Then I should be on the "Users page"
-  And I should see "testuser"
+  When I am on the new user session page
+  And I fill in "user_session_username" with "admin"
+  And I fill in "user_session_password" with "admin1"
+  And I press "login"
+  Then I should be on the traceroutes page
+  And I should see "Login Successful"
+
+Scenario: Fail to authenticate
+  When I am on the new user session page
+  And I fill in "user_session_username" with "admin"
+  And I fill in "user_session_password" with "admin"
+  And I press "login"
+  Then I should be on the user session page
+  And I should see "Password is not valid"
+
 
