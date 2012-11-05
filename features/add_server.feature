@@ -1,8 +1,8 @@
 Feature: Manage a list of servers
 
   As a network user 
-  So that I can troubleshoot different servers
-  I want to be able to add servers to a list to choose from
+  So that I can organize the servers that I have data about
+  I want to be able to manage a table of different servers
 
  Background: Server information has been added to the database
 
@@ -33,13 +33,15 @@ Scenario: Add a server with a specific hostname
   Then I should be on the server page for 96
 	Then I should see "ornl2-pt1.es.net"
 
-Scenario: Remove a server with a specific ip address and name
+  Scenario: Remove a server with a specific ip address and name
   When I am on the new server page
   And I fill in "server_hostname" with "ornl2-pt1.es.net"
   And I press "create_server"
   Then I should be on the server page for 96
-  When I press "delete"
+  And I follow "Delete"
   Then I should be on the servers page
-  And I should not see "ornl2-pt1.es.net"
+  Then I should not see 'ornl2-pt1.es.net'
+
+
 
 
