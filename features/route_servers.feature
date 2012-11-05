@@ -8,20 +8,21 @@ Feature: View traceroute map
 
   Given the following servers exist:
 
-  | name                        | city        | ip             |
-  | Berkeley Engineering DPT    | Berkeley    | 192.168.51.23  |
-  | Lawrence Berkeley NL        | Berkeley    | 453.145.31.65  |
-  | Moffitt Library             | Berkeley    | 652.168.12.45  |
-  | PG&E power station          | Oakland     | 453.168.45.99  |
-  | Stanley Hall                | Berkeley    | 234.168.15.23  |
+  | hostname                  | ip             |
+  | pppl-pt1.es.net           | 192.168.51.23  |
+  | jgi-pt1.es.net            | 453.145.31.65  |
+  | nersc-pt1.es.net          | 652.168.12.45  |
+  | lbl-pt1.es.net            | 453.168.45.99  |   
 
     And I am on the traceroutes page
 
 Scenario: Display information about a pair of servers
-  When I select "1" from "Server_1"
-  When I select "3" from "Server_2"
+  When I select "lbl-pt1.es.net" from "Server_1"
+  When I select "nersc-pt1.es.net" from "Server_2"
+  When I select "BWCTL" from "Requesttype_3"
   When I press "route"
-  Then I should see "192.168.51.23"
+  Then I should see "lbl-pt1.es.net"
+  Then I should see "nersc-pt1.es.net"
 
 
 

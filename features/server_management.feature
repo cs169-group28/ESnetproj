@@ -6,7 +6,7 @@ Feature: Manage a list of servers
 
  Background: Server information has been added to the database
 
- 	Given the following servers exist:
+  Given the following servers exist:
 
   | hostname                  | ip             |
   | pppl-pt1.es.net           | 192.168.51.23  |
@@ -27,21 +27,16 @@ Feature: Manage a list of servers
   Then I should not see 'ornl2-pt1.es.net'
 
 Scenario: Add a server with a specific hostname
-	When I am on the new server page
+  When I am on the new server page
   And I fill in "server_hostname" with "ornl2-pt1.es.net"
   And I press "create_server"
-  Then I should be on the server page for 95
-	Then I should see "ornl2-pt1.es.net"
+  Then I should see "ornl2-pt1.es.net"
 
 Scenario: Remove a server with a specific ip address and name
   When I am on the new server page
   And I fill in "server_hostname" with "ornl2-pt1.es.net"
   And I press "create_server"
-  Then I should be on the server page for 95
   And I follow "Delete"
   Then I should be on the servers page
   Then I should not see 'ornl2-pt1.es.net'
-
-
-
 
