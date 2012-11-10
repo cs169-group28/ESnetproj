@@ -28,3 +28,9 @@ Scenario: Search for a server by part of its name
   And I should see "lbl-pt1.es.net"
   And I should see "lbl-owamp.es.net"
 
+Scenario: Search for a server that doesn't exist
+  When I fill in "search_param" with "lblalala"
+  And I press "search"
+  Then I should be on the servers page
+  And I should see "No servers found"
+  
