@@ -58,11 +58,7 @@ class TraceroutesController < ApplicationController
     @request_type = params[:requesttype]
     s = Array.new
     s.push(@s1, @s2)
-    @json = s.to_gmaps4rails
-    @polylines_json = '[' + @json + ']'
-    polylines_hash = JSON.parse @polylines_json
-    @polylines_json = polylines_hash.to_json
-    puts @polylines_json
+
 
     if @request_type == "OWAMP"
       # Convert hostnames to IP address only for OWAMP

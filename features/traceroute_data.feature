@@ -27,6 +27,6 @@ Scenario: View OWAMP data between two servers
   When I select "aofa-owamp.es.net" from "Server_1"
   When I select "lbl-owamp.es.net" from "Server_2"
   When I select "OWAMP" from "Requesttype_3"
-  When I press 'route'
+  When I press "route"
   Then I should see "lbl-owamp.es.net"
   Then I should see "aofa-owamp.es.net"
