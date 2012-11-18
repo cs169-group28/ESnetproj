@@ -15,6 +15,7 @@
 //= require_tree .
 //=require twitter/bootstrap
 //= require select2
+//= require dataTables/jquery.dataTables
 
 $(document).ready(function(){
   $('select').select2({
