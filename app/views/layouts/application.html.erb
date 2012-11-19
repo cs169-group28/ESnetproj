@@ -6,13 +6,16 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
+  <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js?2.6.0"></script>
+  <script type="text/javascript" src="http://mbostock.github.com/d3/d3.layout.js?2.6.0"></script>
+  <script type="text/javascript" src="http://mbostock.github.com/d3/d3.geom.js?2.6.0"></script>
 </head>
 <body>
 	<div class="navbar navbar-inverse">
     	<div class="navbar-inner">
     		<a class="brand">PerfSONAR</a>
     		<ul class="nav">
-    			<li><%= link_to("Servers", servers_path, :id => "servers_page") %></li>
+    			<li><%= link_to "Servers", servers_path %></li>
     			<li><%= link_to "Traceroute Query", traceroutes_path %></li>
     			<% if current_user %>
     				<li><%= link_to("View Profile", users_path, :id => "view_profile")%></li>
@@ -29,39 +32,140 @@
 <%= yield %>
 <%= yield :scripts %>    
 <div id="viz"></div>
-<% if request.path_parameters.has_value?('traceroutes') %>
-    <p> Graph of unrealistic data </p>
+<% if request.path_parameters.has_value?('traceroutes') && @nodes%>
+       <script type="text/javascript" charset="utf-8">
+	
+    var w = 800,                        
+    h = 500,                            
+    r = 200,                            //radius
+    color = d3.scale.category20c();     
+  var data = [];
+   for(var i = 0; i < <%= raw @nodes.length.to_json %> ; i++) {
+	var names = {name : <%= raw @nodes.keys.to_json %> 
+			};
+	var values = {v : <%= raw @nodes.values.to_json %> 
+				};
+	var node = {
+		"label" : names.name[i],
+		"value" : values.v[i],
+		};
+	data.push(node);
+			};
 
-    <script type="text/javascript">
+    var vis = d3.select("body")
+        .append("svg:svg")              
+        .data([data])                   
+            .attr("width", w)           
+            .attr("height", h)
+        .append("svg:g")                
+            .attr("transform", "translate(" + r + "," + r + ")")    
 
-var dataset = [],
-    i = 0;    
+    var arc = d3.svg.arc()              
+        .outerRadius(r);
 
-for(i=0; i<5; i++){
-    dataset.push(Math.random()*100);
-}    
+    var pie = d3.layout.pie()           
+        .value(function(d) { return d.value; });    
 
-var sampleSVG = d3.select("#viz")
-    .append("svg")
-    .attr("width", 500)
-    .attr("height", 300); 
+    var arcs = vis.selectAll("g.slice")     
+        .data(pie)                          
+        .enter()                           
+            .append("svg:g")                
+                .attr("class", "slice");    
 
-   var node = sampleSVG.selectAll("node")
-    .data(dataset)
-    .enter().append("circle")
-    .style("stroke", "gray")
+        arcs.append("svg:path")
+                .attr("fill", function(d, i) { return color(i); } ) 
+                .attr("d", arc);                                    
+
+        arcs.append("svg:text")                                     
+                .attr("transform", function(d) {                    
+                
+                d.innerRadius = 0;
+                d.outerRadius = r;
+                return "translate(" + arc.centroid(d) + ")";        
+            })
+            .attr("text-anchor", "middle")                          
+            .text(function(d, i) { return data[i].label; });        
+        arcs.append("svg:title")
+		.text(function(d, i) { return data[i].label + " : " + data[i].value + " mSec"; });
+vis.append("svg:text")
+	     	.attr("dy", r+20)
+	      .attr("text-anchor", "middle")
+	      .text("Average time per request in m Seconds")
+	      .attr("class","title")
+	      ;		 
+		</script>
+
+
+<script type="text/javascript" charset="utf-8">
+	
+    var w = 800,                        
+    h = 200,                            
+    r = 200,                            //radius
+    color = d3.scale.category20c();     
+  var data = [];
+   for(var i = 0; i < <%= raw @nodes.length.to_json %> ; i++) {
+	var names = {name : <%= raw @nodes.keys.to_json %> 
+			};
+	var values = {v : <%= raw @nodes.values.to_json %> 
+				};
+	var node = {
+		"label" : names.name[i],
+		"value" : values.v[i],
+		};
+	
+	data.push(node);
+			};
+
+    var vis = d3.select("body")
+        .append("svg:svg")              
+        .data([data])                   
+            .attr("width", w)           
+            .attr("height", h)
+        .append("svg:g")                
+            .attr("transform", "translate(" + 10 + "," + 10 + ")")    
+  var pie = d3.layout.pie()           
+        .value(function(d) { return d.value; }); 
+   
+var link = vis.selectAll("g.link")
+      .data(pie)
+      .enter().append("svg:g");
+     
+link.append("svg:line")   
+      .attr("class","link")
+      .attr("title",function(d, i) { return data[i].value + " mSec"; })
+      .attr("style", "stroke:#00d1d6;stroke-width:15px")
+      .attr("x1", function(d,i) { return i*100+40; })
+      .attr("y1", 70)
+      .attr("x2", function(d,i) { return i*100+140; })
+      .attr("y2", 70)
+     ;
+
+
+var node = vis.selectAll("g.node")
+    .data(pie)
+    .enter().append("svg:g")
+    .attr("class", "node");
+
+    node.append("circle")
+    .style("stroke", "black")
     .style("fill", "white")
     
     .attr("r", 30)
-    .attr("cx", function(d, i){return i*90+40})
+    .attr("cx", function(d, i){return i*100+40})
     .attr("cy", 70)
-    .text(function(d, cx) { return cx; })
     .on("mouseover", function(){d3.select(this).style("fill", "aliceblue");})
     .on("mouseout", function(){d3.select(this).style("fill", "white");})
     .on("mousedown", animateFirstStep);
 
- node.append("title")
-       .text(function(d) { return d; });
+node.append("svg:text")                                     
+            
+	.attr("x", function(d, i){return i*100+40})
+        .attr("y", 110)
+            .attr("text-anchor", "middle")                          
+            .text(function(d, i) { return data[i].label; });        
+        node.append("svg:title")
+		.text(function(d, i) { return data[i].label + " : " + data[i].value + " mSec"; });
+
 
 function animateFirstStep(){
     d3.select(this)
@@ -78,10 +182,14 @@ function animateSecondStep(){
     d3.select(this)
       .transition()
         .duration(1000)
-        .attr("r", 35);
+        .attr("r", 30);
 };
+ 
+		</script>
 
-    </script>
+
+
+
 <% end %>
 
   </div>
