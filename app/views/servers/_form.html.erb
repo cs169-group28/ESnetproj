@@ -21,5 +21,17 @@
     <%= f.text_field :ip %>
   </div>
 
+  <div class="checkbox">
+    <% @categoriesList.each do |category| %>
+      <% if @checkedCategoriesList.include?(category) %>
+      <%= f.check_box category, {checked:true} %>
+      <% else %>
+      <%= f.check_box category, {checked:false} %>
+      <% end %>
+      <%= f.label category %>
+
+    <% end %>
+  </div>
+
   <button class="btn btn-primary" type="submit" id="create_server">Save Server</button>
 <% end %>

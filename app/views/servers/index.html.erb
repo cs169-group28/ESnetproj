@@ -11,7 +11,7 @@
   <tr>
     <th>Hostname</th>
     <th>Ip</th>
-
+    <th>Categories</tb>
     <th>Server Actions</th>
   </tr>
   </thead>
@@ -19,8 +19,8 @@
   <% @servers.each do |server| %>
     <tr>
       <td><%= server.hostname %></td>
-      <td><%= server.ip %></td>    
-
+      <td><%= server.ip %></td> 
+      <td><%= server.categories %></td> 
       <td id="actions">
         <div class="btn-group">
           <button class="btn dropdown-toggle" data-toggle="dropdown">

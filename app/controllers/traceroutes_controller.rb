@@ -59,7 +59,6 @@ class TraceroutesController < ApplicationController
     s = Array.new
     s.push(@s1, @s2)
 
-
     if @request_type == "OWAMP"
       # Convert hostnames to IP address only for OWAMP
       src = IPSocket::getaddress(@s1.hostname)

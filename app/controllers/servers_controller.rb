@@ -2,13 +2,14 @@ class ServersController < ApplicationController
  before_filter :require_user
   # GET /servers
   # GET /servers.json
+
+  @@categoriesList = ["Core Hosts", "Edge Hosts", "Exchange Points", "Smaller DOE Sites", "DICE Testing", "Main Hubs", "Large BWCTL DOE Sites", "Other BWCTL Hubs", "1G Testers", "OWAMP", "BWCTL", "TRACEROUTE"]
+
+ 
+
   def index
     @servers = Server.all
 
-    
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @servers }
     end
   end
 
@@ -27,7 +28,18 @@ class ServersController < ApplicationController
   # GET /servers/new.json
   def new
     @server = Server.new
-
+    @categoriesList = ["Core Hosts", "Edge Hosts", "Exchange Points", "Smaller DOE Sites", "DICE Testing", "Main Hubs", "Large BWCTL DOE Sites", "Other BWCTL Hubs", "1G Testers", "OWAMP", "BWCTL", "TRACEROUTE"]
+    
+    if @server.categories != nil
+       @checkedCategoriesList = @server.categories.split("\n- ")
+       @checkedCategoriesList.each do |shit|
+         @newArray << shit.rstrip
+       end
+       @checkedCategoriesList = @newArray
+    else 
+       @checkedCategoriesList = []
+    end
+ 
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @server }
@@ -37,12 +49,29 @@ class ServersController < ApplicationController
   # GET /servers/1/edit
   def edit
     @server = Server.find(params[:id])
+
+    @categoriesList = ["Core Hosts", "Edge Hosts", "Exchange Points", "Smaller DOE Sites", "DICE Testing", "Main Hubs", "Large BWCTL DOE Sites", "Other BWCTL Hubs", "1G Testers", "OWAMP", "BWCTL", "TRACEROUTE"]
+    p "======================================"
+    p @server.categories
+    @newArray = []
+    if @server.categories != nil
+      @checkedCategoriesList = @server.categories.split("\n- ")
+      @checkedCategoriesList.each do |shit|
+        @newArray << shit.rstrip
+      end
+      @checkedCategoriesList = @newArray
+    else 
+      @checkedCategoriesList = []
+    end
+
   end
 
   # POST /servers
   # POST /servers.json
   def create
-    @server = Server.new(params[:server])
+    @server = Server.new(:hostname => params[:server][:hostname], :ip => params[:server][:ip])
+
+    updateCategories
 
     respond_to do |format|
       if @server.save
@@ -55,13 +84,34 @@ class ServersController < ApplicationController
     end
   end
 
+  def updateCategories
+    @newCategoryList = []
+    p 'params hash ================='
+    p params[:server]
+
+    @@categoriesList.each do |category|
+      if params[:server][category] == "1"
+        @newCategoryList << category
+      end
+    end
+
+    p 'printing categories======================='
+    p @newCategoryList
+
+    @server.categories = @newCategoryList
+    @server.save
+  end
+
   # PUT /servers/1
   # PUT /servers/1.json
   def update
     @server = Server.find(params[:id])
 
+    updateCategories
+
     respond_to do |format|
-      if @server.update_attributes(params[:server])
+      if @server.update_attributes(:hostname => params[:server][:hostname], :ip => params[:server][:ip])
+
         format.html { redirect_to @server, notice: 'Server was successfully updated.' }
         format.json { head :no_content }
       else
@@ -69,6 +119,9 @@ class ServersController < ApplicationController
         format.json { render json: @server.errors, status: :unprocessable_entity }
       end
     end
+
+    p '===========Updated'
+    p @server.categories
   end
 
   # DELETE /servers/1
