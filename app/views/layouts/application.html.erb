@@ -97,9 +97,132 @@ vis.append("svg:text")
 
 
 <script type="text/javascript" charset="utf-8">
+//This code is all steps (even the ones that seem to go in circles)
+	/*
+    var w = 1000,                        
+    h = 400,                            
+    r = 200,                            //radius
+    color = d3.scale.category20c();     
+  var data = [];
+  
+  var names = {name : <%= raw @response.collect{ |a| a[:hop] }.to_json %> };
+  var values = {v : <%= raw @response.collect{ |a| a[:value] }.to_json %> };
+  var count =1;
+  var calcv = values.v[0];
+   for(var i = 0; i < <%= raw @response.length.to_json %> ; i++) {
 	
-    var w = 800,                        
-    h = 200,                            
+	 calcv +=  values.v[i];
+	count = count + 1;
+	if (i%3==0){	
+	if (count ==0){ count = 1;}		
+	var node = {
+		"label" : names.name[i],
+		"value" : (calcv / count),
+		};
+	data.push(node);
+	count = 0;
+	calcv = 0;
+} else {
+       if (values.v[i]){
+	count = count + 1;
+	calcv = calcv + values.v[i];
+
+}
+}
+        
+			};
+
+    var vis = d3.select("body")
+        .append("svg:svg")              
+        .data([data])                   
+            .attr("width", w)           
+            .attr("height", h)
+        .append("svg:g")                
+            .attr("transform", "translate(" + 10 + "," + 10 + ")")    
+  var pie = d3.layout.pie()           
+        .value(function(d) { return d.value; }); 
+   
+var link = vis.selectAll("g.link")
+      .data(pie)
+      .enter().append("svg:g");
+     
+link.append("svg:line")   
+      .attr("class","link")
+      .attr("title",function(d, i) { return data[i].value + " mSec"; })
+      .attr("style", "stroke:#00d1d6;stroke-width:15px")
+      .attr("x1", function(d, i){if (i*100+40 > w){ return i*100+40-w
+}
+return i*100+40})
+      .attr("y1", function(d, i){if (i*100+40 > w){ return 160
+}
+return 70})
+      .attr("x2", function(d, i){if (i*100+40 > w){ return i*100+140-w
+}
+return i*100+140})
+      .attr("y2", function(d, i){if (i*100+40 > w){ return 160
+}
+return 70})
+     ;
+
+
+var node = vis.selectAll("g.node")
+    .data(pie)
+    .enter().append("svg:g")
+    .attr("class", "node");
+
+    node.append("circle")
+    .style("stroke", "black")
+    .style("fill", "white")
+    
+    .attr("r", 30)
+    .attr("cx", function(d, i){if (i*100+40 > w){ return i*100+40-w
+}
+return i*100+40})
+    .attr("cy", function(d, i){if (i*100+40 > w){ return 160
+}
+return 70})
+    .on("mouseover", function(){d3.select(this).style("fill", "aliceblue");})
+    .on("mouseout", function(){d3.select(this).style("fill", "white");})
+    .on("mousedown", animateFirstStep);
+
+node.append("svg:text")                                     
+            
+	    .attr("x", function(d, i){if (i*100+40 > w){ return i*100+40-w
+}
+return i*100+40})
+    .attr("y", function(d, i){if (i*100+40 > w){ return 200
+}
+return 110})
+            .attr("text-anchor", "middle")                          
+            .text(function(d, i) { return data[i].label; });        
+        node.append("svg:title")
+		.text(function(d, i) { return data[i].label + " : " + data[i].value + " mSec"; });
+
+
+function animateFirstStep(){
+    d3.select(this)
+      .transition()            
+        .delay(0)            
+        .duration(1000)
+        .attr("r", 10)
+        .style("fill", "steelblue")
+       
+        .each("end", animateSecondStep);
+};
+
+function animateSecondStep(){
+    d3.select(this)
+      .transition()
+        .duration(1000)
+        .attr("r", 30);
+};
+ */
+		</script>
+
+<script type="text/javascript" charset="utf-8">
+	//Code is the average taken across all visits to a particular server
+    var w = 1000,                        
+    h = 300,                            
     r = 200,                            //radius
     color = d3.scale.category20c();     
   var data = [];
@@ -134,10 +257,18 @@ link.append("svg:line")
       .attr("class","link")
       .attr("title",function(d, i) { return data[i].value + " mSec"; })
       .attr("style", "stroke:#00d1d6;stroke-width:15px")
-      .attr("x1", function(d,i) { return i*100+40; })
-      .attr("y1", 70)
-      .attr("x2", function(d,i) { return i*100+140; })
-      .attr("y2", 70)
+      .attr("x1", function(d, i){if (i*100+40 > w){ return i*100+40-w
+}
+return i*100+40})
+      .attr("y1", function(d, i){if (i*100+40 > w){ return 160
+}
+return 70})
+      .attr("x2", function(d, i){if (i*100+40 > w){ return i*100+140-w
+}
+return i*100+140})
+      .attr("y2", function(d, i){if (i*100+40 > w){ return 160
+}
+return 70})
      ;
 
 
@@ -151,16 +282,24 @@ var node = vis.selectAll("g.node")
     .style("fill", "white")
     
     .attr("r", 30)
-    .attr("cx", function(d, i){return i*100+40})
-    .attr("cy", 70)
+     .attr("cx", function(d, i){if (i*100+40 > w){ return i*100+40-w
+}
+return i*100+40})
+    .attr("cy", function(d, i){if (i*100+40 > w){ return 160
+}
+return 70})
     .on("mouseover", function(){d3.select(this).style("fill", "aliceblue");})
     .on("mouseout", function(){d3.select(this).style("fill", "white");})
     .on("mousedown", animateFirstStep);
 
 node.append("svg:text")                                     
             
-	.attr("x", function(d, i){return i*100+40})
-        .attr("y", 110)
+	  .attr("x", function(d, i){if (i*100+40 > w){ return i*100+40-w
+}
+return i*100+40})
+    .attr("y", function(d, i){if (i*100+40 > w){ return 200
+}
+return 110})
             .attr("text-anchor", "middle")                          
             .text(function(d, i) { return data[i].label; });        
         node.append("svg:title")
