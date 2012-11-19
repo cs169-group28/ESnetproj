@@ -13,12 +13,21 @@ Background: Server information has been added to the database
   | lbl-owamp.es.net          | 652.168.12.45  |
   | aofa-owamp.es.net         | 453.168.45.99  |
 
-   And I am on the servers page
+  Given the following users exist:
 
+  |username       | email            | password      | password_confirmation    |
+  | admin         | admin@admin.com  | admin1        | admin1                   |
+
+   
+
+@culerity
 Scenario: Search for a server by ip
-  When I fill in "search_param" with "192.168.51.23"
-  And I press "search"
-  Then I should be on the servers page
+  Given I am on the new user session page
+  And I fill in "user_session_username" with "admin"
+  And I fill in "user_session_password" with "admin1"
+  And I press "login"
+  And I am on the servers page
+  Then I should see 10 servers
   And I should see "pppl-pt1.es.net"
 
 Scenario: Search for a server by part of its name

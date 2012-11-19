@@ -3,3 +3,4 @@ Given /the following users exist/ do |users_table|
 		User.create(user)
 	end	
 end	
+

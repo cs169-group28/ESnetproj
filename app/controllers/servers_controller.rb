@@ -5,8 +5,7 @@ class ServersController < ApplicationController
   def index
     @servers = Server.all
 
-    @json = Server.all.to_gmaps4rails
-
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @servers }
