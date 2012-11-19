@@ -14,4 +14,6 @@ And /^I add the server (.*)$/ do |server_details|
 end
 
 
-
+Then /^I should see (\d+) nodes$/ do |arg1|
+	@nodes == arg1
+end

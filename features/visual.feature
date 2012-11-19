@@ -21,5 +21,5 @@ Scenario: View a graphic of the traceroute data between two servers
   When I select "TRACEROUTE" from "Requesttype_3"
   When I press 'route'
   Then I should see 2 nodes
-  And I should see"lbl-pt1.es.net"
-  And I should see "ppl-pt1.es.net"
+  Then I should see "lbl-pt1.es.net"
+  Then I should see "ppl-pt1.es.net"
