@@ -19,6 +19,17 @@ Scenario: Authenticate using credentials
   Then I should be on the traceroutes page
   And I should see "Login Successful"
 
+Scenario: Logout 
+  When I am on the new user session page
+  And I fill in "user_session_username" with "admin"
+  And I fill in "user_session_password" with "admin1"
+  And I press "login"
+  Then I should be on the traceroutes page
+  And I should see "Login Successful"
+  When I follow "logout"
+  Then I should see "Logout Successful"
+
+
 Scenario: Fail to authenticate because of wrong password
   When I am on the new user session page
   And I fill in "user_session_username" with "admin"

@@ -16,7 +16,7 @@
     			<li><%= link_to "Traceroute Query", traceroutes_path %></li>
     			<% if current_user %>
     				<li><%= link_to("View Profile", users_path, :id => "view_profile")%></li>
-    				<li><%= link_to "Logout", :logout %></li>
+    				<li><%= link_to("Logout", :logout, :id => "logout") %></li>
   				<% else %>
   	    			<li><%= link_to "Register", new_user_path %></li>
     				<li><%= link_to("Login", :login, :id => "login") %></li>
