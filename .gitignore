@@ -1,3 +1,5 @@
 /tmp/
 db/*.sqlite3
 log/*.log
+coverage/.resultset.json
+coverage/index.html
