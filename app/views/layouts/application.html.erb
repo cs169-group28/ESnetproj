@@ -6,6 +6,9 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js"></script>
+  <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js?2.6.0"></script>
+  <script type="text/javascript" src="http://mbostock.github.com/d3/d3.layout.js?2.6.0"></script>
+  <script type="text/javascript" src="http://mbostock.github.com/d3/d3.geom.js?2.6.0"></script>
 </head>
 <body>
 	<div class="navbar navbar-inverse">
@@ -29,59 +32,153 @@
 <%= yield %>
 <%= yield :scripts %>    
 <div id="viz"></div>
-<% if request.path_parameters.has_value?('traceroutes') %>
-    <p> Graph of unrealistic data </p>
+<% if request.path_parameters.has_value?('traceroutes') && @nodes%>
+       <script type="text/javascript" charset="utf-8">
+			var w = 960, h = 500;
 
-    <script type="text/javascript">
+			var labelDistance = 5;
 
-var dataset = [],
-    i = 0;    
+			var vis = d3.select("body").append("svg:svg").attr("width", w).attr("height", h);
 
-for(i=0; i<5; i++){
-    dataset.push(Math.random()*100);
-}    
+			var nodes = [];
+			var labelAnchors = [];
+			var labelAnchorLinks = [];
+			var links = [];
 
-var sampleSVG = d3.select("#viz")
-    .append("svg")
-    .attr("width", 500)
-    .attr("height", 300); 
+			for(var i = 0; i < <%= raw @nodes.length.to_json %> + 1; i++) {
+				
+				var names = {name : <%= raw @nodes.keys.to_json %> 
+				};
+				var values = {v : <%= raw @nodes.values.to_json %> 
+				};
 
-   var node = sampleSVG.selectAll("node")
-    .data(dataset)
-    .enter().append("circle")
-    .style("stroke", "gray")
-    .style("fill", "white")
-    
-    .attr("r", 30)
-    .attr("cx", function(d, i){return i*90+40})
-    .attr("cy", 70)
-    .text(function(d, cx) { return cx; })
-    .on("mouseover", function(){d3.select(this).style("fill", "aliceblue");})
-    .on("mouseout", function(){d3.select(this).style("fill", "white");})
-    .on("mousedown", animateFirstStep);
+				
 
- node.append("title")
-       .text(function(d) { return d; });
+				var node = {
+					label : names.name[i],
+					value : values.v[i],
+					
 
-function animateFirstStep(){
-    d3.select(this)
-      .transition()            
-        .delay(0)            
-        .duration(1000)
-        .attr("r", 10)
-        .style("fill", "steelblue")
-       
-        .each("end", animateSecondStep);
-};
+				};
+				var link = {
+					label : names.name[i],
+					value : values.v[i]
 
-function animateSecondStep(){
-    d3.select(this)
-      .transition()
-        .duration(1000)
-        .attr("r", 35);
-};
+				};
+				
+				nodes.push(node);
+				labelAnchors.push({
+					node : node
+				});
+				labelAnchors.push({
+					node : node
+				});
+			};
 
-    </script>
+			for(var i = 0; i < nodes.length-1; i++) {
+				
+				links.push({
+					source : i,
+					target : i+1,	
+					weight : 1,
+					
+						});
+				
+				labelAnchorLinks.push({
+					source : i * 2,
+					target : i * 2 + 1,
+					weight : 1,
+					
+				});
+			};
+	
+
+			var force = d3.layout.force().size([w, h]).nodes(nodes).links(links).gravity(1).linkDistance(50).charge(-10000).linkStrength(function(x) {
+				return x.weight * 10
+			});
+
+
+			force.start();
+
+			var force2 = d3.layout.force().nodes(labelAnchors).links(labelAnchorLinks).gravity(0).linkDistance(0).linkStrength(8).charge(0).size([w, h]);
+			force2.start();
+
+			var link = vis.selectAll("line.link").data(links).enter().append("svg:line").attr("class", "link").style("stroke", "#CCC");
+			  link.append("svg:text")
+            .text("some text to add...")
+      ;
+			var node = vis.selectAll("g.node").data(force.nodes()).enter().append("svg:g").attr("class", "node")
+;
+		node.append("svg:text").text(function(d) { return d.label; });
+
+			node.append("svg:circle").attr("r", 15).style("fill", "#555")
+		.on("mouseover", function(){
+			d3.select(this).style("fill", "aliceblue").text(function(d) { return d.value + " msecs"; }); 
+			//node.append("svg:text").text(function(d) { return d.value + " msecs"; });
+
+
+		;})
+		.on("mouseout", function(){
+			d3.select(this).style("fill", "#555");
+			//node.append("svg:text").text(" ");
+		;})
+		.style("stroke", "#FFF").style("stroke-width", 3)
+		;
+						
+			node.call(force.drag);
+	
+
+
+			var anchorLink = vis.selectAll("line.anchorLink").data(labelAnchorLinks);//.enter().append("svg:line").attr("class", "anchorLink").style("stroke", "#999");
+			
+ 
+			var anchorNode = vis.selectAll("g.anchorNode").data(force2.nodes()).enter().append("svg:g").attr("class", "anchorNode");
+			anchorNode.append("svg:circle").attr("r", 1).style("fill", "#FFF");
+				
+
+			var updateLink = function() {
+				this.attr("x1", function(d) {
+					return d.source.x;
+				}).attr("y1", function(d) {
+					return d.source.y;
+				}).attr("x2", function(d) {
+					return d.target.x;
+				}).attr("y2", function(d) {
+					return d.target.y;
+				});
+
+			}
+
+			var updateNode = function() {
+				this.attr("transform", function(d,i) {
+					return "translate(" + d.x + "," + d.y + ")";
+				});
+
+			}
+
+					
+			force.on("tick", function() {
+
+
+
+				node.call(updateNode);
+
+				anchorNode.each(function(d, i) {
+					
+						d.x = d.node.x;
+						d.y = d.node.y;
+					
+				});
+
+
+				anchorNode.call(updateNode);
+
+				link.call(updateLink);
+				anchorLink.call(updateLink);
+
+			});
+
+		</script>
 <% end %>
 
   </div>
