@@ -102,11 +102,6 @@ class Perfsonar
 	private
 
 	def self.postToPerfSonar(domain, data)
-		p '========'
-		p data.to_xml
-		p '========'
-		p domain
-		#domain = 'lbl-pt1.es.net'
 		url = URI.parse(domain)
 		request = Net::HTTP::Post.new(url.path)
 		request.body = data.to_xml
