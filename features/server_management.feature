@@ -16,11 +16,11 @@ Feature: Manage a list of servers
 
   Given the following users exist:
 
-  |username       | email            | password      | password_confirmation    |
-  | admin         | admin@admin.com  | admin1        | admin1                   |
+  | username           | email                | password      | password_confirmation    |
+  | new_admin          | new_admin@admin.com  | admin1        | admin1                   |
 
   And I am on the new user session page
-  And I fill in "user_session_username" with "admin"
+  And I fill in "user_session_username" with "new_admin"
   And I fill in "user_session_password" with "admin1"
   And I press "login"
   Then I should be on the traceroutes page

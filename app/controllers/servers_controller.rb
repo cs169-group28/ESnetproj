@@ -9,8 +9,6 @@ class ServersController < ApplicationController
 
   def index
     @servers = Server.all
-
-    end
   end
 
   # GET /servers/1
@@ -49,7 +47,6 @@ class ServersController < ApplicationController
   # GET /servers/1/edit
   def edit
     @server = Server.find(params[:id])
-
     @categoriesList = ["Core Hosts", "Edge Hosts", "Exchange Points", "Smaller DOE Sites", "DICE Testing", "Main Hubs", "Large BWCTL DOE Sites", "Other BWCTL Hubs", "1G Testers", "OWAMP", "BWCTL", "TRACEROUTE"]
     
     @newArray = []
@@ -62,16 +59,13 @@ class ServersController < ApplicationController
     else 
       @checkedCategoriesList = []
     end
-
   end
 
   # POST /servers
   # POST /servers.json
   def create
     @server = Server.new(:hostname => params[:server][:hostname], :ip => params[:server][:ip])
-
     updateCategories
-
     respond_to do |format|
       if @server.save
         format.html { redirect_to @server, notice: 'Server was successfully created.' }
@@ -85,16 +79,11 @@ class ServersController < ApplicationController
 
   def updateCategories
     @newCategoryList = []
-    
-
     @@categoriesList.each do |category|
       if params[:server][category] == "1"
         @newCategoryList << category
       end
     end
-
-    
-
     @server.categories = @newCategoryList
     @server.save
   end
@@ -116,9 +105,9 @@ class ServersController < ApplicationController
         format.json { render json: @server.errors, status: :unprocessable_entity }
       end
     end
-
-    
   end
+    
+  
 
   # DELETE /servers/1
   # DELETE /servers/1.json
