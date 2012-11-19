@@ -69,6 +69,7 @@ class TraceroutesController < ApplicationController
       @response = Perfsonar.requestBwctlData(@s1.hostname, @s2.hostname)
     else
       @response = Perfsonar.requestTracerouteData(@s1.hostname, @s2.hostname)
+      @nodes = Hash[@response.collect { |a| [a[:hop], a[:value]] }]
     end
    
   end
