@@ -12,7 +12,7 @@
     	<div class="navbar-inner">
     		<a class="brand">PerfSONAR</a>
     		<ul class="nav">
-    			<li><%= link_to "Servers", servers_path %></li>
+    			<li><%= link_to("Servers", servers_path, :id => "servers")%></li>
     			<li><%= link_to "Traceroute Query", traceroutes_path %></li>
     			<% if current_user %>
     				<li><%= link_to("View Profile", users_path, :id => "view_profile")%></li>

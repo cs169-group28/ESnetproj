@@ -23,8 +23,7 @@ Feature: Manage a list of servers
   And I fill in "user_session_username" with "admin"
   And I fill in "user_session_password" with "admin1"
   And I press "login"
-  And I am on the servers page
-  Then I should not see 'ornl2-pt1.es.net'
+  Then I should be on the traceroutes page
 
 Scenario: Add a server with a specific hostname
   When I am on the new server page

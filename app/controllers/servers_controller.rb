@@ -51,8 +51,7 @@ class ServersController < ApplicationController
     @server = Server.find(params[:id])
 
     @categoriesList = ["Core Hosts", "Edge Hosts", "Exchange Points", "Smaller DOE Sites", "DICE Testing", "Main Hubs", "Large BWCTL DOE Sites", "Other BWCTL Hubs", "1G Testers", "OWAMP", "BWCTL", "TRACEROUTE"]
-    p "======================================"
-    p @server.categories
+    
     @newArray = []
     if @server.categories != nil
       @checkedCategoriesList = @server.categories.split("\n- ")
@@ -86,8 +85,7 @@ class ServersController < ApplicationController
 
   def updateCategories
     @newCategoryList = []
-    p 'params hash ================='
-    p params[:server]
+    
 
     @@categoriesList.each do |category|
       if params[:server][category] == "1"
@@ -95,8 +93,7 @@ class ServersController < ApplicationController
       end
     end
 
-    p 'printing categories======================='
-    p @newCategoryList
+    
 
     @server.categories = @newCategoryList
     @server.save
@@ -120,8 +117,7 @@ class ServersController < ApplicationController
       end
     end
 
-    p '===========Updated'
-    p @server.categories
+    
   end
 
   # DELETE /servers/1
