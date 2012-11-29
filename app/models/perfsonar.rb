@@ -14,31 +14,13 @@ class Perfsonar
 	#@@nmwgt = 'http://ggf.org/ns/nmwg/topology/2.0/'
 
 	def Perfsonar.requestBwctlData (src, dst)
-		# bwctlRequest = XmlSimple.xml_in(@@xmlTemplatesFolder + @@bwctlRequestFile)
+		startTime = 1.month.ago.to_i
+		endTime = Time.now.to_i
 
 		bwctlRequest = Nokogiri::XML(File.open(@@xmlTemplatesFolder + @@bwctlRequestFile))
-
-		#src = 'sdsc-pt1.es.net'
-		#dst = 'fnal-pt1.es.net'
-
-		#ip address update
-		bwctlRequest.at_xpath('//nmwgt:src', 'nmwgt'=>'http://ggf.org/ns/nmwg/topology/2.0/')['value']=src
-		bwctlRequest.at_xpath('//nmwgt:dst', 'nmwgt'=>'http://ggf.org/ns/nmwg/topology/2.0/')['value']=dst
-
-		# p 'REQUEST =========================================='
-		# p bwctlRequest
-		# p 'REQUEST END =========================================='
-
-		# p 'REQUEST XML OUT=========================================='
-		# p bwctlRequest.to_xml
-		# p 'REQUEST END =========================================='
-
-		# p 'RESPONSE =========================================='
-		# p self.postToPerfSonar(dst, bwctlRequest)
-		# p 'RESPONSE END =========================================='
+		bwctlRequest = self.updateParameters(bwctlRequest, src, dst, startTime, endTime)
 
 		domain = 'http://' + dst + @@bwctlURI
-
 		response = Nokogiri::XML(self.postToPerfSonar(domain, bwctlRequest).body)
 
 		responseList = []
@@ -50,16 +32,13 @@ class Perfsonar
 	end
 
 	def Perfsonar.requestOwampData (src, dst)
+		startTime = 12.hours.ago.to_i
+		endTime = Time.now.to_i
+
 		owampRequest = Nokogiri::XML(File.open(@@xmlTemplatesFolder + @@owampRequestFile))
-
-		#src = '198.124.238.106'
-		#dst = '198.129.252.142'
-
-		owampRequest.at_xpath('//nmwgt:src', 'nmwgt'=>'http://ggf.org/ns/nmwg/topology/2.0/')['value']=src
-		owampRequest.at_xpath('//nmwgt:dst', 'nmwgt'=>'http://ggf.org/ns/nmwg/topology/2.0/')['value']=dst
+		owampRequest = self.updateParameters(owampRequest, src, dst, startTime, endTime)
 
 		domain = 'http://' + dst + @@owampURI
-
 		response = Nokogiri::XML(self.postToPerfSonar(domain, owampRequest).body)
 
 		responseList = []
@@ -69,21 +48,16 @@ class Perfsonar
 		end
 
 		responseList
-
 	end
 
 	def Perfsonar.requestTracerouteData (src, dst)
+		startTime = 12.hours.ago.to_i
+		endTime = Time.now.to_i
+
 		tracerouteRequest = Nokogiri::XML(File.open(@@xmlTemplatesFolder + @@tracerouteRequestFile))
-
-		#src = 'lbl-pt1.es.net'
-		#dst = 'pppl-pt1.es.net'
-
-		#ip address update
-		tracerouteRequest.at_xpath('//nmwgt:src', 'nmwgt'=>'http://ggf.org/ns/nmwg/topology/2.0/')['value']=src
-		tracerouteRequest.at_xpath('//nmwgt:dst', 'nmwgt'=>'http://ggf.org/ns/nmwg/topology/2.0/')['value']=dst
-
+		tracerouteRequest = self.updateParameters(tracerouteRequest, src, dst, startTime, endTime)
+		
 		domain = 'http://' + src + @@tracerouteURI
-
 		response = Nokogiri::XML(self.postToPerfSonar(domain, tracerouteRequest).body)
 
 		responseList = []
@@ -96,10 +70,17 @@ class Perfsonar
 		end
 
 		responseList
-
 	end
 
 	private
+
+	def self.updateParameters(template, src, dst, startTime, endTime)
+		template.at_xpath('//nmwgt:src', 'nmwgt'=>'http://ggf.org/ns/nmwg/topology/2.0/')['value']=src
+		template.at_xpath('//nmwgt:dst', 'nmwgt'=>'http://ggf.org/ns/nmwg/topology/2.0/')['value']=dst
+		template.at_xpath('//nmwg:parameter[@name="startTime"]', 'nmwg'=>'http://ggf.org/ns/nmwg/base/2.0/').content=startTime
+		template.at_xpath('//nmwg:parameter[@name="endTime"]', 'nmwg'=>'http://ggf.org/ns/nmwg/base/2.0/').content=endTime
+		template	
+	end
 
 	def self.postToPerfSonar(domain, data)
 		url = URI.parse(domain)
