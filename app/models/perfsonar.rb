@@ -51,7 +51,7 @@ class Perfsonar
 	end
 
 	def Perfsonar.requestTracerouteData (src, dst)
-		startTime = 12.hours.ago.to_i
+		startTime = 1.hours.ago.to_i
 		endTime = Time.now.to_i
 
 		tracerouteRequest = Nokogiri::XML(File.open(@@xmlTemplatesFolder + @@tracerouteRequestFile))
@@ -69,7 +69,7 @@ class Perfsonar
 			end
 		end
 
-		responseList
+		responseList.sort_by{|e| [e[:timeValue],e[:queryNum],e[:value].to_f]}
 	end
 
 	private
