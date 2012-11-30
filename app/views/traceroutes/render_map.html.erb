@@ -2,15 +2,11 @@
 <%= @request_type %>
 	 response</h2>
 
-<br />
-
 <b> Server 1 (origin): </b>
 <br />
 <%=@s1.hostname%>
 <br />
 <%=@s1.ip%>
-<br />
-
 <br />
 
 <b> Server 2 (destination): </b>
@@ -20,11 +16,13 @@
 <%=@s2.ip%>
 <br />
 
-<br />
-
-
+<button class="btn btn-primary" data-toggle="collapse" data-target="#table">Raw data <i class="icon-white icon-chevron-up"></i></button>
 
 <br />
+<br />
+
+<div id="table" class="collapse in">
+
 <table class="table table-striped table-bordered table-condensed">
 <% if @request_type == "OWAMP" %>
 <tr>
@@ -84,3 +82,9 @@
 <% end %>
 <% end %>
 </table>
+</div>
+
+<button class="btn btn-primary" data-toggle="collapse" data-target="#table">Graph <i class="icon-white icon-chevron-up"></i></button>
+
+<div id="table" class="collapse in">
+</div>
