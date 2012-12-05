@@ -71,8 +71,9 @@ class TraceroutesController < ApplicationController
       @response = Perfsonar.requestTracerouteData(@s1.hostname, @s2.hostname)
       
       @masterNodes = @response[3]
-      @masterMatrix = @response[2]
+      @masterMatrixOfValues = @response[2]
       @masterHash = @response[1]
+      @masterMatrixOfColorValues = @response[4]
       @response = @response[0]
       @nodes = Hash[@response.collect { |a| [a[:hop], a[:value]] }]
     end

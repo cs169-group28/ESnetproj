@@ -191,18 +191,23 @@ class Perfsonar
 		###########################
 
 		finalMatrix = []
+		finalMatrixOfColorValues = []
 
 		serverList.each do |server1|
-			row = []
+			rowValues = []
+			rowColorValues = []
 			serverList.each do |server2|
 				key = [server1, server2]
 				if finalHash.has_key?(key)
-					row.append(finalHash[key][1])
+					rowValues.append(finalHash[key][1])
+					rowColorValues.append(finalHash[key][0])
 				else
-					row.append(0)
+					rowValues.append(0)
+					rowColorValues.append(0)
 				end
 			end
-			finalMatrix.append(row)
+			finalMatrix.append(rowValues)
+			finalMatrixOfColorValues.append(rowColorValues)
 		end
 
 		p "===========MASTER MATRIX======="
@@ -214,7 +219,7 @@ class Perfsonar
 		#tempVar.gsub(/:\s*"[^"]*\/[^"]*"/) { |m| m.gsub('/', '\\/')  }
 
 		## RETURN list of all important data structures
-		[responseList, @masterHash, @masterMatrix, @masterNodes]
+		[responseList, @masterHash, @masterMatrix, @masterNodes, finalMatrixOfColorValues]
 
 		## RETURN responseList
 		#responseList
