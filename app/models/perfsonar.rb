@@ -27,7 +27,7 @@ class Perfsonar
 
 		responseList = []
 		response.at_xpath('//nmwg:data', 'nmwg'=>'http://ggf.org/ns/nmwg/base/2.0/').children.each do |child|
-			responseList.append( {timeValue:Time.parse(child['timeValue']), throughput:child['throughput']})
+			responseList.append( {timeValue:child['timeValue'], throughput:child['throughput']})
 		end
 
 		responseList.sort_by{|e| [e[:timeValue]]}  
