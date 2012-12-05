@@ -58,17 +58,22 @@ class TraceroutesController < ApplicationController
     @request_type = params[:requesttype]
     s = Array.new
     s.push(@s1, @s2)
+    @src = IPSocket::getaddress(@s1.hostname)
+    @dst = IPSocket::getaddress(@s2.hostname)
 
     if @request_type == "OWAMP"
       # Convert hostnames to IP address only for OWAMP
-      src = IPSocket::getaddress(@s1.hostname)
-      dst = IPSocket::getaddress(@s2.hostname)
-      @response = Perfsonar.requestOwampData(src, dst)
+      @response = Perfsonar.requestOwampData(@src, @dst)
     elsif @request_type == "BWCTL"
       
       @response = Perfsonar.requestBwctlData(@s1.hostname, @s2.hostname)
     else
       @response = Perfsonar.requestTracerouteData(@s1.hostname, @s2.hostname)
+      
+      @masterNodes = @response[3]
+      @masterMatrix = @response[2]
+      @masterHash = @response[1]
+      @response = @response[0]
       @nodes = Hash[@response.collect { |a| [a[:hop], a[:value]] }]
     end
    

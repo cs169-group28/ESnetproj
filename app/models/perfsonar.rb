@@ -1,6 +1,7 @@
 class Perfsonar
 	require 'socket'
 	require 'xmlsimple'
+	require 'json'
 
 	@@xmlTemplatesFolder = "app/assets/xml-templates/"
 
@@ -52,7 +53,7 @@ class Perfsonar
 	end
 
 	def Perfsonar.requestTracerouteData (src, dst)
-		startTime = 1.hours.ago.to_i
+		startTime = 1.hour.ago.to_i
 		endTime = Time.now.to_i
 
 		tracerouteRequest = Nokogiri::XML(File.open(@@xmlTemplatesFolder + @@tracerouteRequestFile))
@@ -96,6 +97,7 @@ class Perfsonar
 		srcIP = IPSocket::getaddress(src)
 
 		#Create pairs of servers for each request
+
 		requests.each_key do |key|
 			request = requests[key]
 			#List of servers
@@ -113,8 +115,8 @@ class Perfsonar
 			requests[key] = pairHash
 		end
 
-		p "===============STAGE3============"
-		p requests
+		#p "===============STAGE3============"
+		#p requests
 		
 		#Array of all request hashes
 		requestValues = requests.values
@@ -127,6 +129,14 @@ class Perfsonar
 		end
 		#removing duplicates
 		serverPairList = serverPairList.uniq
+
+		#creatingUnique server list
+		serverList = []
+		serverPairList.each do |server|
+			serverList.append(server[0])
+			serverList.append(server[1])
+		end
+		serverList = serverList.uniq
 
 		finalHash = {}
 		#Averaging, etc.
@@ -146,11 +156,68 @@ class Perfsonar
 			finalHash[key][0] = finalHash[key][0]/finalHash[key][1]
 		end
 
-		p "========SERVERPAIRLIST======"
-		p finalHash
+		#p "========SERVERPAIRLIST======"
+		#p finalHash
 
-		responseList
+		listOfNodes = []
 
+		serverList.each do |server|
+			tempHash = {}
+			tempHash["name"] = server
+			tempHash["color"] = "#E41A1C"
+			listOfNodes.append(tempHash)
+		end
+
+		listOfLinks = []
+
+		finalHash.each_key do |key|
+			finalHash[key][0] = finalHash[key][0]/finalHash[key][1]
+			tempHash = {}
+			tempHash["source"] = serverList.index(key[0])
+			tempHash["target"] = serverList.index(key[1])
+			tempHash["value"] = finalHash[key][1]
+			tempHash["colorValue"] = finalHash[key][0]
+			listOfLinks.append(tempHash)
+		end
+
+		@masterHash = {}
+		@masterHash["nodes"] = listOfNodes
+		@masterHash["links"] = listOfLinks
+		@masterHash = @masterHash.to_json
+
+		p "===========MASTER HASH========="
+		puts @masterHash
+
+		###########################
+
+		finalMatrix = []
+
+		serverList.each do |server1|
+			row = []
+			serverList.each do |server2|
+				key = [server1, server2]
+				if finalHash.has_key?(key)
+					row.append(finalHash[key][1])
+				else
+					row.append(0)
+				end
+			end
+			finalMatrix.append(row)
+		end
+
+		p "===========MASTER MATRIX======="
+
+		@masterMatrix = finalMatrix.to_json
+		puts @masterMatrix
+		@masterNodes = listOfNodes.to_json.html_safe
+		#tempVar.gsub('/', '\\/')
+		#tempVar.gsub(/:\s*"[^"]*\/[^"]*"/) { |m| m.gsub('/', '\\/')  }
+
+		## RETURN list of all important data structures
+		[responseList, @masterHash, @masterMatrix, @masterNodes]
+
+		## RETURN responseList
+		#responseList
 	end
 
 	private

@@ -17,6 +17,7 @@
 //= require select2
 //= require dataTables/jquery.dataTables
 
+
 $(document).ready(function(){
   $('select').select2({
   	placeholder: "Select a Server placeholderrrrr",

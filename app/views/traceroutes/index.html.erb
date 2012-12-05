@@ -5,36 +5,89 @@
   <%= form_tag( handle_render_traceroute_path ) do %>
 
   <div class ="selectors">    
-  	<div class="row">
-  		<div class="span4">
-  			<h5>Server (src):</h5>
-  		</div>
-  		<div class="span4">
-  			<h5>Server (dst):</h5>
-  		</div>
-  		<div class="span4">
-  			<h5>Request Type:</h5>
-  		</div>
-  	</div>
+    <div class="row">
+      <div class="span4">
+        <h5>Request Type:</h5>
+      </div>
+      <div class="span4">
+        <h5>Server (src):</h5>
+      </div>
+      <div class="span4">
+        <h5>Server (dst):</h5>
+      </div>
+      <div class="span4">
+        <h5>Timeframe:</h5>
+      </div>
+    </div>
 
-	<div class="row">
-	    <div class="span4">
-	    <%=select("Server", "1", @servers.collect {|s| [s.hostname, s.id]}, {:include_blank => '--Select a server--'}) %>
-	    </div>
+  <script>
+  function selectHelper() {
+    console.log("selecthelper hitted")
+    var typeList = document.getElementById("Requesttype_3");
+    var selectedType = typeList.options[typeList.selectedIndex].text
 
-	    <div class="span4">
-	    <%=select("Server", "2", @servers.collect {|s| [s.hostname, s.id]}, {:include_blank => '--Select a server--'}) %>
-	    </div>
+    timeOptions = []
 
-	    <div class="span4">
-	    <%=select("Requesttype", "3", ["BWCTL", "OWAMP", "TRACEROUTE"], {:include_blank => '--Select request type--'}) %>
-		</div>
-	</div>
+    $("#s2id_Server_1").select2("enable");
+    $("#s2id_Server_2").select2("enable")
+    $("#s2id_Timeframe_4").select2("enable")
+
+    document.getElementById("Server_1").disabled = false
+    document.getElementById("Server_2").disabled = false
+    document.getElementById("Timeframe_4").disabled = false
+
+    if (selectedType == "TRACEROUTE") {
+      console.log("got here");
+      timeOptions = ["1 hour", "4 hours", "12 hours", "24 hours"];
+
+    }
+    else if (selectedType == "OWAMP") {
+      $("#s2id_Server_2").select2("enable")
+    }
+    else if (selectedType == "BWCTL") {
+      $("#s2id_Timeframe_3").select2("enable")
+    }
+    else {
+      $("#s2id_Server_1").select2("disable");
+      $("#s2id_Server_2").select2("disable")
+      $("#s2id_Timeframe_4").select2("disable")
+
+      document.getElementById("Server_1").disabled = true
+      document.getElementById("Server_2").disabled = true
+      document.getElementById("Timeframe_4").disabled = true
+    }
+
+  }
+
+  </script>
+
+  <div class="row">
+
+      <div class="span4">
+      <%=select("Requesttype", "3", ["BWCTL", "OWAMP", "TRACEROUTE"], {:include_blank => '--Select request type--'}, {:onchange => 'selectHelper()'}) %>
+      </div>
+        
+      <div class="span4">
+      <%=select("Server", "1", @servers.collect {|s| [s.hostname, s.id]}, {:include_blank => '--Select a server--'}, {:disabled => true}) %>
+      </div>
+
+      <div class="span4">
+      <%=select("Server", "2", @servers.collect {|s| [s.hostname, s.id]}, {:include_blank => '--Select a server--'}, {:disabled => true}) %>
+      </div>
+
+      <div class="span4">
+      <%=select("Timeframe", "4", ["1 hour", "2 hours", "4 hours", "12 hours", "1 day", "2 days", "10 days"], {:include_blank => '--Select timeframe--'}, {:disabled => true}) %>
+      </div>
+  </div>
 </div>
+
+<script>
+
+</script>
 
 
   <br />
-  	<%=submit_tag('Route', :id => 'route', :class =>'btn btn-primary')  %>
+    <%=submit_tag('Route', :id => 'route', :class =>'btn btn-primary')  %>
   <br />
 
 <% end %>
