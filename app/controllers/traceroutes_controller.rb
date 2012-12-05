@@ -49,13 +49,20 @@ class TraceroutesController < ApplicationController
   end
 
   def handle_render
-    redirect_to render_map_traceroute_path(params[:Requesttype]['3'], params[:Server]['1'], params[:Server]['2'])
+    p "=========shit"
+    p params[:Timeframe]
+    p "HERERERERERERdfsfd==========================aefh;kjaewfh;iaewhf;aewhb;fiqwh;eifh;iufh"
+
+    redirect_to render_map_traceroute_path(params[:Requesttype]['3'], params[:Server]['1'], params[:Server]['2'], params[:Timeframe]['4'])
   end
 
   def render_map
     @s1 = Server.find(params[:server1])
     @s2 = Server.find(params[:server2])
     @request_type = params[:requesttype]
+    @time_frame = params[:timeframe]
+    p "=================shitcock==============="
+    p params
     s = Array.new
     s.push(@s1, @s2)
     @src = IPSocket::getaddress(@s1.hostname)
@@ -63,12 +70,12 @@ class TraceroutesController < ApplicationController
 
     if @request_type == "OWAMP"
       # Convert hostnames to IP address only for OWAMP
-      @response = Perfsonar.requestOwampData(@src, @dst)
+      @response = Perfsonar.requestOwampData(@src, @dst, @time_frame)
     elsif @request_type == "BWCTL"
       
-      @response = Perfsonar.requestBwctlData(@s1.hostname, @s2.hostname)
+      @response = Perfsonar.requestBwctlData(@s1.hostname, @s2.hostname, @time_frame)
     else
-      @response = Perfsonar.requestTracerouteData(@s1.hostname, @s2.hostname)
+      @response = Perfsonar.requestTracerouteData(@s1.hostname, @s2.hostname, @time_frame)
       
       @masterNodes = @response[3]
       @masterMatrix = @response[2]
