@@ -44,10 +44,11 @@ class Perfsonar
 		responseList = []
 		response.at_xpath('//nmwg:data', 'nmwg'=>'http://ggf.org/ns/nmwg/base/2.0/').children.each do |child|
 			responseList.append( {minTTL:child['minTTL'], min_delay:child['min_delay'], maxError:child['maxError'], max_delay:child['max_delay'], 
-				duplicates:child['duplicates'], endTime:child['endTime'], loss:child['loss'], sent:child['sent'], startTime:child['startTime'], maxTTL:child['maxTTL'] } )
+				duplicates:child['duplicates'], endTime:child['endTime'], loss:child['loss'], sent:child['sent'], startTime:Time.parse(child['startTime']), maxTTL:child['maxTTL'] } )
 		end
 
-		responseList
+		#responseList
+		responseList.sort_by{|e| [e[:startTime]]}
 	end
 
 	def Perfsonar.requestTracerouteData (src, dst, time)
