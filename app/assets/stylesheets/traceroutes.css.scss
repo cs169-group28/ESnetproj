@@ -30,3 +30,37 @@
 .link:hover {
   stroke-opacity: .5;
 }
+path.link {
+  fill: none;
+  stroke: #666;
+  stroke-opacity: .9;
+}
+
+marker#licensing {
+  fill: green;
+}
+
+path.link.licensing {
+  stroke: green;
+}
+
+path.link.resolved {
+  stroke-dasharray: 0,2 1;
+}
+
+circle {
+  fill: #00B2EE;
+  stroke: #333;
+  stroke-width: 2px;
+}
+
+text {
+  font: 10px sans-serif;
+  pointer-events: none;
+}
+
+text.shadow {
+  stroke: #00B2EE;
+  stroke-width: 3px;
+  stroke-opacity: .5;
+}

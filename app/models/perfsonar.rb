@@ -183,6 +183,7 @@ class Perfsonar
 		@masterHash = {}
 		@masterHash["nodes"] = listOfNodes
 		@masterHash["links"] = listOfLinks
+		@linksjs=listOfLinks
 		@masterHash = @masterHash.to_json
 
 		p "===========MASTER HASH========="
@@ -219,7 +220,8 @@ class Perfsonar
 		#tempVar.gsub(/:\s*"[^"]*\/[^"]*"/) { |m| m.gsub('/', '\\/')  }
 
 		## RETURN list of all important data structures
-		[responseList, @masterHash, @masterMatrix, @masterNodes, finalMatrixOfColorValues]
+            
+		[responseList, @masterHash, @masterMatrix, @masterNodes, finalMatrixOfColorValues, @linksjs]
 
 		## RETURN responseList
 		#responseList
