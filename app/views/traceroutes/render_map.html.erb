@@ -14,6 +14,7 @@
 path.chord {
   stroke: #000;
   stroke-width: .25px;
+  fill-opacity: .5;
 }
 
 #circle:hover path.fade {
@@ -45,9 +46,27 @@ path.chord {
 <br />
 <br />
 
-<div id="table" class="collapse in">
+<script>
+  function rainbow(n, max) {
+    // ranges between 0 and max
+    // smaller numbers are towards green
+    // larger numbers are towards reds
+      n = Math.min(n, max)
+      n = Math.max(n, 0)
+      n = 120 - n * 120 / max;
+      return 'hsl(' + n + ',100%,50%)';
+  }
 
-<table class="table table-striped table-bordered table-condensed">
+  function roundNumber(number, digits) {
+            var multiple = Math.pow(10, digits);
+            var rndedNum = Math.round(number * multiple) / multiple;
+            return rndedNum;
+        }
+</script>
+
+<div id="table" class="row-fluid collapse in">
+<div class="span10">
+<table class="table table-hover table-bordered table-condensed">
 <% if @request_type == "OWAMP" %>
 <tr>
   <th>Min TTL</th>
@@ -89,23 +108,22 @@ path.chord {
 <% end %>
 <% else %>
 <tr>
+  <th>Time</th>
   <th>Query Num</th>
   <th>Hop</th>
-  <th>Value</th>
-  <th>Value Units</th>
-  <th>Time Value</th>
+  <th>Duration (s)</th>
 </tr>
 <% @response.each do |entry| %>
 <tr>
-	<td><%= entry[:queryNum] %></td>
-	<td><%= entry[:hop] %></td>
-	<td><%= entry[:value] %></td>
-	<td><%= entry[:valueUnits] %></td>
 	<td><%= entry[:timeValue] %></td>
+  <td><%= entry[:queryNum] %></td>
+  <td><%= entry[:hop] %></td>
+  <td><%= entry[:value] %></td>
 </tr>
 <% end %>
 <% end %>
 </table>
+</div>
 </div>
 
 <button class="btn btn-primary" data-toggle="collapse" data-target="#graph">Graph <i class="icon-white icon-chevron-up"></i></button>
@@ -144,11 +162,12 @@ path.chord {
   svg.append("circle")
       .attr("r", outerRadius);
 
-  var cities = <%=@masterNodes%>;
-  var matrix = <%=@masterMatrix%>;
+  var servers = <%=@masterNodes%>;
+  var matrixOfValues = <%=@masterMatrixOfValues%>;
+  var matrixOfColorsValues = <%=@masterMatrixOfColorValues%>;
 
   // Compute the chord layout.
-  layout.matrix(matrix);
+  layout.matrix(matrixOfValues);
 
   // Add a group per neighborhood.
   var group = svg.selectAll(".group")
@@ -165,7 +184,14 @@ path.chord {
 
   // Add a mouseover title.
   group.append("title").text(function(d, i) {
-    return cities[i].name + ": " + formatPercent(d.value) + " of origins";
+    var x = Math.round(d.value)
+    if (isOrigin(servers[i].name)) {
+      return "Source:\t\t" + servers[i].name + "\nOccurance:\t" + x;
+    } else if (isDestination(servers[i].name)) {
+      return "Destination:\t" + servers[i].name + "\nOccurance:\t" + x;
+    } else {
+      return "Hop:\t\t\t" + servers[i].name + "\nOccurance:\t" + x;
+    }
   });
 
   // Add the group arc.
@@ -173,7 +199,7 @@ path.chord {
       .attr("id", function(d, i) { return "group" + i; })
       .attr("d", arc)
       .style("fill", function(d, i) {
-        if (isOrigin(cities[i].name) || isDestination(cities[i].name))
+        if (isOrigin(servers[i].name) || isDestination(servers[i].name))
           // ORIGIN and DESTINATION NODE COLOR
           return "#0099FF"
         else
@@ -189,12 +215,12 @@ path.chord {
   groupText.append("textPath")
       .attr("xlink:href", function(d, i) { return "#group" + i; })
       .text(function(d, i) {
-      if (isOrigin(cities[i].name)) {
-        return "ORIGIN: " + cities[i].name;
-      } else if (isDestination(cities[i].name)) {
-        return "DESTINATION: " + cities[i].name;
+      if (isOrigin(servers[i].name)) {
+        return "SRC: " + servers[i].name;
+      } else if (isDestination(servers[i].name)) {
+        return "DST: " + servers[i].name;
       } else {
-        return cities[i].name;
+        return servers[i].name;
       }
     });
 
@@ -207,17 +233,33 @@ path.chord {
       .data(layout.chords)
     .enter().append("path")
       .attr("class", "chord")
-      .style("fill", function(d) { return cities[d.source.index].color; })
+      .style("fill", function(d) { 
+        // select color of chord depending on color matrix
+        return rainbow(matrixOfColorsValues[d.source.index][d.target.index], 5)
+        //return servers[d.source.index].color; 
+      })
       .attr("d", path)
 
   // Add an elaborate mouseover title for each chord.
   chord.append("title").text(function(d) {
-    return cities[d.source.index].name
-        + " → " + cities[d.target.index].name
-        + ": " + formatPercent(d.source.value)
-        + "\n" + cities[d.target.index].name
-        + " → " + cities[d.source.index].name
-        + ": " + formatPercent(d.target.value);
+    var xSource = Math.round(d.source.value);
+    var xTarget = Math.round(d.target.value);
+    var label = ""
+    if (xSource > 0) {
+      label = servers[d.source.index].name
+        + " → " + servers[d.target.index].name
+        + ": \nOccurance:\t\t" + xSource 
+        + "\nAvg. Duration:\t" + roundNumber(matrixOfColorsValues[d.source.index][d.target.index], 3) + " s";
+    }
+
+    if (xTarget > 0) {
+      label = label + "\n\n" + servers[d.target.index].name
+        + " → " + servers[d.source.index].name
+        + ": \nOccurance:\t\t" + xTarget 
+        + "\nAvg. Duration:\t" + roundNumber(matrixOfColorsValues[d.target.index][d.source.index], 3) + " s";
+    }
+
+    return label;
   });
 
   function mouseover(d, i) {
@@ -236,4 +278,124 @@ path.chord {
   }
 
 </script>
+
+
+<script type="text/javascript" src="http://mbostock.github.com/d3/d3.js?1.29.1"></script>
+    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.geom.js?1.29.1"></script>
+    <script type="text/javascript" src="http://mbostock.github.com/d3/d3.layout.js?1.29.1"></script>
+  <script type="text/javascript">
+
+// http://blog.thomsonreuters.com/index.php/mobile-patent-suits-graphic-of-the-day/
+var links = 
+  <%=@linksjs.to_json.html_safe%>;
+
+
+var node = <%=@masterNodes%>;
+
+
+var nodes = {};
+
+// Compute the distinct nodes from the links.
+links.forEach(function(link) {
+  link.source = nodes[link.source] || (nodes[link.source] = {name: link.source});
+  link.target = nodes[link.target] || (nodes[link.target] = {name: link.target});
+});
+
+var w = 960,
+    h = 500;
+
+var force = d3.layout.force()
+    .nodes(d3.values(nodes))
+    .links(links)
+    .size([w, h])
+    .linkDistance(80)
+    .charge(-800)
+    .on("tick", tick)
+    .start();
+
+var svg = d3.select("body").append("svg:svg")
+    .attr("width", w)
+    .attr("height", h);
+
+// Per-type markers, as they don't inherit styles.
+svg.append("svg:defs").selectAll("marker")
+    .data([0,1,2,3,4,5,6,7,8,9,10])
+  .enter().append("svg:marker")
+    .attr("id", String)
+    .attr("viewBox", "0 -5 10 10")
+    .attr("refX", 15)
+    .attr("refY", -1.5)
+    .attr("markerWidth", 6)
+    .attr("markerHeight", 6)
+    .attr("orient", "auto")
+    
+  .append("svg:path")
+    .attr("d", "M0,-5L10,0L0,5");
+
+var path = svg.append("svg:g").selectAll("path")
+    .data(force.links())
+  .enter().append("svg:path")
+    .attr("class", function(d) { return "link " + d.value; })
+    .attr("marker-end", function(d) { return "url(#" + d.value + ")"; })
+    .style("stroke-width", function(d) { return Math.sqrt(d.value); })
+    .style("stroke", function(d) { return rainbow(d.colorValue,5); });
+  
+var circle = svg.append("svg:g").selectAll("circle")
+    .data(force.nodes())
+  .enter().append("svg:circle")
+    .attr("r", 6)
+    .call(force.drag);
+
+var text = svg.append("svg:g").selectAll("g")
+    .data(force.nodes())
+  .enter().append("svg:g");
+
+// A copy of the text with a thick white stroke for legibility.
+text.append("svg:text")
+    .attr("x", 8)
+    .attr("y", ".31em")
+    .attr("class", "shadow")
+    .text(function(d) { return node[d.name].name; });
+
+
+text.append("svg:text")
+    .attr("x", 8)
+    .attr("y", ".31em")
+    .text(function(d) { return node[d.name].name; });
+
+// Use elliptical arc path segments to doubly-encode directionality.
+function tick() {
+    nodes[0].x = w / 8;
+    nodes[0].y = h / 2;
+    nodes[node.length-1].x = (w*7)/8;
+    nodes[node.length-1].y = h/2;
+
+  path.attr("d", function(d) {
+    var dx = d.target.x - d.source.x,
+        dy = d.target.y - d.source.y,
+        dr = Math.sqrt(dx * dx + dy * dy);
+    return "M" + d.source.x + "," + d.source.y + "A" + dr + "," + dr + " 0 0,1 " + d.target.x + "," + d.target.y;
+  });
+
+  circle.attr("transform", function(d) {
+    return "translate(" + d.x + "," + d.y + ")";
+  });
+
+  text.attr("transform", function(d) {
+    return "translate(" + d.x + "," + d.y + ")";
+  });
+}
+
+    </script>
+
+<h2>
+Traceroute Path Visualization:</h2>
+
+Commonly used paths are indicated with bigger arrows and thicker lines 
+<br />
+<font color="red">Red Paths</font> are over 5 msec
+<br />
+<font color="yellow">Yellow Paths</font> are around 2.5 msec
+<br />
+<font color="green">Green Paths</font> are between 0 and 2 msec
 </div>

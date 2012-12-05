@@ -49,10 +49,6 @@ class TraceroutesController < ApplicationController
   end
 
   def handle_render
-    p "=========shit"
-    p params[:Timeframe]
-    p "HERERERERERERdfsfd==========================aefh;kjaewfh;iaewhf;aewhb;fiqwh;eifh;iufh"
-
     redirect_to render_map_traceroute_path(params[:Requesttype]['3'], params[:Server]['1'], params[:Server]['2'], params[:Timeframe]['4'])
   end
 
@@ -76,10 +72,11 @@ class TraceroutesController < ApplicationController
       @response = Perfsonar.requestBwctlData(@s1.hostname, @s2.hostname, @time_frame)
     else
       @response = Perfsonar.requestTracerouteData(@s1.hostname, @s2.hostname, @time_frame)
-      
+      @linksjs = @response[5]
       @masterNodes = @response[3]
-      @masterMatrix = @response[2]
+      @masterMatrixOfValues = @response[2]
       @masterHash = @response[1]
+      @masterMatrixOfColorValues = @response[4]
       @response = @response[0]
       @nodes = Hash[@response.collect { |a| [a[:hop], a[:value]] }]
     end
