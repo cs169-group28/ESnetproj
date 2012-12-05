@@ -183,6 +183,7 @@ class Perfsonar
 		@masterHash = {}
 		@masterHash["nodes"] = listOfNodes
 		@masterHash["links"] = listOfLinks
+		@linksjs=listOfLinks
 		@masterHash = @masterHash.to_json
 
 		p "===========MASTER HASH========="
@@ -217,7 +218,8 @@ class Perfsonar
 		@masterNodes = listOfNodes.to_json.html_safe
 
 		## RETURN list of all important data structures
-		[responseList, @masterHash, @masterMatrix, @masterNodes, finalMatrixOfColorValues]
+            
+		[responseList, @masterHash, @masterMatrix, @masterNodes, finalMatrixOfColorValues, @linksjs]
 
 
 		## RETURN responseList

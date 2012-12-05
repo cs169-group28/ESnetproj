@@ -69,7 +69,7 @@ class TraceroutesController < ApplicationController
       @response = Perfsonar.requestBwctlData(@s1.hostname, @s2.hostname)
     else
       @response = Perfsonar.requestTracerouteData(@s1.hostname, @s2.hostname)
-      
+      @linksjs = @response[5]
       @masterNodes = @response[3]
       @masterMatrixOfValues = @response[2]
       @masterHash = @response[1]
