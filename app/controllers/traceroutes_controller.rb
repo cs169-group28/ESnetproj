@@ -104,7 +104,7 @@ class TraceroutesController < ApplicationController
       
       @response = Perfsonar.requestBwctlData(@s1.hostname, @s2.hostname, @time_frame)
 
-      if @response[0][:startTime] == nil
+      if @response[0][:timeValue] == nil
         flash[:notice] = "Wrong server pair selected. Please try again."
         redirect_to traceroutes_path
       else 
