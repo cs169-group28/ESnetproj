@@ -13,8 +13,6 @@ class Perfsonar
 	@@bwctlURI = ':8085/perfSONAR_PS/services/pSB'
 	@@tracerouteURI = ':8086/perfSONAR_PS/services/tracerouteMA'
 
-	#@@nmwgt = 'http://ggf.org/ns/nmwg/topology/2.0/'
-
 	def Perfsonar.requestBwctlData (src, dst, time)
 		startTime = time.to_i.hours.ago.to_i
 		endTime = Time.now.to_i
@@ -46,10 +44,11 @@ class Perfsonar
 		responseList = []
 		response.at_xpath('//nmwg:data', 'nmwg'=>'http://ggf.org/ns/nmwg/base/2.0/').children.each do |child|
 			responseList.append( {minTTL:child['minTTL'], min_delay:child['min_delay'], maxError:child['maxError'], max_delay:child['max_delay'], 
-				duplicates:child['duplicates'], endTime:child['endTime'], loss:child['loss'], sent:child['sent'], startTime:child['startTime'], maxTTL:child['maxTTL'] } )
+				duplicates:child['duplicates'], endTime:child['endTime'], loss:child['loss'], sent:child['sent'], startTime:Time.parse(child['startTime']), maxTTL:child['maxTTL'] } )
 		end
 
-		responseList
+		#responseList
+		responseList.sort_by{|e| [e[:startTime]]}
 	end
 
 	def Perfsonar.requestTracerouteData (src, dst, time)
@@ -187,8 +186,8 @@ class Perfsonar
 		@linksjs=listOfLinks
 		@masterHash = @masterHash.to_json
 
-		p "===========MASTER HASH========="
-		puts @masterHash
+		# p "===========MASTER HASH========="
+		# puts @masterHash
 
 		###########################
 
@@ -212,19 +211,15 @@ class Perfsonar
 			finalMatrixOfColorValues.append(rowColorValues)
 		end
 
-		p "===========MASTER MATRIX======="
+		# p "===========MASTER MATRIX======="
 
 		@masterMatrix = finalMatrix.to_json
-		puts @masterMatrix
+		# puts @masterMatrix
 		@masterNodes = listOfNodes.to_json.html_safe
 
 		## RETURN list of all important data structures
             
 		[responseList, @masterHash, @masterMatrix, @masterNodes, finalMatrixOfColorValues, @linksjs]
-
-
-		## RETURN responseList
-		#responseList
 	end
 
 	private
