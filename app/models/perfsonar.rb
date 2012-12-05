@@ -1,4 +1,5 @@
 class Perfsonar
+	require 'socket'
 	require 'xmlsimple'
 
 	@@xmlTemplatesFolder = "app/assets/xml-templates/"
@@ -25,10 +26,10 @@ class Perfsonar
 
 		responseList = []
 		response.at_xpath('//nmwg:data', 'nmwg'=>'http://ggf.org/ns/nmwg/base/2.0/').children.each do |child|
-			responseList.append( {timeValue:child['timeValue'], throughput:child['throughput']})
+			responseList.append( {timeValue:Time.parse(child['timeValue']), throughput:child['throughput']})
 		end
 
-		responseList
+		responseList.sort_by{|e| [e[:timeValue]]}  
 	end
 
 	def Perfsonar.requestOwampData (src, dst)
@@ -64,12 +65,92 @@ class Perfsonar
 		response.xpath('//nmwg:data', 'nmwg'=>'http://ggf.org/ns/nmwg/base/2.0/').each do |data|
 			data.children.each do |child|
 
-				responseList.append( {queryNum:child['queryNum'], hop:child['hop'], value:child['value'], numBytes:child['numBytes'], 
-				valueUnits:child['valueUnits'], timeValue:child['timeValue'], timeType:child['timeType'] } )
+				responseList.append( {queryNum:child['queryNum'], hop:child['hop'], value:child['value'], timeValue:child['timeValue']} )
 			end
 		end
 
-		responseList.sort_by{|e| [e[:timeValue],e[:queryNum],e[:value].to_f]}
+		responseList = responseList.sort_by{|e| [e[:timeValue],e[:queryNum],e[:value].to_f]}
+		
+		#Grouping initial response list by timeValue. That is each request and data associated with it
+		requests = responseList.group_by {|entry| entry[:timeValue]}
+
+		#Grouping each request (timeValue) by server and associated data
+		requests.each_key do |key|
+			requests[key] = requests[key].group_by {|row| row[:hop]}
+		end
+		
+		#Remaking the server hash by appending only the time data
+		requests.each_key do |key|
+			request = requests[key]
+			request.each_key do |serverKey|
+				serverList = request[serverKey]
+				averageTime = 0.0
+				serverList.each do |queryNum|
+					averageTime += queryNum[:value].to_f
+				end
+				averageTime = averageTime/3
+				request[serverKey] = averageTime
+			end
+		end
+
+		srcIP = IPSocket::getaddress(src)
+
+		#Create pairs of servers for each request
+		requests.each_key do |key|
+			request = requests[key]
+			#List of servers
+			servers = request.keys
+			pairHash = {}
+			pairHash[ [srcIP, servers[0]] ] = request[servers[0]]
+			for i in 0..servers.length-2
+				begin
+					value = request[servers[i+1]] - request[servers[i]]
+					serverPair = [servers[i], servers[i+1]]
+					pairHash[serverPair] = value
+				rescue
+				end
+			end
+			requests[key] = pairHash
+		end
+
+		p "===============STAGE3============"
+		p requests
+		
+		#Array of all request hashes
+		requestValues = requests.values
+
+		#Array of all possible servers pairs, no duplicates
+		serverPairList = []
+		requests.each_key do |key|
+			request = requests[key]
+			serverPairList.push(*request.keys)
+		end
+		#removing duplicates
+		serverPairList = serverPairList.uniq
+
+		finalHash = {}
+		#Averaging, etc.
+		requests.each_key do |key|
+			request = requests[key]
+			request.each_key do |serverPair|
+				begin
+					finalHash[serverPair][0] += request[serverPair]
+					finalHash[serverPair][1] += 1
+				rescue
+					finalHash[serverPair] = [request[serverPair], 1]
+				end
+			end
+		end
+
+		finalHash.each_key do |key|
+			finalHash[key][0] = finalHash[key][0]/finalHash[key][1]
+		end
+
+		p "========SERVERPAIRLIST======"
+		p finalHash
+
+		responseList
+
 	end
 
 	private
