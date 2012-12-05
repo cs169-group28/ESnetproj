@@ -14,6 +14,7 @@
 path.chord {
   stroke: #000;
   stroke-width: .25px;
+  fill-opacity: .5;
 }
 
 #circle:hover path.fade {
@@ -55,6 +56,12 @@ path.chord {
       n = 120 - n * 120 / max;
       return 'hsl(' + n + ',100%,50%)';
   }
+
+  function roundNumber(number, digits) {
+            var multiple = Math.pow(10, digits);
+            var rndedNum = Math.round(number * multiple) / multiple;
+            return rndedNum;
+        }
 </script>
 
 <div id="table" class="row-fluid collapse in">
@@ -177,7 +184,14 @@ path.chord {
 
   // Add a mouseover title.
   group.append("title").text(function(d, i) {
-    return servers[i].name + ": " + formatPercent(d.value) + " of origins";
+    var x = Math.round(d.value)
+    if (isOrigin(servers[i].name)) {
+      return "Source:\t\t" + servers[i].name + "\nOccurance:\t" + x;
+    } else if (isDestination(servers[i].name)) {
+      return "Destination:\t" + servers[i].name + "\nOccurance:\t" + x;
+    } else {
+      return "Hop:\t\t\t" + servers[i].name + "\nOccurance:\t" + x;
+    }
   });
 
   // Add the group arc.
@@ -228,12 +242,24 @@ path.chord {
 
   // Add an elaborate mouseover title for each chord.
   chord.append("title").text(function(d) {
-    return servers[d.source.index].name
+    var xSource = Math.round(d.source.value);
+    var xTarget = Math.round(d.target.value);
+    var label = ""
+    if (xSource > 0) {
+      label = servers[d.source.index].name
         + " → " + servers[d.target.index].name
-        + ": " + formatPercent(d.source.value)
-        + "\n" + servers[d.target.index].name
+        + ": \nOccurance:\t\t" + xSource 
+        + "\nAvg. Duration:\t" + roundNumber(matrixOfColorsValues[d.source.index][d.target.index], 3) + " s";
+    }
+
+    if (xTarget > 0) {
+      label = label + "\n\n" + servers[d.target.index].name
         + " → " + servers[d.source.index].name
-        + ": " + formatPercent(d.target.value);
+        + ": \nOccurance:\t\t" + xTarget 
+        + "\nAvg. Duration:\t" + roundNumber(matrixOfColorsValues[d.target.index][d.source.index], 3) + " s";
+    }
+
+    return label;
   });
 
   function mouseover(d, i) {

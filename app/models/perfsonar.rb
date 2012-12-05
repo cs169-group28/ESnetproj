@@ -215,11 +215,10 @@ class Perfsonar
 		@masterMatrix = finalMatrix.to_json
 		puts @masterMatrix
 		@masterNodes = listOfNodes.to_json.html_safe
-		#tempVar.gsub('/', '\\/')
-		#tempVar.gsub(/:\s*"[^"]*\/[^"]*"/) { |m| m.gsub('/', '\\/')  }
 
 		## RETURN list of all important data structures
 		[responseList, @masterHash, @masterMatrix, @masterNodes, finalMatrixOfColorValues]
+
 
 		## RETURN responseList
 		#responseList
