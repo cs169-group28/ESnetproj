@@ -30,22 +30,62 @@
 
     $("#s2id_Server_1").select2("enable");
     $("#s2id_Server_2").select2("enable")
-    $("#s2id_Timeframe_4").select2("enable")
+    $("#Timeframe_4").select2("enable")
 
     document.getElementById("Server_1").disabled = false
     document.getElementById("Server_2").disabled = false
     document.getElementById("Timeframe_4").disabled = false
 
     if (selectedType == "TRACEROUTE") {
-      console.log("got here");
-      timeOptions = ["1 hour", "4 hours", "12 hours", "24 hours"];
 
+      var newData = [{id:0,text:'1 hour'},{id:1,text:'4 hours'},{id:2,text:'12 hours'},{id:3,text:'24 hours'}]
+      $("#Timeframe_4").select2("data", newData)
+
+      var newOptions = {"1 hour": "1",
+        "4 hours": "1",
+        "12 hours": "12",
+        "24 hours": "24"
+      };
+
+      var $el = $("#Timeframe_4");
+      $el.empty(); // remove old options
+      $.each(newOptions, function(key, value) {
+        $el.append($("<option></option>")
+           .attr("value", value).text(key));
+      });
     }
     else if (selectedType == "OWAMP") {
-      $("#s2id_Server_2").select2("enable")
+      var newData = [{id:0,text:'4 hours'},{id:1,text:'12 hours'},{id:2,text:'24 hours'},{id:3,text:'1 week'}]
+      $("#Timeframe_4").select2("data", newData)
+
+      var newOptions = {
+        "4 hours": "4",
+        "12 hours": "12",
+        "24 hours": "24",
+        "1 week": "168"
+      };
+
+      var $el = $("#Timeframe_4");
+      $el.empty(); // remove old options
+      $.each(newOptions, function(key, value) {
+        $el.append($("<option></option>")
+           .attr("value", value).text(key));
+      });
     }
     else if (selectedType == "BWCTL") {
-      $("#s2id_Timeframe_3").select2("enable")
+      var newData = [{id:0,text:'1 month'},{id:1,text:'3 months'}]
+      $("#Timeframe_4").select2("data", newData)
+
+      var newOptions = {"1 month": "731",
+      "3 months": "1461"
+      };
+
+      var $el = $("#Timeframe_4");
+      $el.empty(); // remove old options
+      $.each(newOptions, function(key, value) {
+        $el.append($("<option></option>")
+           .attr("value", value).text(key));
+      });
     }
     else {
       $("#s2id_Server_1").select2("disable");
@@ -61,7 +101,7 @@
 
   </script>
 
-  <div class="row">
+  <div id="selectors" class="row">
 
       <div class="span4">
       <%=select("Requesttype", "3", ["BWCTL", "OWAMP", "TRACEROUTE"], {:include_blank => '--Select request type--'}, {:onchange => 'selectHelper()'}) %>
@@ -76,7 +116,7 @@
       </div>
 
       <div class="span4">
-      <%=select("Timeframe", "4", ["1 hour", "2 hours", "4 hours", "12 hours", "1 day", "2 days", "10 days"], {:include_blank => '--Select timeframe--'}, {:disabled => true}) %>
+      <%=select("Timeframe", "4", ["1","2","3"], {:include_blank => '--Select a server--'}, {:disabled => true}) %>
       </div>
   </div>
 </div>

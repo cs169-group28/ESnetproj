@@ -15,8 +15,8 @@ class Perfsonar
 
 	#@@nmwgt = 'http://ggf.org/ns/nmwg/topology/2.0/'
 
-	def Perfsonar.requestBwctlData (src, dst)
-		startTime = 1.month.ago.to_i
+	def Perfsonar.requestBwctlData (src, dst, time)
+		startTime = time.to_i.hours.ago.to_i
 		endTime = Time.now.to_i
 
 		bwctlRequest = Nokogiri::XML(File.open(@@xmlTemplatesFolder + @@bwctlRequestFile))
@@ -33,8 +33,8 @@ class Perfsonar
 		responseList.sort_by{|e| [e[:timeValue]]}  
 	end
 
-	def Perfsonar.requestOwampData (src, dst)
-		startTime = 12.hours.ago.to_i
+	def Perfsonar.requestOwampData (src, dst, time)
+		startTime = time.to_i.hours.ago.to_i
 		endTime = Time.now.to_i
 
 		owampRequest = Nokogiri::XML(File.open(@@xmlTemplatesFolder + @@owampRequestFile))
@@ -52,8 +52,8 @@ class Perfsonar
 		responseList
 	end
 
-	def Perfsonar.requestTracerouteData (src, dst)
-		startTime = 1.hour.ago.to_i
+	def Perfsonar.requestTracerouteData (src, dst, time)
+		startTime = time.to_i.hours.ago.to_i
 		endTime = Time.now.to_i
 
 		tracerouteRequest = Nokogiri::XML(File.open(@@xmlTemplatesFolder + @@tracerouteRequestFile))
@@ -118,6 +118,7 @@ class Perfsonar
 		#p "===============STAGE3============"
 		#p requests
 		
+
 		#Array of all request hashes
 		requestValues = requests.values
 
