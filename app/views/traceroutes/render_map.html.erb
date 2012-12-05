@@ -121,19 +121,17 @@ path.chord {
 <% end %>
 <% else %>
 <tr>
+  <th>Time Value</th>
   <th>Query Num</th>
   <th>Hop</th>
-  <th>Value</th>
-  <th>Value Units</th>
-  <th>Time Value</th>
+  <th>Duration</th>
 </tr>
 <% @response.each do |entry| %>
 <tr>
-	<td><%= entry[:queryNum] %></td>
-	<td><%= entry[:hop] %></td>
-	<td><%= entry[:value] %></td>
-	<td><%= entry[:valueUnits] %></td>
 	<td><%= entry[:timeValue] %></td>
+  <td><%= entry[:queryNum] %></td>
+  <td><%= entry[:hop] %></td>
+  <td><%= entry[:value] %></td>
 </tr>
 <% end %>
 <% end %>

@@ -57,8 +57,7 @@ class TraceroutesController < ApplicationController
     @s2 = Server.find(params[:server2])
     @request_type = params[:requesttype]
     @time_frame = params[:timeframe]
-    p "=================shitcock==============="
-    p params
+    
     s = Array.new
     s.push(@s1, @s2)
     @src = IPSocket::getaddress(@s1.hostname)

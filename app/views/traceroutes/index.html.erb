@@ -1,22 +1,22 @@
 
-<h2>Traceroute Query</h2>
-<h4>Select servers to see traceroute data<h4>
+<h2>Query</h2>
+<h4>Select query type, servers, and time frame.<h4>
 <p id="notice"><%= notice %></p>
   <%= form_tag( handle_render_traceroute_path ) do %>
 
   <div class ="selectors">    
     <div class="row">
       <div class="span4">
-        <h5>Request Type:</h5>
+        <h5>Query Type:</h5>
       </div>
       <div class="span4">
-        <h5>Server (src):</h5>
+        <h5>Origin:</h5>
       </div>
       <div class="span4">
-        <h5>Server (dst):</h5>
+        <h5>Destination:</h5>
       </div>
       <div class="span4">
-        <h5>Timeframe:</h5>
+        <h5>Time frame:</h5>
       </div>
     </div>
 
