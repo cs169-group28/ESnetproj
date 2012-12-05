@@ -62,3 +62,4 @@ gem 'select2-rails'
 gem 'authlogic'
 gem 'less-rails-bootstrap'
 gem 'd3-rails'
+

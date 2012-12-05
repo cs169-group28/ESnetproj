@@ -5,8 +5,6 @@ class ServersController < ApplicationController
 
   @@categoriesList = ["Core Hosts", "Edge Hosts", "Exchange Points", "Smaller DOE Sites", "DICE Testing", "Main Hubs", "Large BWCTL DOE Sites", "Other BWCTL Hubs", "1G Testers", "OWAMP", "BWCTL", "TRACEROUTE"]
 
- 
-
   def index
     @servers = Server.all
   end

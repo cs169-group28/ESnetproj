@@ -168,7 +168,7 @@ SimpleGraph.prototype.update = function() {
   var self = this;
   var lines = this.vis.select("path").attr("d", this.line(this.points));
         
-  var circle = this.vis.select("svg").selectAll("circle")
+  var circle = this.vis.select("svg").selectAll("line_graoh_circle")
       .data(this.points, function(d) { return d; });
 
   circle.enter().append("circle")

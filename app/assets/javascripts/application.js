@@ -16,6 +16,7 @@
 //=require twitter/bootstrap
 //= require select2
 //= require dataTables/jquery.dataTables
+//= require d3
 
 
 $(document).ready(function(){
