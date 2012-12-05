@@ -70,7 +70,13 @@ class TraceroutesController < ApplicationController
       if @response[0][:startTime] == nil
         flash[:notice] = "Wrong server pair selected. Please try again."
         redirect_to traceroutes_path
+      else 
+        @response.each do |row|
+          row[:startTime]=Time.parse(row[:startTime])
+        end
       end
+
+      @response.sort_by!{|e| [e[:startTime]]}
 
     elsif @request_type == "BWCTL"
       
