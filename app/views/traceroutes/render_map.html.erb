@@ -82,7 +82,11 @@ path.chord {
   <th>Start Time</th>
   <th>Max TTL</th>
 </tr>
+<% @times = [] %>
+<% @maxd = [] %>
+<% @mind = [] %>
 <% @response.each do |entry| %>
+
 <tr>
 	<td><%= entry[:minTTL] %></td>
 	<td><%= entry[:min_delay] %></td>
@@ -94,6 +98,9 @@ path.chord {
 	<td><%= entry[:sent] %></td>
 	<td><%= entry[:startTime] %></td>
 	<td><%= entry[:maxTTL] %></td>
+  <% @maxd.append(entry[:max_delay].to_f*100) %>
+  <% @mind.append(entry[:min_delay].to_f*100) %>
+  <% @times.append(entry[:startTime].to_i)%>
 </tr>
 <% end %>
 
@@ -138,6 +145,7 @@ path.chord {
   <div id="BWCTL_chart" class="line_chart"></div>
 <% end %>
 
+
 <script>   
   graph = new SimpleGraph("BWCTL_chart", {
     "xmax": 10, "xmin": 0,
@@ -148,7 +156,36 @@ path.chord {
     "ypoints": <%= @datum %>,
     "xpoints": <%= @times %>
   });
-     
+</script>
+
+<% if @request_type == "OWAMP" %>
+  <div id="OWAMP_chart" class="line_chart"></div>
+   <div id="Mind_chart" class="line_chart"></div>
+<% end %>
+
+<script>   
+  graph = new SimpleGraph("OWAMP_chart", {
+    "xmax": 2, "xmin": 0,
+    "ymax": 400, "ymin": 1, 
+    "title": "Max Delay Data",
+    "xlabel": "Query Date (UTC)",
+    "ylabel": "One Way Latency (tenths of a second)",
+    "ypoints": <%= @maxd %>,
+    "xpoints": <%= @times %>
+  });
+
+</script>
+<script>   
+  graph = new SimpleGraph("Mind_chart", {
+    "xmax": 2, "xmin": 0,
+    "ymax": 2, "ymin": 1.5, 
+    "title": "Min Delay Data",
+    "xlabel": "Query Date (UTC)",
+    "ylabel": "One Way Latency (tenths of a second)",
+    "ypoints": <%= @mind %>,
+    "xpoints": <%= @times %>
+  });
+
 </script>
 
 
@@ -305,13 +342,13 @@ path.chord {
 </script>
 
 
-<script type="text/javascript" src="http://mbostock.github.com/d3/d3.js?1.29.1"></script>
+  <script type="text/javascript" src="http://mbostock.github.com/d3/d3.js?1.29.1"></script>
     <script type="text/javascript" src="http://mbostock.github.com/d3/d3.geom.js?1.29.1"></script>
     <script type="text/javascript" src="http://mbostock.github.com/d3/d3.layout.js?1.29.1"></script>
   <script type="text/javascript">
 
 // http://blog.thomsonreuters.com/index.php/mobile-patent-suits-graphic-of-the-day/
-var links =
+var links = 
   <%=@linksjs.to_json.html_safe%>;
 
 
@@ -357,12 +394,32 @@ svg.append("svg:defs").selectAll("marker")
   .append("svg:path")
     .attr("d", "M0,-5L10,0L0,5");
 
+function strngth(n, max) {
+    
+      n = Math.min(n, max)
+      n = Math.max(n, 1)
+     
+      n = 3 * (n/max)
+      n = Math.ceil(n * 10) / 10
+      //n = Math.round(n / .5)*.5
+      n = Math.max(n, 1)
+      
+      return n;
+  }
+function wght(n, max) {
+   
+      n = Math.min(n, 3)
+      n = Math.max(n, 1)
+      return n;
+  }
+
 var path = svg.append("svg:g").selectAll("path")
     .data(force.links())
   .enter().append("svg:path")
     .attr("class", function(d) { return "link " + d.value; })
-    .attr("marker-end", function(d) { return "url(#" + d.value + ")"; })
-    .style("stroke-width", function(d) { return Math.sqrt(d.value); })
+    .attr("marker-end", function(d) { return "url(#" + wght(d.value,links[0].value) + ")"; })
+  
+    .style("stroke-width", function(d) { return strngth(d.value,links[0].value); })
     .style("stroke", function(d) { return rainbow(d.colorValue,5); });
   
 var circle = svg.append("svg:g").selectAll("circle")
@@ -412,8 +469,8 @@ function tick() {
 }
 
     </script>
-
 <h2>
+<% if @request_type == "Traceroute" %>
 Traceroute Path Visualization:</h2>
 
 Commonly used paths are indicated with bigger arrows and thicker lines
@@ -423,6 +480,7 @@ Commonly used paths are indicated with bigger arrows and thicker lines
 <font color="yellow">Yellow Paths</font> are around 2.5 msec
 <br />
 <font color="green">Green Paths</font> are between 0 and 2 msec
+<% end %>
 </div>
 
 
