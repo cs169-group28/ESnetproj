@@ -13,8 +13,6 @@ class Perfsonar
 	@@bwctlURI = ':8085/perfSONAR_PS/services/pSB'
 	@@tracerouteURI = ':8086/perfSONAR_PS/services/tracerouteMA'
 
-	#@@nmwgt = 'http://ggf.org/ns/nmwg/topology/2.0/'
-
 	def Perfsonar.requestBwctlData (src, dst, time)
 		startTime = time.to_i.hours.ago.to_i
 		endTime = Time.now.to_i
@@ -187,8 +185,8 @@ class Perfsonar
 		@linksjs=listOfLinks
 		@masterHash = @masterHash.to_json
 
-		p "===========MASTER HASH========="
-		puts @masterHash
+		# p "===========MASTER HASH========="
+		# puts @masterHash
 
 		###########################
 
@@ -212,19 +210,15 @@ class Perfsonar
 			finalMatrixOfColorValues.append(rowColorValues)
 		end
 
-		p "===========MASTER MATRIX======="
+		# p "===========MASTER MATRIX======="
 
 		@masterMatrix = finalMatrix.to_json
-		puts @masterMatrix
+		# puts @masterMatrix
 		@masterNodes = listOfNodes.to_json.html_safe
 
 		## RETURN list of all important data structures
             
 		[responseList, @masterHash, @masterMatrix, @masterNodes, finalMatrixOfColorValues, @linksjs]
-
-
-		## RETURN responseList
-		#responseList
 	end
 
 	private
