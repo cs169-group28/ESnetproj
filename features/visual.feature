@@ -15,10 +15,14 @@ Background: Server information has been added to the database
 
    And I am on the traceroutes page
 
+@ignore-hidden-elements
+@javascript
 Scenario: View a graphic of the traceroute data between two servers
-  When I select "lbl-pt1.es.net" from "Server_1"
+  And Selenium sees the select boxes
+  When I select "TRACEROUTE" from "Requesttype[3]"
+  When I select "lbl-pt1.es.net" from "Server[1]"
   When I select "pppl-pt1.es.net" from "Server_2"
-  When I select "TRACEROUTE" from "Requesttype_3"
+  When I select "4 hours" from "Timeframe_4"
   When I press 'route'
   Then I should see 2 nodes
   Then I should see "lbl-pt1.es.net"

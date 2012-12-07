@@ -61,29 +61,17 @@ class TraceroutesController < ApplicationController
     s = Array.new
     s.push(@s1, @s2)
 
-    p "==start============++++++++++++++++++"
-
      begin
       @src = IPSocket::getaddress(@s1.hostname)
       @dst = IPSocket::getaddress(@s2.hostname)
 
      rescue SocketError
-      p "======begin socket error========++++++++++++++++++"
-      p @src
-      p @dst
-      #flash[:notice] = "The servers you selected are currently not available."
-
       end
 
       if @src == nil || @dst == nil
         flash[:notice] = "The servers you selected are currently not available."
         redirect_to traceroutes_path
       else
-      # break
-    # end
-
-    p "===========after===++++++++++++++++++"
-
 
     if @request_type == "OWAMP"
       # Convert hostnames to IP address only for OWAMP
